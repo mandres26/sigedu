@@ -1,0 +1,30 @@
+.Titulo{
+    color:#1864a2;
+}
+
+.Subtitulo{
+    color:#1864a2;
+}
+
+.EtiquetaNombreUsuario{
+    font-size: small;
+    color: silver;
+}
+
+.EtiquetaIntranet{
+    font-size: small;
+    color:silver;
+    font-weight: bold;
+}
+
+.Imagen {
+    background-position: top;
+    background-image: url(../Imagenes/TituloGrande.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 0% 0%;    
+    width: 661px;
+    height:100px;
+    border: 0
+    }
+    
