@@ -1,0 +1,20 @@
+a:link{
+     color: #1864a2;
+     text-decoration: none;
+     background-color: transparent;
+}
+
+a.Navegador:link{
+     color: #1864a2;
+     text-decoration: none;
+     background-color: transparent;
+     font-weight: bold;
+}
+
+a.CerrarSesion:link{
+    font-size: small;
+    text-decoration: none;
+    color:silver;
+    font-weight: bold;
+    background-color: transparent;
+}

@@ -1,0 +1,85 @@
+.Tabla{
+    width: 100%;
+}
+
+th{
+    color: #d6dadc;
+    background-color: #1864a2;
+}
+
+th a:link{
+    color: #d6dadc;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+td a:link{
+    color: #1864a2;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.pagelinks {
+     color: #d6dadc;
+     margin: 5px;
+}
+
+.pagelinks img {
+     vertical-align: middle;
+}
+
+span.export {
+     padding: 0 4px 1px 20px;
+     font-size: x-small;
+     text-align: left;
+}
+
+span.excel {
+     background-image: url(resources/img/Excel.png);
+     background-repeat: no-repeat;
+     width: 16px;
+}
+
+
+.dataTable tr.rowMouseOver {
+     background-color: #ffff99;
+}
+
+.pageHeader {
+     height: 60px;
+     background-image: url(resources/img/header.gif);
+     background-repeat: repeat-x;
+}
+
+.pageHeader a:link{
+    color: #1864a2;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.pageHeaderText {
+     font-size: 30px;
+     margin-left: 5px;
+     color: whitesmoke;
+     font-family: "century gothic", verdana, arial, helvetica, sans-serif;
+     font-weight: bold;
+     text-align: left;
+     display:inline;
+     white-space: nowrap;
+}
+
+.logo {
+     border-top: 1px solid #000066;
+     border-left: 1px solid #000066;
+     border-bottom: 1px solid #000066;
+     display:inline;
+     text-align: right;
+}
+
+.even{
+    background-color: #C2DFFC;
+}
+
+img {
+     border: 0px;
+}

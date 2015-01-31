@@ -1,0 +1,13 @@
+.MensajeExito{
+    color: green;
+    font-style: italic;
+}
+.MensajeAdvertencia{
+    color: darkorange;
+    font-style: italic;
+}
+.MensajeError{
+    color: red;
+    font-style: italic;
+}
+
