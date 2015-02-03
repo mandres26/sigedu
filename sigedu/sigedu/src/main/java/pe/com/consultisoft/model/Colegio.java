@@ -38,8 +38,8 @@ public class Colegio {
 	private String int_idusuario_creacion;
 	@Column(name="int_idusuario_modificacion")
 	private String int_idusuario_modificacion;
-	@Column(name="chr_estado")
-	private String chr_estado;
+	@Column(name="int_idestado")
+	private String int_idestado;
 	
 	public Integer getInt_idcolegio() {
 		return int_idcolegio;
@@ -113,11 +113,11 @@ public class Colegio {
 	public void setInt_idusuario_modificacion(String int_idusuario_modificacion) {
 		this.int_idusuario_modificacion = int_idusuario_modificacion;
 	}
-	public String getChr_estado() {
-		return chr_estado;
+	public String getInt_idestado() {
+		return int_idestado;
 	}
-	public void setChr_estado(String chr_estado) {
-		this.chr_estado = chr_estado;
+	public void setInt_idestado(String int_idestado) {
+		this.int_idestado = int_idestado;
 	}
 	
 }

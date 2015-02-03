@@ -41,17 +41,7 @@
 					<td>Direcci&oacute;n:</td>
 					<td><form:input	path="str_direccion" /></td>
 				</tr>
-				<tr>
-					<td>Distrito: </td>
-					<td>
-						<datalist id="listadistrito">
-							<option value="1" label="Lima">
-							<option value="2" label="San Isidro">
-							<option value="3" label="San Borja">
-							<option value="4" label="Jesus María">
-						</datalist>
-					</td/>
-				</tr>
+				
 				<tr>
 					<td>Cantidad Salones:</td>
 					<td><form:input	path="int_cantidad_salones" /></td>
@@ -91,14 +81,14 @@
 
 		<display:column value="${fila_rowNum}" title="Nro." />
 		<display:column property="str_colegio" title="Colegio" sortable="true" style="width:300px " />
-		<display:column property="str_telefono1" title="Teléfono 1" sortable="true" style="width:200px" />
-		<display:column property="str_telefono2" title="Teléfono 2" sortable="true" style="width:200px" />
-		<display:column property="str_celular" title="Celular" sortable="true" style="width:200px" />
-		<display:column property="str_direccion" title="Dirección" sortable="true" style="width:200px" />
-		<display:column property="int_cantidad_salones" title="Cantidad Salones" sortable="true" style="width:200px" />
+		<display:column property="str_telefono1" title="Teléfono 1" sortable="true" style="width:100px" />
+		<display:column property="str_telefono2" title="Teléfono 2" sortable="true" style="width:100px" />
+		<display:column property="str_celular" title="Celular" sortable="true" style="width:100px" />
+		<display:column property="str_direccion" title="Dirección" sortable="true" style="width:300px" />
+		<display:column property="int_cantidad_salones" title="Cantidad Salones" sortable="true" style="width:80x" />
 		<display:column title="Estado">
-			<c:if test="${fila.chr_estado=='A'}">Activo</c:if>
-			<c:if test="${fila.chr_estado=='I'}">Inactivo</c:if>
+			<c:if test="${fila.int_idestado=='1'}">Activo</c:if>
+			<c:if test="${fila.int_idestado=='2'}">Inactivo</c:if>
 		</display:column>
 		<display:column media="html" title="Ver" style="text-align:center;">
 			<a href="viewColegio?int_idcolegio=${fila.int_idcolegio}"><img src="resources/img/Buscar.png" alt="Ver" height="20" width="20"></a>

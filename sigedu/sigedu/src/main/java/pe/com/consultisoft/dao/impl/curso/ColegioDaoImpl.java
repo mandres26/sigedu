@@ -39,7 +39,7 @@ public class ColegioDaoImpl implements ColegioDao {
 	@Override
 	public int add(Colegio colegio) {
 		try{
-			colegio.setChr_estado(Constantes.Estados.EST_ACTIVO);
+			colegio.setInt_idestado(Constantes.Estados.EST_ACTIVO);
 			sessionFactory.getCurrentSession().save(colegio);
 			//sessionFactory.getCurrentSession().flush();
 			return 0;
@@ -69,7 +69,7 @@ public class ColegioDaoImpl implements ColegioDao {
 	public int delete(int int_idcolegio) {
 		try{
 			Colegio colegio = (Colegio)sessionFactory.getCurrentSession().get(Colegio.class, int_idcolegio);
-			colegio.setChr_estado(Constantes.Estados.EST_INACTIVO);
+			colegio.setInt_idestado(Constantes.Estados.EST_INACTIVO);
 			sessionFactory.getCurrentSession().save(colegio);
 			return 0;
 		}

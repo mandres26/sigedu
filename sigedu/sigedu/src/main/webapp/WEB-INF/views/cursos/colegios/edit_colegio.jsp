@@ -66,9 +66,9 @@
 			</tr>
 			<tr>
 				<td>Estado:</td>
-				<td><form:radiobutton path="estado" value="A" />Activo 
+				<td><form:radiobutton path="int_idestado" value="1" />Activo 
 					&nbsp;
-					<form:radiobutton path="estado" value="I" />Inactivo</td>
+					<form:radiobutton path="int_idestado" value="2" />Inactivo</td>
 			</tr>
 			
 			<tr>

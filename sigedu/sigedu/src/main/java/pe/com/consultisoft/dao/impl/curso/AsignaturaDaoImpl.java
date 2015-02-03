@@ -84,8 +84,8 @@ public class AsignaturaDaoImpl implements AsignaturaDao {
 	public List<Asignatura> find(Asignatura asignatura) {
 		try{
 			List<Asignatura> listAsignaturas = new ArrayList();
-			String query = "from Asignatura where nombre like '"+asignatura.getNombre().trim()+"%'";
-			listAsignaturas = sessionFactory.getCurrentSession().createQuery(query).list();
+			//String query = "from Asignatura where nombre like '"+asignatura.().trim()+"%'";
+			//listAsignaturas = sessionFactory.getCurrentSession().createQuery(query).list();
 			return listAsignaturas;
 		}
 		catch(Exception ex){
