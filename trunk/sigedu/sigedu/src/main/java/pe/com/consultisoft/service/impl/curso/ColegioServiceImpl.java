@@ -32,8 +32,8 @@ public class ColegioServiceImpl implements ColegioService{
 	}
 	@Override
 	@Transactional
-	public int delete(int idColegio) {
-		return colegioDao.delete(idColegio);
+	public int delete(int int_idcolegio) {
+		return colegioDao.delete(int_idcolegio);
 	}
 	@Override
 	@Transactional
@@ -42,7 +42,7 @@ public class ColegioServiceImpl implements ColegioService{
 	}
 	@Override
 	@Transactional
-	public Colegio find(int idColegio) {
-		return colegioDao.find(idColegio);
+	public Colegio find(int int_idcolegio) {
+		return colegioDao.find(int_idcolegio);
 	}	
 }

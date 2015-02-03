@@ -32,32 +32,37 @@
 			<tr>
 				<td>C&oacute;digo:</td>
 				<td><form:input
-						path="codigo" readonly="true"/></td>
+						path="int_idcolegio" readonly="true"/></td>
 			</tr>
 			<tr>
 				<td>Nombre Colegio:</td>
-				<td><form:errors path="nombre" cssClass="error" /><br> <form:input
-						path="nombre" /></td>
+				<td><form:errors path="str_colegio" cssClass="error" /><br> <form:input
+						path="str_colegio" /></td>
 			</tr>
 			<tr>
 				<td>Tel&eacute;fono 1:</td>
-				<td><form:errors path="telefono1" cssClass="error" /><br> <form:input
-						path="telefono1" /></td>
+				<td><form:errors path="str_telefono1" cssClass="error" /><br> <form:input
+						path="str_telefono1" /></td>
 			</tr>
 			<tr>
 				<td>Tel&eacute;fono 2:</td>
-				<td><form:errors path="telefono2" cssClass="error" /><br> <form:input
-						path="telefono2" /></td>
+				<td><form:errors path="str_telefono2" cssClass="error" /><br> <form:input
+						path="str_telefono2" /></td>
 			</tr>
 			<tr>
 				<td>Celular:</td>
-				<td><form:errors path="celular" cssClass="error" /><br> <form:input
-						path="celular" /></td>
+				<td><form:errors path="str_celular" cssClass="error" /><br> <form:input
+						path="str_celular" /></td>
 			</tr>
 			<tr>
 				<td>Direcci&oacute;n:</td>
-				<td><form:errors path="direccion" cssClass="error" /><br> <form:input
-						path="direccion" /></td>
+				<td><form:errors path="str_direccion" cssClass="error" /><br> <form:input
+						path="str_direccion" /></td>
+			</tr>
+			<tr>
+				<td>Cantidad Salones:</td>
+				<td><form:errors path="int_cantidad_salones" cssClass="error" /><br> <form:input
+						path="int_cantidad_salones" /></td>
 			</tr>
 			<tr>
 				<td>Estado:</td>

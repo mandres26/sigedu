@@ -63,11 +63,11 @@ public class ColegioController {
 
 	@RequestMapping(value = "/deleteColegio")
     public String delete(@ModelAttribute("colegio") Colegio colegio,
-    						@ModelAttribute("codigo")String codigo,
+    						@ModelAttribute("int_idcolegio")String int_idcolegio,
     						ModelMap model) {
  
-		colegioService.delete(Integer.parseInt(codigo));
-		if(colegioService.delete(Integer.parseInt(codigo))==0){
+		colegioService.delete(Integer.parseInt(int_idcolegio));
+		if(colegioService.delete(Integer.parseInt(int_idcolegio))==0){
 			model.addAttribute("resultado", "0");
 			model.addAttribute("mensaje", Constantes.Mensajes.MSG_REGISTRO_ELIMINADO_OK);
 		}
@@ -80,20 +80,20 @@ public class ColegioController {
     }
 	
 	@RequestMapping(value = "/viewColegio", method = RequestMethod.GET)
-    public String view(@ModelAttribute("codigo")
-    String codigo, ModelMap model) {
+    public String view(@ModelAttribute("int_idcolegio")
+    String int_idcolegio, ModelMap model) {
  
-		Colegio colegio = colegioService.find(Integer.parseInt(codigo));
+		Colegio colegio = colegioService.find(Integer.parseInt(int_idcolegio));
 		model.addAttribute("colegio", colegio);
  
         return "cursos/colegios/view_colegio";
     }
 	
 	@RequestMapping(value = "/editColegio")
-    public String edit(@ModelAttribute("codigo")
-    String codigo, ModelMap model) {
+    public String edit(@ModelAttribute("int_idcolegio")
+    String int_idcolegio, ModelMap model) {
  
-		Colegio colegio = colegioService.find(Integer.parseInt(codigo));
+		Colegio colegio = colegioService.find(Integer.parseInt(int_idcolegio));
 		model.addAttribute("colegio", colegio);
  
         return "cursos/colegios/edit_colegio";
