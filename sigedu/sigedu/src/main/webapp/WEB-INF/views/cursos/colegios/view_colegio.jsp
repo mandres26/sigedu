@@ -10,8 +10,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link rel="stylesheet" href="resources/css/titulos.css" type="text/css">
 <script language="JavaScript" type="text/javascript">
-function editar(codigo){
-	location.replace("editColegio?codigo="+codigo);
+function editar(int_idcolegio){
+	location.replace("editColegio?int_idcolegio="+int_idcolegio);
 	//alert("hola");
 }
 </script>
@@ -25,33 +25,33 @@ function editar(codigo){
 		<table>
 			<tr>
 				<td>C&oacute;digo:</td>
-				<td>${colegio.codigo}</td>
+				<td>${colegio.int_idcolegio}</td>
 			</tr>
 			<tr>
 				<td>Nombre Colegio:</td>
-				<td>${colegio.nombre}</td>
+				<td>${colegio.str_colegio}</td>
 			</tr>
 			<tr>
 				<td>Tel&eacute;fono 1:</td>
-				<td>${colegio.telefono1}</td>
+				<td>${colegio.str_telefono1}</td>
 			</tr>
 			<tr>
 				<td>Tel&eacute;fono 2:</td>
-				<td>${colegio.telefono2}</td>
+				<td>${colegio.str_telefono2}</td>
 			</tr>
 			<tr>
 				<td>Celular:</td>
-				<td>${colegio.celular}</td>
+				<td>${colegio.str_celular}</td>
 			</tr>
 			<tr>
 				<td>Direcci&oacute;n:</td>
-				<td>${colegio.direccion}</td>
+				<td>${colegio.str_direccion}</td>
 			</tr>
 			<tr>
 				<td>Estado:</td>
 				<td>					
-					<c:if test="${alumno.estado=='A'}">Activo</c:if>
-					<c:if test="${alumno.estado=='I'}">Inactivo</c:if>
+					<c:if test="${colegio.chr_estado=='A'}">Activo</c:if>
+					<c:if test="${colegio.chr_estado=='I'}">Inactivo</c:if>
 				</td>
 			</tr>
 			<tr>
@@ -59,7 +59,7 @@ function editar(codigo){
 					&nbsp;
 				</td>
 				<td>
-					<button title="Editar" onclick="javascript:editar('${colegio.codigo}')">
+					<button title="Editar" onclick="javascript:editar('${colegio.int_idcolegio}')">
 						<img src="resources/img/Editar.png" width="50" height="50" border="0">
 					</button>
 				</td>								

@@ -25,7 +25,7 @@ public class ColegioDaoImpl implements ColegioDao {
 	public List<Colegio> list() {
 		try{
 			List<Colegio> listColegios = new ArrayList();
-			listColegios = sessionFactory.getCurrentSession().createQuery("from Colegio order by nombre").list();
+			listColegios = sessionFactory.getCurrentSession().createQuery("from Colegio order by str_colegio").list();
 			return listColegios;
 		}
 		catch(Exception ex){
@@ -39,7 +39,7 @@ public class ColegioDaoImpl implements ColegioDao {
 	@Override
 	public int add(Colegio colegio) {
 		try{
-			colegio.setEstado(Constantes.Estados.EST_ACTIVO);
+			colegio.setChr_estado(Constantes.Estados.EST_ACTIVO);
 			sessionFactory.getCurrentSession().save(colegio);
 			//sessionFactory.getCurrentSession().flush();
 			return 0;
@@ -66,10 +66,10 @@ public class ColegioDaoImpl implements ColegioDao {
 
 
 	@Override
-	public int delete(int idColegio) {
+	public int delete(int int_idcolegio) {
 		try{
-			Colegio colegio = (Colegio)sessionFactory.getCurrentSession().get(Colegio.class, idColegio);
-			colegio.setEstado(Constantes.Estados.EST_INACTIVO);
+			Colegio colegio = (Colegio)sessionFactory.getCurrentSession().get(Colegio.class, int_idcolegio);
+			colegio.setChr_estado(Constantes.Estados.EST_INACTIVO);
 			sessionFactory.getCurrentSession().save(colegio);
 			return 0;
 		}
@@ -84,7 +84,7 @@ public class ColegioDaoImpl implements ColegioDao {
 	public List<Colegio> find(Colegio colegio) {
 		try{
 			List<Colegio> listColegios = new ArrayList();
-			String query = "from Colegio where nombre like '"+colegio.getNombre().trim()+"%'";
+			String query = "from Colegio where str_colegio like '"+colegio.getStr_colegio().trim()+"%'";
 			listColegios = sessionFactory.getCurrentSession().createQuery(query).list();
 			return listColegios;
 		}
@@ -96,9 +96,9 @@ public class ColegioDaoImpl implements ColegioDao {
 
 
 	@Override
-	public Colegio find(int idColegio) {
+	public Colegio find(int int_idcolegio) {
 		try{
-			return (Colegio) sessionFactory.getCurrentSession().get(Colegio.class, idColegio);
+			return (Colegio) sessionFactory.getCurrentSession().get(Colegio.class, int_idcolegio);
 		}
 		catch(Exception ex){
 			logger.error(ex.getMessage());

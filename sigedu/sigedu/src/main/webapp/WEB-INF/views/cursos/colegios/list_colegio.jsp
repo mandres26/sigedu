@@ -23,23 +23,38 @@
             <table>
             	<tr>
 					<td>Nombre Colegio:</td>
-					<td><form:input	path="nombre" /></td>
+					<td><form:input	path="str_colegio" /></td>
 				</tr>
 				<tr>
 					<td>Tel&eacute;fono 1:</td>
-					<td><form:input	path="telefono1" /></td>
+					<td><form:input	path="str_telefono1" /></td>
 				</tr>
 				<tr>
 					<td>Tel&eacute;fono 2:</td>
-					<td><form:input	path="telefono2" /></td>
+					<td><form:input	path="str_telefono2" /></td>
 				</tr>
 				<tr>
 					<td>Celular:</td>
-					<td><form:input	path="celular" /></td>
+					<td><form:input	path="str_celular" /></td>
 				</tr>
             	<tr>
 					<td>Direcci&oacute;n:</td>
-					<td><form:input	path="direccion" /></td>
+					<td><form:input	path="str_direccion" /></td>
+				</tr>
+				<tr>
+					<td>Distrito: </td>
+					<td>
+						<datalist id="listadistrito">
+							<option value="1" label="Lima">
+							<option value="2" label="San Isidro">
+							<option value="3" label="San Borja">
+							<option value="4" label="Jesus María">
+						</datalist>
+					</td/>
+				</tr>
+				<tr>
+					<td>Cantidad Salones:</td>
+					<td><form:input	path="int_cantidad_salones" /></td>
 				</tr>
                 <tr>
                     <td>
@@ -75,22 +90,22 @@
 		<display:setProperty name="export.csv" value="false" /> 
 
 		<display:column value="${fila_rowNum}" title="Nro." />
-		<display:column property="nombre" title="Nombre" sortable="true" style="width:300px " />
-		<display:column property="telefono1" title="Teléfono 1" sortable="true" style="width:200px" />
-		<display:column property="telefono2" title="Teléfono 2" sortable="true" style="width:200px" />
-		<display:column property="celular" title="Celular" sortable="true" style="width:200px" />
-		<display:column property="direccion" title="Dirección" sortable="true" style="width:200px" />
-		
+		<display:column property="str_colegio" title="Colegio" sortable="true" style="width:300px " />
+		<display:column property="str_telefono1" title="Teléfono 1" sortable="true" style="width:200px" />
+		<display:column property="str_telefono2" title="Teléfono 2" sortable="true" style="width:200px" />
+		<display:column property="str_celular" title="Celular" sortable="true" style="width:200px" />
+		<display:column property="str_direccion" title="Dirección" sortable="true" style="width:200px" />
+		<display:column property="int_cantidad_salones" title="Cantidad Salones" sortable="true" style="width:200px" />
 		<display:column title="Estado">
-			<c:if test="${fila.estado=='A'}">Activo</c:if>
-			<c:if test="${fila.estado=='I'}">Inactivo</c:if>
+			<c:if test="${fila.chr_estado=='A'}">Activo</c:if>
+			<c:if test="${fila.chr_estado=='I'}">Inactivo</c:if>
 		</display:column>
 		<display:column media="html" title="Ver" style="text-align:center;">
-			<a href="viewColegio?codigo=${fila.codigo}"><img src="resources/img/Buscar.png" alt="Ver" height="20" width="20"></a>
+			<a href="viewColegio?int_idcolegio=${fila.int_idcolegio}"><img src="resources/img/Buscar.png" alt="Ver" height="20" width="20"></a>
 		</display:column>
 
 		<display:column media="html" title="Eliminar" style="text-align:center;">
-			<a href="JavaScript:eliminar('${fila.nombre}', 'deleteColegio?codigo=${fila.codigo}')"><img src="resources/img/Borrar.png" alt="Ver" height="20" width="20"></a>
+			<a href="JavaScript:eliminar('${fila.str_colegio}', 'deleteColegio?int_idcolegio=${fila.int_idcolegio}')"><img src="resources/img/Borrar.png" alt="Ver" height="20" width="20"></a>
 		</display:column>
 	</display:table>
 

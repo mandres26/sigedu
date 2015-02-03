@@ -8,7 +8,7 @@ public interface ColegioDao {
 	public List<Colegio> list();
 	public int add(Colegio colegio);
 	public int update(Colegio colegio);
-	public int delete(int idColegio);
+	public int delete(int int_idcolegio);
 	public List<Colegio> find(Colegio colegio);
-	public Colegio find(int idColegio);
+	public Colegio find(int int_idcolegio);
 }
