@@ -1,0 +1,1187 @@
+CREATE TABLE SGCM_ANHO
+(
+	int_idanho           SERIAL NOT NULL ,
+	str_anho             character varying(4) NULL ,
+	str_anho_actual      character varying(4) NULL ,
+	int_idestado         INT NULL 
+);
+
+
+
+ALTER TABLE SGCM_ANHO
+	ADD  PRIMARY KEY (int_idanho);
+
+
+
+CREATE TABLE SGCM_AREA
+(
+	int_idarea           SERIAL NOT NULL ,
+	str_area             character varying(50) NULL ,
+	dte_fecha_creacion   DATE NULL ,
+	dte_fecha_modificacion DATE NULL ,
+	int_idtipo_area      INT NULL ,
+	int_idusuario_creacion INT NULL ,
+	int_idusuario_modificacion INT NULL ,
+	int_idestado         INT NULL 
+);
+
+
+
+ALTER TABLE SGCM_AREA
+	ADD  PRIMARY KEY (int_idarea);
+
+
+
+CREATE TABLE SGCM_COLE
+(
+	int_idcolegio        SERIAL NOT NULL ,
+	str_colegio          character varying(150) NULL ,
+	str_telefono1        character varying(18) NULL ,
+	str_telefono2        character varying(18) NULL ,
+	str_celular          character varying(18) NULL ,
+	str_direccion        character varying(150) NULL ,
+	dte_fecha_creacion   DATE NULL ,
+	dte_fecha_modificacion DATE NULL ,
+	int_cantidad_salones INT NULL ,
+	int_iddistrito       INT NULL ,
+	int_idusuario_creacion INT NULL ,
+	int_idusuario_modificacion INT NULL ,
+	int_idestado         INT NULL 
+);
+
+
+
+ALTER TABLE SGCM_COLE
+	ADD  PRIMARY KEY (int_idcolegio);
+
+
+
+CREATE TABLE SGCM_CUAD_CONT
+(
+	int_idcuaderno_control SERIAL NOT NULL ,
+	str_comunicado       character varying(250) NULL ,
+	dte_fecha_comunicado DATE NULL ,
+	int_idhorario        INT NULL ,
+	str_titulo           character varying(100) NULL ,
+	dte_fecha_creacion   DATE NULL ,
+	dte_fecha_modificacion DATE NULL ,
+	int_idusuario_creacion INT NULL ,
+	int_idusuario_modificacion INT NULL ,
+	int_idestado         INT NULL 
+);
+
+
+
+ALTER TABLE SGCM_CUAD_CONT
+	ADD  PRIMARY KEY (int_idcuaderno_control);
+
+
+
+CREATE TABLE SGCM_CURRI
+(
+	int_idcurricula      SERIAL NOT NULL ,
+	str_curricula        character varying(100) NULL ,
+	dte_fecha_creacion   DATE NULL ,
+	dte_fecha_modificacion DATE NULL ,
+	int_idusuario_creacion INT NULL ,
+	int_idusuario_modificacion INT NULL ,
+	int_idequivalencia   INT NULL ,
+	int_idanho           INT NULL ,
+	int_idestado         INT NULL 
+);
+
+
+
+ALTER TABLE SGCM_CURRI
+	ADD  PRIMARY KEY (int_idcurricula);
+
+
+
+CREATE TABLE SGCM_CURS
+(
+	int_idcurso          SERIAL NOT NULL ,
+	str_curso            character varying(100) NULL ,
+	dte_fecha_creacion   DATE NULL ,
+	dte_fecha_modificacion DATE NULL ,
+	int_idarea           INT NULL ,
+	int_idusuario_creacion INT NULL ,
+	int_idusuario_modificacion INT NULL ,
+	int_idestado         INT NULL 
+);
+
+
+
+ALTER TABLE SGCM_CURS
+	ADD  PRIMARY KEY (int_idcurso);
+
+
+
+CREATE TABLE SGCM_DCN
+(
+	int_iddcn            SERIAL NOT NULL ,
+	str_dcn              character varying(100) NULL ,
+	dte_fecha_inicio_vig DATE NULL ,
+	dte_fecha_fin_vig    DATE NULL ,
+	dte_fecha_creacion   DATE NULL ,
+	dte_fecha_modificacion DATE NULL ,
+	int_idmodalidad      INT NULL ,
+	int_idtipo_centro    INT NULL ,
+	int_idestado         INT NULL ,
+	int_idusuario_creacion INT NULL ,
+	int_idusuario_modificacion INT NULL 
+);
+
+
+
+ALTER TABLE SGCM_DCN
+	ADD  PRIMARY KEY (int_iddcn);
+
+
+
+CREATE TABLE SGCM_DIST
+(
+	int_iddistrito       SERIAL NOT NULL ,
+	str_distrito         character varying(100) NULL ,
+	chr_codigo_distrito  character varying(2) NULL ,
+	int_idprovincia      INT NULL 
+);
+
+
+
+ALTER TABLE SGCM_DIST
+	ADD  PRIMARY KEY (int_iddistrito);
+
+
+
+CREATE TABLE SGCM_DOCT
+(
+	int_iddocente        SERIAL NOT NULL ,
+	str_nombre           character varying(50) NULL ,
+	str_apellido_paterno character varying(50) NULL ,
+	str_apellido_materno character varying(50) NULL ,
+	str_direccion        character varying(100) NULL ,
+	str_telefono         character varying(18) NULL ,
+	str_celular          character varying(18) NULL ,
+	str_email            character varying(50) NULL ,
+	dte_fecha_creacion   DATE NULL ,
+	dte_fecha_modificacion DATE NULL ,
+	str_dni              character varying(8) NULL ,
+	int_iddistrito       INT NULL ,
+	dte_fecha_nacimiento DATE NULL ,
+	int_idusuario_creacion INT NULL ,
+	int_idusuario_modificacion INT NULL ,
+	int_idestado         INT NULL 
+);
+
+
+
+ALTER TABLE SGCM_DOCT
+	ADD  PRIMARY KEY (int_iddocente);
+
+
+
+CREATE TABLE SGCM_DPTO
+(
+	int_iddepartamento   INT NOT NULL ,
+	str_departamento     character varying(50) NULL ,
+	chr_codigo_departamento character varying(2) NULL 
+);
+
+
+
+ALTER TABLE SGCM_DPTO
+	ADD  PRIMARY KEY (int_iddepartamento);
+
+
+
+CREATE TABLE SGCM_EMPL
+(
+	int_idempleado       SERIAL NOT NULL ,
+	str_nombre           character varying(50) NULL ,
+	str_apellido_paterno character varying(50) NULL ,
+	str_apellido_materno character varying(50) NULL ,
+	str_direccion        character varying(100) NULL ,
+	str_telefono         character varying(18) NULL ,
+	str_celular          character varying(18) NULL ,
+	str_email            character varying(50) NULL ,
+	dte_fecha_creacion   DATE NULL ,
+	dte_fecha_modificacion DATE NULL ,
+	str_dni              character varying(8) NULL ,
+	int_iddistrito       INT NULL ,
+	int_idsexo           INT NULL ,
+	dte_fecha_nacimiento DATE NULL ,
+	int_idcolegio        INT NULL ,
+	int_idusuario_creacion INT NULL ,
+	int_idusuario_modificacion INT NULL ,
+	int_idestado         INT NULL 
+);
+
+
+
+ALTER TABLE SGCM_EMPL
+	ADD  PRIMARY KEY (int_idempleado);
+
+
+
+CREATE TABLE SGCM_ESCA_NOTA
+(
+	int_idescala_notas   SERIAL NOT NULL ,
+	str_escala_notas     character varying(50) NULL ,
+	dte_fecha_creacion   DATE NULL ,
+	dte_fecha_modificacion DATE NULL ,
+	int_idestado         INT NULL 
+);
+
+
+
+ALTER TABLE SGCM_ESCA_NOTA
+	ADD  PRIMARY KEY (int_idescala_notas);
+
+
+
+CREATE TABLE SGCM_GRAD
+(
+	int_idgrado          SERIAL NOT NULL ,
+	dte_fecha_creacion   DATE NULL ,
+	dte_fecha_modificacion DATE NULL ,
+	int_idnivel          INT NULL ,
+	int_idCiclo          INT NULL ,
+	int_idusuario_creacion INT NULL ,
+	int_idusuario_modificacion INT NULL ,
+	int_idestado         INT NULL 
+);
+
+
+
+ALTER TABLE SGCM_GRAD
+	ADD  PRIMARY KEY (int_idgrado);
+
+
+
+CREATE TABLE SGCM_IE
+(
+	int_idie             SERIAL NOT NULL ,
+	str_ie               character varying(150) NULL ,
+	str_codigo_modular   character varying(18) NULL ,
+	str_gestion          character varying(50) NULL ,
+	str_codigo_local     character varying(18) NULL ,
+	dte_fecha_creacion   DATE NULL ,
+	dte_fecha_modificacion DATE NULL ,
+	int_idnivel          INT NULL ,
+	int_idugel           INT NULL ,
+	int_idusuario_creacion INT NULL ,
+	int_idusuario_modificacion INT NULL ,
+	int_idcolegio        INT NULL ,
+	int_idestado         INT NULL 
+);
+
+
+
+ALTER TABLE SGCM_IE
+	ADD  PRIMARY KEY (int_idie);
+
+
+
+CREATE TABLE SGCM_NIVEL
+(
+	int_idnivel          SERIAL NOT NULL ,
+	str_nivel            character varying(50) NULL ,
+	dte_fecha_creacion   DATE NULL ,
+	dte_fecha_modificacion DATE NULL ,
+	int_idtipo_calificacion INT NULL ,
+	int_idestado         INT NULL 
+);
+
+
+
+ALTER TABLE SGCM_NIVEL
+	ADD  PRIMARY KEY (int_idnivel);
+
+
+
+CREATE TABLE SGCM_NOTA
+(
+	int_idnotas          SERIAL NOT NULL ,
+	int_nota             INT NULL ,
+	int_idcurso          INT NULL ,
+	int_idmatricula      INT NULL ,
+	int_idestado         INT NULL 
+);
+
+
+
+ALTER TABLE SGCM_NOTA
+	ADD  PRIMARY KEY (int_idnotas);
+
+
+
+CREATE TABLE SGCM_PADR_APOD
+(
+	int_idpadre_apoderado SERIAL NOT NULL ,
+	str_nombre           character varying(50) NULL ,
+	str_apellido_paterno character varying(50) NULL ,
+	str_apellido_materno character varying(50) NULL ,
+	str_direccion        character varying(100) NULL ,
+	str_telefono         character varying(18) NULL ,
+	str_celular          character varying(18) NULL ,
+	str_email            character varying(50) NULL ,
+	dte_fecha_creacion   DATE NULL ,
+	dte_fecha_modificacion DATE NULL ,
+	str_dni              character varying(8) NULL ,
+	int_iddistrito       INT NULL ,
+	int_idsexo           INT NULL ,
+	dte_fecha_nacimiento DATE NULL ,
+	int_idusuario_creacion INT NULL ,
+	int_idusuario_modificacion INT NULL ,
+	int_idestado         INT NULL 
+);
+
+
+
+ALTER TABLE SGCM_PADR_APOD
+	ADD  PRIMARY KEY (int_idpadre_apoderado);
+
+
+
+CREATE TABLE SGCM_PARA
+(
+	int_idParametro      SERIAL NOT NULL ,
+	str_parametro        character varying(150) NULL ,
+	int_tipo_parametro   INT NULL 
+);
+
+
+
+ALTER TABLE SGCM_PARA
+	ADD  PRIMARY KEY (int_idParametro);
+
+
+
+CREATE TABLE SGCM_PENS
+(
+	int_idpension        SERIAL NOT NULL ,
+	int_idmes            INT NULL ,
+	int_idestado         INT NULL ,
+	int_idmatricula      INT NULL ,
+	dte_fecha_creacion   DATE NULL ,
+	dte_fecha_modificacion DATE NULL ,
+	int_idusuario_creacion INT NULL ,
+	int_idusuario_modificacion INT NULL 
+);
+
+
+
+ALTER TABLE SGCM_PENS
+	ADD  PRIMARY KEY (int_idpension);
+
+
+
+CREATE TABLE SGCM_PERFIL
+(
+	int_idperfil         SERIAL NOT NULL ,
+	str_perfil           character varying(100) NULL ,
+	int_idestado         INT NULL 
+);
+
+
+
+ALTER TABLE SGCM_PERFIL
+	ADD  PRIMARY KEY (int_idperfil);
+
+
+
+CREATE TABLE SGCM_PERMISO
+(
+	int_idpermiso        SERIAL NOT NULL ,
+	str_permiso          character varying(150) NULL ,
+	int_idperfil         INT NULL ,
+	int_idestado         INT NULL 
+);
+
+
+
+ALTER TABLE SGCM_PERMISO
+	ADD  PRIMARY KEY (int_idpermiso);
+
+
+
+CREATE TABLE SGCM_PLC
+(
+	int_idplc            SERIAL NOT NULL ,
+	str_plc              character varying(150) NULL ,
+	dte_fecha_inicio     DATE NULL ,
+	dte_fecha_fin        DATE NULL ,
+	dte_fecha_creacion   DATE NULL ,
+	dte_fecha_modificacion DATE NULL ,
+	int_idanho           INT NULL ,
+	int_idusuario_creacion INT NULL ,
+	int_idusuario_modificacion INT NULL ,
+	int_idestado         INT NULL 
+);
+
+
+
+ALTER TABLE SGCM_PLC
+	ADD  PRIMARY KEY (int_idplc);
+
+
+
+CREATE TABLE SGCM_PROV
+(
+	int_idprovincia      SERIAL NOT NULL ,
+	str_provincia        character varying(100) NULL ,
+	chr_codigo_provincia character varying(2) NULL ,
+	int_iddepartamento   INT NULL 
+);
+
+
+
+ALTER TABLE SGCM_PROV
+	ADD  PRIMARY KEY (int_idprovincia);
+
+
+
+CREATE TABLE SGCM_SALO
+(
+	int_idsalon          SERIAL NOT NULL ,
+	str_salon            character varying(100) NULL ,
+	dte_fecha_creacion   DATE NULL ,
+	dte_fecha_modificacion DATE NULL ,
+	int_idcolegio        INT NULL ,
+	int_idusuario_creacion INT NULL ,
+	int_idusuario_modificacion INT NULL ,
+	int_idpabellon       INT NULL ,
+	int_idpiso           INT NULL ,
+	int_idestado         INT NULL 
+);
+
+
+
+ALTER TABLE SGCM_SALO
+	ADD  PRIMARY KEY (int_idsalon);
+
+
+
+CREATE TABLE SGCM_UGEL
+(
+	int_idugel           SERIAL NOT NULL ,
+	str_ugel             character varying(150) NULL ,
+	dte_fecha_creacion   DATE NULL ,
+	dte_fecha_modificacion DATE NULL ,
+	int_idusuario_creacion INT NULL ,
+	int_idusuario_modificacion INT NULL ,
+	int_iddre            INT NULL ,
+	int_idestado         INT NULL 
+);
+
+
+
+ALTER TABLE SGCM_UGEL
+	ADD  PRIMARY KEY (int_idugel);
+
+
+
+CREATE TABLE SGCM_USUA
+(
+	int_idusuario        SERIAL NOT NULL ,
+	str_nombre_completo  character varying(150) NULL ,
+	dte_fecha_creacion   DATE NULL ,
+	dte_fecha_modificacion DATE NULL ,
+	int_idusuario_creacion INT NULL ,
+	int_idusuario_modificacion INT NULL ,
+	int_idperfil         INT NULL ,
+	str_clave            character varying(50) NULL ,
+	int_idestado         INT NULL 
+);
+
+
+
+ALTER TABLE SGCM_USUA
+	ADD  PRIMARY KEY (int_idusuario);
+
+
+
+CREATE TABLE SGTC_ALUM
+(
+	int_idalumno         SERIAL NOT NULL ,
+	str_nombre           character varying(50) NULL ,
+	str_apellido_paterno character varying(50) NULL ,
+	str_apellido_materno character varying(50) NULL ,
+	dte_fecha_creacion   DATE NULL ,
+	dte_fecha_modificacion DATE NULL ,
+	str_dni              character varying(8) NULL ,
+	int_idpadre_apoderado INT NULL ,
+	int_iddistrito       INT NULL ,
+	int_idsexo           INT NULL ,
+	dte_fecha_nacimiento DATE NULL ,
+	str_telefono         character varying(18) NULL ,
+	str_celular          character varying(18) NULL ,
+	str_email            character varying(50) NULL ,
+	str_direccion        character varying(100) NULL ,
+	int_idusuario_creacion INT NULL ,
+	int_idusuario_modificacion INT NULL ,
+	int_idestado         INT NULL 
+);
+
+
+
+ALTER TABLE SGTC_ALUM
+	ADD  PRIMARY KEY (int_idalumno);
+
+
+
+CREATE TABLE SGTC_SECC
+(
+	int_idseccion        SERIAL NOT NULL ,
+	dte_fecha_creacion   DATE NULL ,
+	dte_fecha_modificacion DATE NULL ,
+	int_idsalon          INT NULL ,
+	int_idie             INT NULL ,
+	int_idanho           INT NULL ,
+	int_idturno          INT NULL ,
+	int_idusuario_creacion INT NULL ,
+	int_idusuario_modificacion INT NULL ,
+	int_idgrado          INT NULL ,
+	str_seccion          character varying(50) NULL ,
+	int_idestado         INT NULL 
+);
+
+
+
+ALTER TABLE SGTC_SECC
+	ADD  PRIMARY KEY (int_idseccion);
+
+
+
+CREATE TABLE SGTD_ASIS
+(
+	int_idasistencia     SERIAL NOT NULL ,
+	dte_fecha_asistencia DATE NULL ,
+	int_idvalor_asistencia INT NULL ,
+	int_idmatricula      INT NULL ,
+	dte_fecha_creacion   DATE NULL ,
+	dte_fecha_modificacion DATE NULL ,
+	int_idusuario_creacion INT NULL ,
+	int_idusuario_modificacion INT NULL ,
+	int_idestado         INT NULL 
+);
+
+
+
+ALTER TABLE SGTD_ASIS
+	ADD  PRIMARY KEY (int_idasistencia);
+
+
+
+CREATE TABLE SGTD_CONF_DCN
+(
+	int_idconfig_dcn     SERIAL NOT NULL ,
+	dte_fecha_creacion   DATE NULL ,
+	dte_fecha_modificacion DATE NULL ,
+	str_observaciones    character varying(200) NULL ,
+	int_idusuario_creacion INT NULL ,
+	int_idusuario_modificacion INT NULL ,
+	int_idarea           INT NULL ,
+	int_idnivel          INT NULL ,
+	int_iddcn            INT NULL ,
+	int_idestado         INT NULL ,
+	int_idanho           INT NULL 
+);
+
+
+
+ALTER TABLE SGTD_CONF_DCN
+	ADD  PRIMARY KEY (int_idconfig_dcn);
+
+
+
+CREATE TABLE SGTD_CONF_PLC
+(
+	int_idconfig_plc     SERIAL NOT NULL ,
+	dte_fecha_creacion   DATE NULL ,
+	dte_fecha_modificacion DATE NULL ,
+	str_observaciones    character varying(200) NULL ,
+	int_idcurso          INT NULL ,
+	int_idplc            INT NULL ,
+	int_idgrado          INT NULL ,
+	int_idusuario_creacion INT NULL ,
+	int_idusuario_modificacion INT NULL ,
+	int_idanho           INT NULL ,
+	int_idestado         INT NULL 
+);
+
+
+
+ALTER TABLE SGTD_CONF_PLC
+	ADD  PRIMARY KEY (int_idconfig_plc);
+
+
+
+CREATE TABLE SGTD_CUOT_PAGO
+(
+	int_idcuota_pago     SERIAL NOT NULL ,
+	int_numcuota         INT NULL ,
+	dte_fecha_vencimiento DATE NULL ,
+	dou_monto            DECIMAL(6,2) NULL,
+	dou_descuento        DECIMAL(6,2) NULL,
+	dou_pagado           DECIMAL(6,2) NULL,
+	dte_fecha_pago       DATE NULL ,
+	int_idestado         INT NULL ,
+	int_idmatricula      INT NULL ,
+	dte_fecha_creacion   DATE NULL ,
+	dte_fecha_modificacion DATE NULL ,
+	int_idusuario_creacion INT NULL ,
+	int_idusuario_modificacion INT NULL 
+);
+
+
+
+ALTER TABLE SGTD_CUOT_PAGO
+	ADD  PRIMARY KEY (int_idcuota_pago);
+
+
+
+CREATE TABLE SGTD_EQUI
+(
+	int_idequivalencia   SERIAL NOT NULL ,
+	int_idconfig_dcn     INT NULL ,
+	int_idconfig_plc     INT NULL ,
+	int_idusuario_creacion INT NULL ,
+	int_idusuario_modifcacion INT NULL ,
+	dte_fecha_creacion   DATE NULL ,
+	dte_fecha_modificacion DATE NULL ,
+	int_idestado         INT NULL 
+);
+
+
+
+ALTER TABLE SGTD_EQUI
+	ADD  PRIMARY KEY (int_idequivalencia);
+
+
+
+CREATE TABLE SGTD_HORA
+(
+	int_idhorario        SERIAL NOT NULL ,
+	dte_fecha_creacion   DATE NULL ,
+	dte_fecha_modificacion DATE NULL ,
+	dte_hora_inicio      TIMESTAMP NULL ,
+	dte_hora_fin         TIMESTAMP NULL ,
+	int_iddia            INT NULL ,
+	int_idturno          INT NULL ,
+	int_iddocente        INT NULL ,
+	int_idusuario_creacion INT NULL ,
+	int_idusuario_modificacion INT NULL ,
+	int_idmatricula      INT NULL ,
+	int_idconfig_plc     INT NULL ,
+	int_idestado         INT NULL 
+);
+
+
+
+ALTER TABLE SGTD_HORA
+	ADD  PRIMARY KEY (int_idhorario);
+
+
+
+CREATE TABLE SGTD_MATR
+(
+	int_idmatricula      SERIAL NOT NULL ,
+	str_observaciones    character varying(250) NULL ,
+	int_idseccion        INT NULL ,
+	int_idanho           INT NULL ,
+	int_idalumno         INT NULL ,
+	dte_fecha_creacion   DATE NULL ,
+	dte_fecha_modificacion DATE NULL ,
+	int_idusuario_creacion INT NULL ,
+	int_idusuario_modificacion INT NULL ,
+	int_idie             INT NULL ,
+	int_idestado         INT NULL 
+);
+
+
+
+ALTER TABLE SGTD_MATR
+	ADD  PRIMARY KEY (int_idmatricula);
+
+
+
+ALTER TABLE SGCM_ANHO
+	ADD (FOREIGN KEY (int_idestado) REFERENCES SGCM_PARA (int_idParametro) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGCM_AREA
+	ADD (FOREIGN KEY (int_idtipo_area) REFERENCES SGCM_PARA (int_idParametro) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGCM_AREA
+	ADD (FOREIGN KEY (int_idestado) REFERENCES SGCM_PARA (int_idParametro) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGCM_COLE
+	ADD (FOREIGN KEY (int_iddistrito) REFERENCES SGCM_DIST (int_iddistrito) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGCM_COLE
+	ADD (FOREIGN KEY (int_idestado) REFERENCES SGCM_PARA (int_idParametro) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGCM_CUAD_CONT
+	ADD (FOREIGN KEY (int_idhorario) REFERENCES SGTD_HORA (int_idhorario) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGCM_CUAD_CONT
+	ADD (FOREIGN KEY (int_idestado) REFERENCES SGCM_PARA (int_idParametro) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGCM_CURRI
+	ADD (FOREIGN KEY (int_idequivalencia) REFERENCES SGTD_EQUI (int_idequivalencia) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGCM_CURRI
+	ADD (FOREIGN KEY (int_idanho) REFERENCES SGCM_ANHO (int_idanho) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGCM_CURRI
+	ADD (FOREIGN KEY (int_idestado) REFERENCES SGCM_PARA (int_idParametro) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGCM_CURS
+	ADD (FOREIGN KEY (int_idarea) REFERENCES SGCM_AREA (int_idarea) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGCM_CURS
+	ADD (FOREIGN KEY (int_idestado) REFERENCES SGCM_PARA (int_idParametro) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGCM_DCN
+	ADD (FOREIGN KEY (int_idmodalidad) REFERENCES SGCM_PARA (int_idParametro) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGCM_DCN
+	ADD (FOREIGN KEY (int_idtipo_centro) REFERENCES SGCM_PARA (int_idParametro) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGCM_DCN
+	ADD (FOREIGN KEY (int_idestado) REFERENCES SGCM_PARA (int_idParametro) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGCM_DIST
+	ADD (FOREIGN KEY (int_idprovincia) REFERENCES SGCM_PROV (int_idprovincia) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGCM_DOCT
+	ADD (FOREIGN KEY (int_iddistrito) REFERENCES SGCM_DIST (int_iddistrito) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGCM_DOCT
+	ADD (FOREIGN KEY (int_idestado) REFERENCES SGCM_PARA (int_idParametro) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGCM_EMPL
+	ADD (FOREIGN KEY (int_iddistrito) REFERENCES SGCM_DIST (int_iddistrito) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGCM_EMPL
+	ADD (FOREIGN KEY (int_idsexo) REFERENCES SGCM_PARA (int_idParametro) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGCM_EMPL
+	ADD (FOREIGN KEY (int_idcolegio) REFERENCES SGCM_COLE (int_idcolegio) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGCM_EMPL
+	ADD (FOREIGN KEY (int_idestado) REFERENCES SGCM_PARA (int_idParametro) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGCM_ESCA_NOTA
+	ADD (FOREIGN KEY (int_idestado) REFERENCES SGCM_PARA (int_idParametro) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGCM_GRAD
+	ADD (FOREIGN KEY (int_idnivel) REFERENCES SGCM_NIVEL (int_idnivel) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGCM_GRAD
+	ADD (FOREIGN KEY (int_idCiclo) REFERENCES SGCM_PARA (int_idParametro) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGCM_GRAD
+	ADD (FOREIGN KEY (int_idestado) REFERENCES SGCM_PARA (int_idParametro) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGCM_IE
+	ADD (FOREIGN KEY (int_idnivel) REFERENCES SGCM_NIVEL (int_idnivel) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGCM_IE
+	ADD (FOREIGN KEY (int_idugel) REFERENCES SGCM_UGEL (int_idugel) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGCM_IE
+	ADD (FOREIGN KEY (int_idcolegio) REFERENCES SGCM_COLE (int_idcolegio) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGCM_IE
+	ADD (FOREIGN KEY (int_idestado) REFERENCES SGCM_PARA (int_idParametro) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGCM_NIVEL
+	ADD (FOREIGN KEY (int_idtipo_calificacion) REFERENCES SGCM_PARA (int_idParametro) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGCM_NIVEL
+	ADD (FOREIGN KEY (int_idestado) REFERENCES SGCM_PARA (int_idParametro) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGCM_NOTA
+	ADD (FOREIGN KEY (int_idcurso) REFERENCES SGCM_CURS (int_idcurso) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGCM_NOTA
+	ADD (FOREIGN KEY (int_idmatricula) REFERENCES SGTD_MATR (int_idmatricula) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGCM_NOTA
+	ADD (FOREIGN KEY (int_idestado) REFERENCES SGCM_PARA (int_idParametro) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGCM_PADR_APOD
+	ADD (FOREIGN KEY (int_iddistrito) REFERENCES SGCM_DIST (int_iddistrito) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGCM_PADR_APOD
+	ADD (FOREIGN KEY (int_idsexo) REFERENCES SGCM_PARA (int_idParametro) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGCM_PADR_APOD
+	ADD (FOREIGN KEY (int_idestado) REFERENCES SGCM_PARA (int_idParametro) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGCM_PENS
+	ADD (FOREIGN KEY (int_idmes) REFERENCES SGCM_PARA (int_idParametro) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGCM_PENS
+	ADD (FOREIGN KEY (int_idestado) REFERENCES SGCM_PARA (int_idParametro) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGCM_PENS
+	ADD (FOREIGN KEY (int_idmatricula) REFERENCES SGTD_MATR (int_idmatricula) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGCM_PENS
+	ADD (FOREIGN KEY (int_idestado) REFERENCES SGCM_PARA (int_idParametro) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGCM_PERFIL
+	ADD (FOREIGN KEY (int_idestado) REFERENCES SGCM_PARA (int_idParametro) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGCM_PERMISO
+	ADD (FOREIGN KEY (int_idperfil) REFERENCES SGCM_PERFIL (int_idperfil) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGCM_PERMISO
+	ADD (FOREIGN KEY (int_idestado) REFERENCES SGCM_PARA (int_idParametro) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGCM_PLC
+	ADD (FOREIGN KEY (int_idanho) REFERENCES SGCM_ANHO (int_idanho) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGCM_PLC
+	ADD (FOREIGN KEY (int_idestado) REFERENCES SGCM_PARA (int_idParametro) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGCM_PROV
+	ADD (FOREIGN KEY (int_iddepartamento) REFERENCES SGCM_DPTO (int_iddepartamento) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGCM_SALO
+	ADD (FOREIGN KEY (int_idcolegio) REFERENCES SGCM_COLE (int_idcolegio) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGCM_SALO
+	ADD (FOREIGN KEY (int_idpabellon) REFERENCES SGCM_PARA (int_idParametro) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGCM_SALO
+	ADD (FOREIGN KEY (int_idpiso) REFERENCES SGCM_PARA (int_idParametro) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGCM_SALO
+	ADD (FOREIGN KEY (int_idestado) REFERENCES SGCM_PARA (int_idParametro) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGCM_UGEL
+	ADD (FOREIGN KEY (int_iddre) REFERENCES SGCM_PARA (int_idParametro) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGCM_UGEL
+	ADD (FOREIGN KEY (int_idestado) REFERENCES SGCM_PARA (int_idParametro) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGCM_USUA
+	ADD (FOREIGN KEY (int_idperfil) REFERENCES SGCM_PERFIL (int_idperfil) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGCM_USUA
+	ADD (FOREIGN KEY (int_idestado) REFERENCES SGCM_PARA (int_idParametro) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGTC_ALUM
+	ADD (FOREIGN KEY (int_idpadre_apoderado) REFERENCES SGCM_PADR_APOD (int_idpadre_apoderado) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGTC_ALUM
+	ADD (FOREIGN KEY (int_iddistrito) REFERENCES SGCM_DIST (int_iddistrito) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGTC_ALUM
+	ADD (FOREIGN KEY (int_idsexo) REFERENCES SGCM_PARA (int_idParametro) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGTC_ALUM
+	ADD (FOREIGN KEY (int_idestado) REFERENCES SGCM_PARA (int_idParametro) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGTC_SECC
+	ADD (FOREIGN KEY (int_idsalon) REFERENCES SGCM_SALO (int_idsalon) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGTC_SECC
+	ADD (FOREIGN KEY (int_idie) REFERENCES SGCM_IE (int_idie) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGTC_SECC
+	ADD (FOREIGN KEY (int_idanho) REFERENCES SGCM_PARA (int_idParametro) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGTC_SECC
+	ADD (FOREIGN KEY (int_idturno) REFERENCES SGCM_PARA (int_idParametro) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGTC_SECC
+	ADD (FOREIGN KEY (int_idgrado) REFERENCES SGCM_GRAD (int_idgrado) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGTC_SECC
+	ADD (FOREIGN KEY (int_idanho) REFERENCES SGCM_ANHO (int_idanho) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGTC_SECC
+	ADD (FOREIGN KEY (int_idestado) REFERENCES SGCM_PARA (int_idParametro) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGTD_ASIS
+	ADD (FOREIGN KEY (int_idvalor_asistencia) REFERENCES SGCM_PARA (int_idParametro) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGTD_ASIS
+	ADD (FOREIGN KEY (int_idmatricula) REFERENCES SGTD_MATR (int_idmatricula) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGTD_ASIS
+	ADD (FOREIGN KEY (int_idestado) REFERENCES SGCM_PARA (int_idParametro) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGTD_CONF_DCN
+	ADD (FOREIGN KEY (int_idarea) REFERENCES SGCM_AREA (int_idarea) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGTD_CONF_DCN
+	ADD (FOREIGN KEY (int_idnivel) REFERENCES SGCM_NIVEL (int_idnivel) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGTD_CONF_DCN
+	ADD (FOREIGN KEY (int_iddcn) REFERENCES SGCM_DCN (int_iddcn) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGTD_CONF_DCN
+	ADD (FOREIGN KEY (int_idestado) REFERENCES SGCM_PARA (int_idParametro) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGTD_CONF_DCN
+	ADD (FOREIGN KEY (int_idanho) REFERENCES SGCM_ANHO (int_idanho) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGTD_CONF_PLC
+	ADD (FOREIGN KEY (int_idcurso) REFERENCES SGCM_CURS (int_idcurso) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGTD_CONF_PLC
+	ADD (FOREIGN KEY (int_idplc) REFERENCES SGCM_PLC (int_idplc) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGTD_CONF_PLC
+	ADD (FOREIGN KEY (int_idgrado) REFERENCES SGCM_GRAD (int_idgrado) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGTD_CONF_PLC
+	ADD (FOREIGN KEY (int_idanho) REFERENCES SGCM_ANHO (int_idanho) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGTD_CONF_PLC
+	ADD (FOREIGN KEY (int_idestado) REFERENCES SGCM_PARA (int_idParametro) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGTD_CUOT_PAGO
+	ADD (FOREIGN KEY (int_idestado) REFERENCES SGCM_PARA (int_idParametro) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGTD_CUOT_PAGO
+	ADD (FOREIGN KEY (int_idmatricula) REFERENCES SGTD_MATR (int_idmatricula) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGTD_EQUI
+	ADD (FOREIGN KEY (int_idconfig_dcn) REFERENCES SGTD_CONF_DCN (int_idconfig_dcn) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGTD_EQUI
+	ADD (FOREIGN KEY (int_idconfig_plc) REFERENCES SGTD_CONF_PLC (int_idconfig_plc) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGTD_EQUI
+	ADD (FOREIGN KEY (int_idestado) REFERENCES SGCM_PARA (int_idParametro) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGTD_HORA
+	ADD (FOREIGN KEY (int_iddia) REFERENCES SGCM_PARA (int_idParametro) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGTD_HORA
+	ADD (FOREIGN KEY (int_idturno) REFERENCES SGCM_PARA (int_idParametro) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGTD_HORA
+	ADD (FOREIGN KEY (int_iddocente) REFERENCES SGCM_DOCT (int_iddocente) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGTD_HORA
+	ADD (FOREIGN KEY (int_idmatricula) REFERENCES SGTD_MATR (int_idmatricula) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGTD_HORA
+	ADD (FOREIGN KEY (int_idconfig_plc) REFERENCES SGTD_CONF_PLC (int_idconfig_plc) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGTD_HORA
+	ADD (FOREIGN KEY (int_idestado) REFERENCES SGCM_PARA (int_idParametro) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGTD_MATR
+	ADD (FOREIGN KEY (int_idseccion) REFERENCES SGTC_SECC (int_idseccion) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGTD_MATR
+	ADD (FOREIGN KEY (int_idanho) REFERENCES SGCM_ANHO (int_idanho) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGTD_MATR
+	ADD (FOREIGN KEY (int_idalumno) REFERENCES SGTC_ALUM (int_idalumno) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGTD_MATR
+	ADD (FOREIGN KEY (int_idie) REFERENCES SGCM_IE (int_idie) ON DELETE SET NULL);
+
+
+
+ALTER TABLE SGTD_MATR
+	ADD (FOREIGN KEY (int_idestado) REFERENCES SGCM_PARA (int_idParametro) ON DELETE SET NULL);
+
+
