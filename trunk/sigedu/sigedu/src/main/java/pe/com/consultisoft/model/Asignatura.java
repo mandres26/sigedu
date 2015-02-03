@@ -8,29 +8,28 @@ import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 @Entity
-@Table(name="curso")
+@Table(name="sgcm_curs")
 public class Asignatura {
 	@Id	
-	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator="curso_codigo_seq")
-    @SequenceGenerator(name="curso_codigo_seq", sequenceName="curso_codigo_seq", allocationSize=1)
-	@Column(name="codigo")
-	private Integer codigo;
-	@Column(name="nombre")
-	private String nombre;
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator="sgcm_curs_int_idcurso_seq")
+    @SequenceGenerator(name="sgcm_curs_int_idcurso_seq", sequenceName="sgcm_curs_int_idcurso_seq", allocationSize=1)
+	@Column(name="int_idcurso")
+	private Integer int_idcurso;
+	@Column(name="str_curso")
+	private String str_curso;
 	@Column(name="estado")
 	private String estado;
-	
-	public Integer getCodigo() {
-		return codigo;
+	public Integer getInt_idcurso() {
+		return int_idcurso;
 	}
-	public void setCodigo(Integer codigo) {
-		this.codigo = codigo;
+	public void setInt_idcurso(Integer int_idcurso) {
+		this.int_idcurso = int_idcurso;
 	}
-	public String getNombre() {
-		return nombre;
+	public String getStr_curso() {
+		return str_curso;
 	}
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
+	public void setStr_curso(String str_curso) {
+		this.str_curso = str_curso;
 	}
 	public String getEstado() {
 		return estado;
@@ -38,6 +37,8 @@ public class Asignatura {
 	public void setEstado(String estado) {
 		this.estado = estado;
 	}
+	
+	
 	
 	
 }

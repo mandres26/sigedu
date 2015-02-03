@@ -50,8 +50,8 @@ function editar(int_idcolegio){
 			<tr>
 				<td>Estado:</td>
 				<td>					
-					<c:if test="${colegio.chr_estado=='A'}">Activo</c:if>
-					<c:if test="${colegio.chr_estado=='I'}">Inactivo</c:if>
+					<c:if test="${colegio.int_idestado=='1'}">Activo</c:if>
+					<c:if test="${colegio.int_idestado=='2'}">Inactivo</c:if>
 				</td>
 			</tr>
 			<tr>

@@ -18,15 +18,17 @@ public class ColegioValidator implements Validator{
 
 	@Override
 	public void validate(Object target, Errors errors) {
-		  ValidationUtils.rejectIfEmptyOrWhitespace(errors, "nombre",
-	                "required.nombre", "El campo Nombre del Colegio es obligatorio.");
-		  ValidationUtils.rejectIfEmptyOrWhitespace(errors, "telefono1",
-	                "required.telefono1", "El campo teléfono 1 es obligatorio.");	         
-		  ValidationUtils.rejectIfEmptyOrWhitespace(errors, "telefono2",
-	                "required.telefono2", "El campo teléfono 2 es obligatorio.");
-		  ValidationUtils.rejectIfEmptyOrWhitespace(errors, "celular",
-	                "required.celular", "El campo celular es obligatorio.");
-		  ValidationUtils.rejectIfEmptyOrWhitespace(errors, "direccion",
-	                "required.direccion", "El campo dirección es obligatorio.");
+		  ValidationUtils.rejectIfEmptyOrWhitespace(errors, "str_colegio",
+	                "required.str_colegio", "El campo Nombre del Colegio es obligatorio.");
+		  ValidationUtils.rejectIfEmptyOrWhitespace(errors, "str_telefono1",
+	                "required.str_telefono1", "El campo teléfono 1 es obligatorio.");	         
+		  ValidationUtils.rejectIfEmptyOrWhitespace(errors, "str_telefono2",
+	                "required.str_telefono2", "El campo teléfono 2 es obligatorio.");
+		  ValidationUtils.rejectIfEmptyOrWhitespace(errors, "str_celular",
+	                "required.str_celular", "El campo celular es obligatorio.");
+		  ValidationUtils.rejectIfEmptyOrWhitespace(errors, "str_direccion",
+	                "required.str_direccion", "El campo dirección es obligatorio.");
+		  ValidationUtils.rejectIfEmptyOrWhitespace(errors, "str_direccion",
+	                "required.str_direccion", "El campo dirección es obligatorio.");
 	}
 }
