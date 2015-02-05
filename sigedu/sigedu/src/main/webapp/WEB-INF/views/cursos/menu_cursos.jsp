@@ -20,14 +20,15 @@
 				<td colspan="5">&nbsp;</td>
 			</tr>
 			<tr>
-				<td><a href="menuColegio" cssClass="Navegador"><img
-						src="resources/img/colegio.jpg" width="100" height="100" border="0" />Colegio</a></td>
+				<td><a href="listColegio" cssClass="Navegador">
+					<img src="resources/img/colegio.jpg" width="100" height="100" border="0" />Colegio</a></td>
 				<td>&nbsp;</td>
-				<td><a href="menuAsignatura" cssClass="Navegador"><img
+				
+				<td><a href="listAsignatura" cssClass="Navegador"><img
 						src="resources/img/asignatura.jpg" width="100" height="100" border="0" />Asignatura</a></td>
 				<td>&nbsp;</td>
-			
-				<td><a href="menuCurricula" cssClass="Navegador"><img
+				
+				<td><a href="listCurricula" cssClass="Navegador"><img
 						src="resources/img/curricula.jpg" width="100" height="100" border="0" />Curricula</a></td>
 				<td>&nbsp;</td>
 				<td><a href="menuHorario" cssClass="Navegador"><img

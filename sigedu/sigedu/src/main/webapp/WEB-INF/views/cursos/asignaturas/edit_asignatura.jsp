@@ -15,6 +15,12 @@
 <title>SIGEDU</title>
 </head>
 <body>
+	<table>
+		<tr>
+			<td><img src="resources/img/logoConsultisoft.png" width="350" height="100" border="0"></td>
+		</tr>
+	</table>
+	<hr>
 	<h2 class="Titulo">Editar Asignatura</h2>
 	<hr>
 	
@@ -28,22 +34,26 @@
     </h3>
 	<form:form method="post" action="updateAsignatura" commandName="asignatura">
 
-		<table>
+		<table width="500">
 			<tr>
-				<td>C&oacute;digo:</td>
-				<td><form:input
-						path="codigo" readonly="true"/></td>
+				<td width="100">C&oacute;digo:</td>
+				<td width="300"><form:input path="int_idcurso" readonly="true"/></td>
 			</tr>
 			<tr>
-				<td>Nombre:</td>
-				<td><form:errors path="nombre" cssClass="error" /><br> <form:input
-						path="nombre" /></td>
+				<td width="100">Curso:</td>
+				<td width="300"><form:errors path="str_curso" cssClass="error" />
+								<form:input	path="str_curso" /></td>
+			</tr>
+			<tr>
+				<td width="100">Fecha modificaci&oacute;n:</td>
+				<td width="300"><form:errors path="dte_fecha_modificacion" cssClass="error" />
+								<form:input type="date" name="fecha_modificacion" path="dte_fecha_modificacion" /></td>
 			</tr>
 			<tr>
 				<td>Estado:</td>
-				<td><form:radiobutton path="estado" value="A" />Activo 
+				<td><form:radiobutton path="int_idestado" value=1 />Activo 
 					&nbsp;
-					<form:radiobutton path="estado" value="I" />Inactivo</td>
+					<form:radiobutton path="int_idestado" value=2 />Inactivo</td>
 			</tr>
 			
 			<tr>
@@ -62,6 +72,6 @@
 		</table>
 	</form:form>
 	
-    <a href="menuAsignatura" cssClass="Navegador"><img src="resources/img/alumno.jpg" width="50" height="50" border="0" />Ir a Men&uacute; Asignatura</a>
+    <a href="listAsignatura" cssClass="Navegador"><img src="resources/img/alumno.jpg" width="50" height="50" border="0" />Ir a Mantenimiento Asignatura</a>
 </body>
 </html>

@@ -25,7 +25,7 @@ public class CurriculaDaoImpl implements CurriculaDao {
 	public List<Curricula> list() {
 		try{
 			List<Curricula> listCurriculas = new ArrayList();
-			listCurriculas = sessionFactory.getCurrentSession().createQuery("from Curricula order by nombre").list();
+			listCurriculas = sessionFactory.getCurrentSession().createQuery("from Curricula order by str_curricula").list();
 			return listCurriculas;
 		}
 		catch(Exception ex){
@@ -39,9 +39,9 @@ public class CurriculaDaoImpl implements CurriculaDao {
 	@Override
 	public int add(Curricula curricula) {
 		try{
-			curricula.setEstado(Constantes.Estados.EST_ACTIVO);
+			curricula.setInt_idestado(Constantes.Estados.EST_ACTIVO1);
 			sessionFactory.getCurrentSession().save(curricula);
-			//sessionFactory.getCurrentSession().flush();
+			sessionFactory.getCurrentSession().flush();
 			return 0;
 		}
 		catch(Exception ex){
@@ -66,10 +66,10 @@ public class CurriculaDaoImpl implements CurriculaDao {
 
 
 	@Override
-	public int delete(int idCurricula) {
+	public int delete(int int_idcurricula) {
 		try{
-			Curricula curricula = (Curricula)sessionFactory.getCurrentSession().get(Curricula.class, idCurricula);
-			curricula.setEstado(Constantes.Estados.EST_INACTIVO);
+			Curricula curricula = (Curricula)sessionFactory.getCurrentSession().get(Curricula.class, int_idcurricula);
+			curricula.setInt_idestado(Constantes.Estados.EST_INACTIVO1);
 			sessionFactory.getCurrentSession().save(curricula);
 			return 0;
 		}
@@ -84,7 +84,7 @@ public class CurriculaDaoImpl implements CurriculaDao {
 	public List<Curricula> find(Curricula curricula) {
 		try{
 			List<Curricula> listCurriculas = new ArrayList();
-			String query = "from Curricula where nombre like '"+curricula.getNombre().trim()+"%'";
+			String query = "from Curricula where str_curricula like '%"+curricula.getStr_curricula().trim()+"%'";
 			listCurriculas = sessionFactory.getCurrentSession().createQuery(query).list();
 			return listCurriculas;
 		}
@@ -96,9 +96,9 @@ public class CurriculaDaoImpl implements CurriculaDao {
 
 
 	@Override
-	public Curricula find(int idCurricula) {
+	public Curricula find(int int_idcurricula) {
 		try{
-			return (Curricula) sessionFactory.getCurrentSession().get(Curricula.class, idCurricula);
+			return (Curricula) sessionFactory.getCurrentSession().get(Curricula.class, int_idcurricula);
 		}
 		catch(Exception ex){
 			logger.error(ex.getMessage());

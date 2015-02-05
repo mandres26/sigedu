@@ -15,7 +15,13 @@
 <title>SIGEDU</title>
 </head>
 <body>
-	<h2 class="Titulo">Nuevo Colegio</h2>
+	<table>
+		<tr>
+			<td><img src="resources/img/logoConsultisoft.png" width="350" height="100" border="0"></td>
+		</tr>
+	</table>
+	<hr>
+	<h2 class="Titulo">Registro Nuevo Colegio</h2>
 	<hr>
 	
 	<c:if test="${resultado==0}">
@@ -28,38 +34,91 @@
     </h3>
 	<form:form method="post" action="addColegio" commandName="colegio">
 
-		<table>
+	<table width="1000" >
+	<tr>
+	<td>
+		<table width="500">
 			<tr>
-				<td>Nombre Colegio:</td>
-				<td><form:errors path="str_colegio" cssClass="error" /><br> 
-					<form:input path="str_colegio" /></td>
-			</tr>
-			<tr>
-				<td>Tel&eacute;fono 1:</td>
-				<td><form:errors path="str_telefono1" cssClass="error" /><br> <form:input
-						path="str_telefono1" /></td>
-			</tr>
-			<tr>
-				<td>Tel&eacute;fono 2:</td>
-				<td><form:errors path="str_telefono2" cssClass="error" /><br> <form:input
-						path="str_telefono2" /></td>
-			</tr>
-			<tr>
-				<td>Celular:</td>
-				<td><form:errors path="str_celular" cssClass="error" /><br> <form:input
-						path="str_celular" /></td>
-			</tr>
-			<tr>
-				<td>Direcci&oacute;n:</td>
-				<td><form:errors path="str_direccion" cssClass="error" /><br> <form:input
-						path="str_direccion" /></td>
-			</tr>
-			<tr>
-				<td>Cantidad Salones:</td>
-				<td><form:errors path="int_cantidad_salones" cssClass="error" /><br> <form:input
-						path="int_cantidad_salones" /></td>
+				<td width="200">Colegio:</td>
+				<td width="200"><form:errors path="str_colegio" cssClass="error" />
+								<form:input path="str_colegio" size="50"/><br></td>
 			</tr>
 			
+			<tr>
+				<td width="200">Tel&eacute;fono 1:</td>
+				<td width="200"><form:errors path="str_telefono1" cssClass="error" /> 
+								<form:input path="str_telefono1" size="30"/><br></td>
+			</tr>
+			<tr>
+				<td width="200">Tel&eacute;fono 2:</td>
+				<td width="200"><form:errors path="str_telefono2" cssClass="error" />
+				 				<form:input path="str_telefono2" size="30" /><br></td>
+			</tr>
+			<tr>
+				<td width="200">Celular:</td>
+				<td width="200"><form:errors path="str_celular" cssClass="error" />
+								<form:input path="str_celular"  size="30"/><br></td>
+			</tr>
+			
+		</table>
+	</td>
+	<td>
+		<table width="500" >
+			<tr>
+				<td width="200">Direcci&oacute;n:</td>
+				<td width="200"><form:errors path="str_direccion" cssClass="error" />
+								<form:input	path="str_direccion" size="50"/></td>
+			</tr>
+			<!-- tr  >
+				<td width="200">Departamento:</td>
+				<td width="200"><select name="listarDepartamento" >
+					<option selected> Seleccione departamento</option>
+					<option value="1">Lima</option>
+					<option value="2">Lambayeque</option>
+					<option value="3">Piura</option>
+					</select>
+				</td>
+			</tr -->
+			<!--  tr>
+				<td width="200">Provincia:</td>
+				<td width="200"><select name="listarProvincia" >
+					<option selected> Seleccione provincia</option>
+					<option value="1">Lima</option>
+					</select>
+				</td>
+			</tr -->
+			<tr>
+				<td width="200">Distrito: </td>
+				<td width="200"><select name="listarDistrito" >
+					<option selected> Seleccione distrito</option>
+					<option value="1">Cercado</option>
+					<option value="2">San Isidro</option>
+					<option value="3">Lince</option>
+					<option value="4">Breña</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td width="200">Cant. Salones:</td>
+				<td width="200"><form:errors path="int_cantidad_salones" cssClass="error" /> 
+								<form:input path="int_cantidad_salones"  size="10"/></td>
+			</tr>
+			<tr>
+				<td width="200">Fecha creaci&oacute;n:</td>
+				<td width="200"><form:errors path="dte_fecha_creacion" cssClass="error" /> 
+					<form:input type="date" name="fecha_creacion" path="dte_fecha_creacion" /></td>
+			</tr>
+			<tr>
+				<td width="200">Fecha modificaci&oacute;n:</td>
+				<td width="200"><form:errors path="dte_fecha_modificacion" cssClass="error" />
+					<form:input type="date" name="fecha_modificacion" path="dte_fecha_modificacion" /></td>
+			</tr>
+		</table>
+	</td>
+	</tr>
+	</table>
+	<br>
+		<table>	
 			<tr>
 				<td>
 					<button type="reset" title="Limpiar">
@@ -77,6 +136,6 @@
 		
 	</form:form>
 	
-    <a href="menuColegio" cssClass="Navegador"><img src="resources/img/alumno.jpg" width="50" height="50" border="0" />Ir a Men&uacute; Colegio</a>
+    <a href="listColegio" cssClass="Navegador"><img src="resources/img/alumno.jpg" width="50" height="50" border="0" />Ir a Mantenimiento Colegio</a>
 </body>
 </html>

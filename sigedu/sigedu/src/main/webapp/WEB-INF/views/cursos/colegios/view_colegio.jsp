@@ -19,6 +19,12 @@ function editar(int_idcolegio){
 </head>
 
 <body>
+	<table>
+		<tr>
+			<td><img src="resources/img/logoConsultisoft.png" width="350" height="100" border="0"></td>
+		</tr>
+	</table>
+	<hr>
 	<h2 class="Titulo">Datos del Colegio</h2>
 	<hr>
 		<div id="divView">
@@ -50,8 +56,8 @@ function editar(int_idcolegio){
 			<tr>
 				<td>Estado:</td>
 				<td>					
-					<c:if test="${colegio.int_idestado=='1'}">Activo</c:if>
-					<c:if test="${colegio.int_idestado=='2'}">Inactivo</c:if>
+					<c:if test="${colegio.int_idestado==1}">Activo</c:if>
+					<c:if test="${colegio.int_idestado==2}">Inactivo</c:if>
 				</td>
 			</tr>
 			<tr>
@@ -66,6 +72,6 @@ function editar(int_idcolegio){
 			</tr>			
 		</table>
 	</div>
-	<a href="menuColegio" cssClass="Navegador"><img src="resources/img/alumno.jpg" width="50" height="50" border="0" />Ir a Men&uacute; Colegio</a>
+	<a href="listColegio" cssClass="Navegador"><img src="resources/img/colegio.jpg" width="50" height="50" border="0" />Ir a Mantenimiento Colegio</a>
 </body>
 </html>

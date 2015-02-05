@@ -16,21 +16,33 @@
 <title>SIGEDU</title>
 </head>
 <body>
-	<h3 class="Titulo">Buscar Asignaturas</h3>
+	
+	<table>
+		<tr>
+			<td><img src="resources/img/logoConsultisoft.png" width="350" height="100" border="0"></td>
+		</tr>
+	</table>
+	<hr>
+	<h3 class="Titulo">Mantenimiento de Asignaturas</h3>
     <hr>
         
          <form:form action="findAsignatura" method="post" commandName="asignatura" >
-            <table>
+            
+            <table width="400" >
             	<tr>
-					<td>Nombre:</td>
-					<td><form:input	path="nombre" /></td>
+					<td width="100">Asignatura:</td>
+					<td width="300"><form:input	path="str_curso" width="200" /></td>
 				</tr>
-				
+			</table>
+			<table>	
                 <tr>
                     <td>
-                        <button type="submit" title="Buscar Asignatura">
+                    	<br>
+                        <button type="submit" title="Buscar asignatura">
                             <img src="resources/img/Buscar.png" width="50" height="50" border="0">
                         </button>
+                        <a href="formAsignatura" cssClass="Navegador"><img src="resources/img/cursos.jpg" width="50" height="50" border="0" title="Nueva asignatura"></a>
+    					<br>
                     </td>
                 </tr>
             </table>
@@ -47,7 +59,7 @@
 		${mensaje}
     </h3>
     <br>
-	<display:table 
+    <display:table 
 		id="fila"
 		export="true" 
 		pagesize="10" 
@@ -60,21 +72,25 @@
 		<display:setProperty name="export.csv" value="false" /> 
 
 		<display:column value="${fila_rowNum}" title="Nro." />
-		<display:column property="nombre" title="Nombre" sortable="true"	style="width:300px " />
+		<display:column property="str_curso" title="Asignatura" sortable="true" style="width:400px " />
+		<display:column property="dte_fecha_creacion" title="Fec. Creación" sortable="true" style="width:200px" />
+		<display:column property="dte_fecha_modificacion" title="Fec. Modificación" sortable="true" style="width:200px" />
 		<display:column title="Estado">
-			<c:if test="${fila.estado=='A'}">Activo</c:if>
-			<c:if test="${fila.estado=='I'}">Inactivo</c:if>
+			<c:if test="${fila.int_idestado==1}">Activo</c:if>
+			<c:if test="${fila.int_idestado==2}">Inactivo</c:if>
 		</display:column>
 		<display:column media="html" title="Ver" style="text-align:center;">
-			<a href="viewAsignatura?codigo=${fila.codigo}"><img src="resources/img/Buscar.png" alt="Ver" height="20" width="20"></a>
+			<a href="viewAsignatura?int_idcurso=${fila.int_idcurso}"><img src="resources/img/Buscar.png" alt="Ver" height="20" width="20"></a>
 		</display:column>
 
 		<display:column media="html" title="Eliminar" style="text-align:center;">
-			<a href="JavaScript:eliminar('${fila.nombre}', 'deleteAsignatura?codigo=${fila.codigo}')"><img src="resources/img/Borrar.png" alt="Ver" height="20" width="20"></a>
+			<a href="JavaScript:eliminar('${fila.str_curso}', 'deleteAsignatura?int_idcurso=${fila.int_idcurso}')"><img src="resources/img/Borrar.png" alt="Ver" height="20" width="20"></a>
 		</display:column>
 	</display:table>
 
 	<br>
-	<a href="menuAsignatura" cssClass="Navegador"><img src="resources/img/alumno.jpg" width="50" height="50" border="0" />Ir a Men&uacute; Asignatura</a>
+	<hr>
+	<br>
+	<a href="moduloCursos" cssClass="Navegador"><img src="resources/img/cursos.jpg" width="50" height="50" border="0" />Ir a Men&uacute; Principal</a>
 </body>
 </html>

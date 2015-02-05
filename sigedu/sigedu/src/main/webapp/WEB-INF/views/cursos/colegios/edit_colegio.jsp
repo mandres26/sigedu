@@ -15,6 +15,12 @@
 <title>SIGEDU</title>
 </head>
 <body>
+	<table>
+		<tr>
+			<td><img src="resources/img/logoConsultisoft.png" width="350" height="100" border="0"></td>
+		</tr>
+	</table>
+	<hr>
 	<h2 class="Titulo">Editar Colegio</h2>
 	<hr>
 	
@@ -66,9 +72,9 @@
 			</tr>
 			<tr>
 				<td>Estado:</td>
-				<td><form:radiobutton path="int_idestado" value="1" />Activo 
+				<td><form:radiobutton path="int_idestado" value=1 />Activo 
 					&nbsp;
-					<form:radiobutton path="int_idestado" value="2" />Inactivo</td>
+					<form:radiobutton path="int_idestado" value=2 />Inactivo</td>
 			</tr>
 			
 			<tr>
@@ -87,6 +93,6 @@
 		</table>
 	</form:form>
 	
-    <a href="menuColegio" cssClass="Navegador"><img src="resources/img/alumno.jpg" width="50" height="50" border="0" />Ir a Men&uacute; Colegio</a>
+    <a href="listColegio" cssClass="Navegador"><img src="resources/img/alumno.jpg" width="50" height="50" border="0" />Ir a Mantenimiento Colegio</a>
 </body>
 </html>

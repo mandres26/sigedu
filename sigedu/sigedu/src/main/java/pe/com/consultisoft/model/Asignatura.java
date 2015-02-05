@@ -17,8 +17,15 @@ public class Asignatura {
 	private Integer int_idcurso;
 	@Column(name="str_curso")
 	private String str_curso;
-	@Column(name="estado")
-	private String estado;
+	@Column(name="dte_fecha_creacion")
+	private String dte_fecha_creacion;
+	@Column(name="dte_fecha_modificacion")
+	private String dte_fecha_modificacion;
+	//@Column(name="int_idarea")
+	//private Area area;
+	@Column(name="int_idestado")
+	private Integer int_idestado;
+	
 	public Integer getInt_idcurso() {
 		return int_idcurso;
 	}
@@ -31,14 +38,28 @@ public class Asignatura {
 	public void setStr_curso(String str_curso) {
 		this.str_curso = str_curso;
 	}
-	public String getEstado() {
-		return estado;
+	public String getDte_fecha_creacion() {
+		return dte_fecha_creacion;
 	}
-	public void setEstado(String estado) {
-		this.estado = estado;
+	public void setDte_fecha_creacion(String dte_fecha_creacion) {
+		this.dte_fecha_creacion = dte_fecha_creacion;
 	}
-	
-	
-	
-	
+	public String getDte_fecha_modificacion() {
+		return dte_fecha_modificacion;
+	}
+	public void setDte_fecha_modificacion(String dte_fecha_modificacion) {
+		this.dte_fecha_modificacion = dte_fecha_modificacion;
+	}
+	/*public Integer getInt_idarea() {
+		return int_idarea;
+	}
+	public void setInt_idarea(Integer int_idarea) {
+		this.int_idarea = int_idarea;
+	}*/
+	public Integer getInt_idestado() {
+		return int_idestado;
+	}
+	public void setInt_idestado(Integer int_idestado) {
+		this.int_idestado = int_idestado;
+	}
 }

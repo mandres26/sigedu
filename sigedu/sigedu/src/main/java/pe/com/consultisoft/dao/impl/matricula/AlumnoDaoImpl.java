@@ -84,9 +84,9 @@ public class AlumnoDaoImpl implements AlumnoDao {
 	public List<Alumno> find(Alumno alumno) {
 		try{
 			List<Alumno> listAlumnos = new ArrayList();
-			String query = "from Alumno where paterno like '"+alumno.getPaterno().trim()+"%'" +
-							" and materno like '"+alumno.getMaterno().trim()+"%'" +
-							" and nombres like '"+alumno.getNombres().trim()+"%'";
+			String query = "from Alumno where paterno like '%"+alumno.getPaterno().trim()+"%'" +
+							" and materno like '%"+alumno.getMaterno().trim()+"%'" +
+							" and nombres like '%"+alumno.getNombres().trim()+"%'";
 			listAlumnos = sessionFactory.getCurrentSession().createQuery(query).list();
 			return listAlumnos;
 		}

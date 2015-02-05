@@ -15,6 +15,12 @@
 <title>SIGEDU</title>
 </head>
 <body>
+	<table>
+		<tr>
+			<td><img src="resources/img/logoConsultisoft.png" width="350" height="100" border="0"></td>
+		</tr>
+	</table>
+	<hr>
 	<h2 class="Titulo">Editar Currícula</h2>
 	<hr>
 	
@@ -30,35 +36,24 @@
 
 		<table>
 			<tr>
-				<td>C&oacute;digo:</td>
-				<td><form:input
-						path="codigo" readonly="true"/></td>
+				<td width="200">C&oacute;digo:</td>
+				<td width="200"><form:input path="codigo" readonly="true"/></td>
 			</tr>
 			<tr>
-				<td>Colegio:</td>
-				<td><form:errors path="colegio" cssClass="error" /><br> <form:input
-						path="colegio" /></td>
+				<td width="200">Curr&iacute;cula:</td>
+				<td width="200"><form:errors path="str_curricula" cssClass="error" />
+								<form:input path="str_curricula" /></td>
 			</tr>
 			<tr>
-				<td>Curso:</td>
-				<td><form:errors path="curso" cssClass="error" /><br> <form:input
-						path="curso" /></td>
+				<td width="200">Fecha modificaci&oacute;n:</td>
+				<td width="200"><form:errors path="dte_fecha_modificacion" cssClass="error" />
+					<form:input type="date" name="fecha_modificacion" path="dte_fecha_modificacion" /></td>
 			</tr>
 			<tr>
-				<td>Grado:</td>
-				<td><form:errors path="grado" cssClass="error" /><br> <form:input
-						path="grado" /></td>
-			</tr>
-			<tr>
-				<td>Nombre:</td>
-				<td><form:errors path="nombre" cssClass="error" /><br> <form:input
-						path="nombre" /></td>
-			</tr>
-			<tr>
-				<td>Estado:</td>
-				<td><form:radiobutton path="estado" value="A" />Activo 
+				<td width="200">Estado:</td>
+				<td width="200"><form:radiobutton path="int_idestado" value=1 />Activo 
 					&nbsp;
-					<form:radiobutton path="estado" value="I" />Inactivo</td>
+								<form:radiobutton path="int_idestado" value=2 />Inactivo</td>
 			</tr>
 			
 			<tr>
@@ -77,6 +72,6 @@
 		</table>
 	</form:form>
 	
-    <a href="menuCurricula" cssClass="Navegador"><img src="resources/img/alumno.jpg" width="50" height="50" border="0" />Ir a Men&uacute; Curr&iacute;cula</a>
+    <a href="listCurricula" cssClass="Navegador"><img src="resources/img/alumno.jpg" width="50" height="50" border="0" />Ir a Mantenimiento Curr&iacute;cula</a>
 </body>
 </html>

@@ -15,7 +15,13 @@
 <title>SIGEDU</title>
 </head>
 <body>
-	<h2 class="Titulo">Nueva Asignatura</h2>
+	<table>
+		<tr>
+			<td><img src="resources/img/logoConsultisoft.png" width="350" height="100" border="0"></td>
+		</tr>
+	</table>
+	<hr>
+	<h2 class="Titulo">Registro Nueva Asignatura</h2>
 	<hr>
 	
 	<c:if test="${resultado==0}">
@@ -28,13 +34,34 @@
     </h3>
 	<form:form method="post" action="addAsignatura" commandName="asignatura">
 
-		<table>
+		<table width="500">
 			<tr>
-				<td>Nombre:</td>
-				<td><form:errors path="nombre" cssClass="error" /><br> <form:input
-						path="nombre" /></td>
+				<td width="100">Asignatura:</td>
+				<td width="300"><form:errors path="str_curso" cssClass="error" />
+								<form:input	path="str_curso" /></td>
+			</tr>
+			<tr>
+				<td width="100">Fecha creaci&oacute;n:</td>
+				<td width="300"><form:errors path="dte_fecha_creacion" cssClass="error" /> 
+					<form:input type="date" name="fecha_creacion" path="dte_fecha_creacion" /></td>
+			</tr>
+			<tr>
+				<td width="100">Fecha modificaci&oacute;n:</td>
+				<td width="300"><form:errors path="dte_fecha_modificacion" cssClass="error" />
+					<form:input type="date" name="fecha_modificacion" path="dte_fecha_modificacion" /></td>
+			</tr>
+			<tr>
+				<td width="100">Año: </td>
+				<td width="300"><select name="listarAnho" >
+					<option selected> Seleccione año</option>
+					<option value="1">2014</option>
+					<option value="2">2015</option>
+					</select>
+				</td>
 			</tr>
 			
+		</table>
+		<table>
 			<tr>
 				<td>
 					<button type="reset" title="Limpiar">
@@ -52,6 +79,6 @@
 		
 	</form:form>
 	
-    <a href="menuAsignatura" cssClass="Navegador"><img src="resources/img/alumno.jpg" width="50" height="50" border="0" />Ir a Menu Asignatura</a>
+    <a href="listAsignatura" cssClass="Navegador"><img src="resources/img/alumno.jpg" width="50" height="50" border="0" />Ir a Mantenimiento Asignatura</a>
 </body>
 </html>
