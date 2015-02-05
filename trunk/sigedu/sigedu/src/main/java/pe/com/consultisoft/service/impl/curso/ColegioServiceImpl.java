@@ -6,9 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import pe.com.consultisoft.service.curso.ColegioService;
 import pe.com.consultisoft.dao.curso.ColegioDao;
 import pe.com.consultisoft.model.Colegio;
-import pe.com.consultisoft.service.curso.ColegioService;
 
 @Service
 public class ColegioServiceImpl implements ColegioService{
@@ -44,5 +44,5 @@ public class ColegioServiceImpl implements ColegioService{
 	@Transactional
 	public Colegio find(int int_idcolegio) {
 		return colegioDao.find(int_idcolegio);
-	}	
+	}
 }

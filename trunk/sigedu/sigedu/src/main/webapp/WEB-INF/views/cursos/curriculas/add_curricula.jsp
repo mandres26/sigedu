@@ -15,7 +15,13 @@
 <title>SIGEDU</title>
 </head>
 <body>
-	<h2 class="Titulo">Nuevo Curr&iacute;cula</h2>
+	<table>
+		<tr>
+			<td><img src="resources/img/logoConsultisoft.png" width="350" height="100" border="0"></td>
+		</tr>
+	</table>
+	<hr>
+	<h2 class="Titulo">Registro Nueva Curr&iacute;cula</h2>
 	<hr>
 	
 	<c:if test="${resultado==0}">
@@ -28,27 +34,24 @@
     </h3>
 	<form:form method="post" action="addCurricula" commandName="curricula">
 
+		<table width="500">
+			<tr>
+				<td width="100">Curr&iacute;cula:</td>
+				<td width="300"><form:errors path="str_curricula" cssClass="error" />
+								<form:input path="str_curricula" size="50"/></td>
+			</tr>
+			<tr>
+				<td width="100">Fecha creaci&oacute;n:</td>
+				<td width="300"><form:errors path="dte_fecha_creacion" cssClass="error" /> 
+								<form:input type="date" name="fecha_creacion" path="dte_fecha_creacion" /></td>
+			</tr>
+			<tr>
+				<td width="100">Fecha modificaci&oacute;n:</td>
+				<td width="300"><form:errors path="dte_fecha_modificacion" cssClass="error" />
+								<form:input type="date" name="fecha_modificacion" path="dte_fecha_modificacion" /></td>
+			</tr>
+		</table>
 		<table>
-			<tr>
-				<td>Colegio:</td>
-				<td><form:errors path="colegio" cssClass="error" /><br> <form:input
-						path="colegio" /></td>
-			</tr>
-			<tr>
-				<td>Curso:</td>
-				<td><form:errors path="curso" cssClass="error" /><br> <form:input
-						path="curso" /></td>
-			</tr>
-			<tr>
-				<td>Grado:</td>
-				<td><form:errors path="grado" cssClass="error" /><br> <form:input
-						path="grado" /></td>
-			</tr>
-			<tr>
-				<td>Nombre:</td>
-				<td><form:errors path="nombre" cssClass="error" /><br> <form:input
-						path="nombre" /></td>
-			</tr>
 			<tr>
 				<td>
 					<button type="reset" title="Limpiar">
@@ -66,6 +69,6 @@
 		
 	</form:form>
 	
-    <a href="menuCurricula" cssClass="Navegador"><img src="resources/img/alumno.jpg" width="50" height="50" border="0" />Ir a Men&uacute; Curr&iacute;cula</a>
+    <a href="listCurricula" cssClass="Navegador"><img src="resources/img/alumno.jpg" width="50" height="50" border="0" />Ir a Mantenimiento Curr&iacute;cula</a>
 </body>
 </html>

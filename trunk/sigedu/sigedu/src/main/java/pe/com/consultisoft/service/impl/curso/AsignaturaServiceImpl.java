@@ -32,8 +32,8 @@ public class AsignaturaServiceImpl implements AsignaturaService{
 	}
 	@Override
 	@Transactional
-	public int delete(int idAsignatura) {
-		return asignaturaDao.delete(idAsignatura);
+	public int delete(int int_idcurso) {
+		return asignaturaDao.delete(int_idcurso);
 	}
 	@Override
 	@Transactional
@@ -42,9 +42,7 @@ public class AsignaturaServiceImpl implements AsignaturaService{
 	}
 	@Override
 	@Transactional
-	public Asignatura find(int idAsignatura) {
-		return asignaturaDao.find(idAsignatura);
+	public Asignatura find(int int_idcurso) {
+		return asignaturaDao.find(int_idcurso);
 	}
-
-	
 }

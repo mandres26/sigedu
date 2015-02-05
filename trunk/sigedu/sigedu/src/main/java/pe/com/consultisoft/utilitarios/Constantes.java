@@ -17,6 +17,9 @@ public class Constantes {
 		public static final String EST_ACTIVO = "A";
 		public static final String EST_INACTIVO = "I";
 		
+		public static final int EST_ACTIVO1 = 1;
+		public static final int EST_INACTIVO1 = 2;
+				
 	}
 
 

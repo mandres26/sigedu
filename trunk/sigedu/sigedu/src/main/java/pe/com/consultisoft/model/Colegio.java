@@ -39,7 +39,7 @@ public class Colegio {
 	@Column(name="int_idusuario_modificacion")
 	private String int_idusuario_modificacion;
 	@Column(name="int_idestado")
-	private String int_idestado;
+	private Integer int_idestado;
 	
 	public Integer getInt_idcolegio() {
 		return int_idcolegio;
@@ -113,11 +113,15 @@ public class Colegio {
 	public void setInt_idusuario_modificacion(String int_idusuario_modificacion) {
 		this.int_idusuario_modificacion = int_idusuario_modificacion;
 	}
-	public String getInt_idestado() {
+	/*public String getInt_idestado() {
 		return int_idestado;
-	}
-	public void setInt_idestado(String int_idestado) {
+	}*/
+	public void setInt_idestado(int int_idestado) {
 		this.int_idestado = int_idestado;
 	}
+	public Integer getInt_idestado() {
+		return int_idestado;
+	}
+	
 	
 }

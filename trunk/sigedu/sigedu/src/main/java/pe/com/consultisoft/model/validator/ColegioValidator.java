@@ -22,13 +22,19 @@ public class ColegioValidator implements Validator{
 	                "required.str_colegio", "El campo Nombre del Colegio es obligatorio.");
 		  ValidationUtils.rejectIfEmptyOrWhitespace(errors, "str_telefono1",
 	                "required.str_telefono1", "El campo teléfono 1 es obligatorio.");	         
-		  ValidationUtils.rejectIfEmptyOrWhitespace(errors, "str_telefono2",
-	                "required.str_telefono2", "El campo teléfono 2 es obligatorio.");
-		  ValidationUtils.rejectIfEmptyOrWhitespace(errors, "str_celular",
-	                "required.str_celular", "El campo celular es obligatorio.");
+		 // ValidationUtils.rejectIfEmptyOrWhitespace(errors, "str_telefono2",
+	     //           "required.str_telefono2", "El campo teléfono 2 es obligatorio.");
+		  //ValidationUtils.rejectIfEmptyOrWhitespace(errors, "str_celular",
+	      //          "required.str_celular", "El campo celular es obligatorio.");
 		  ValidationUtils.rejectIfEmptyOrWhitespace(errors, "str_direccion",
 	                "required.str_direccion", "El campo dirección es obligatorio.");
-		  ValidationUtils.rejectIfEmptyOrWhitespace(errors, "str_direccion",
-	                "required.str_direccion", "El campo dirección es obligatorio.");
+		  //ValidationUtils.rejectIfEmptyOrWhitespace(errors, "int_iddistrito",
+	      //          "required.int_iddistrito", "El campo distrito es obligatorio.");
+		  ValidationUtils.rejectIfEmptyOrWhitespace(errors, "int_cantidad_salones",
+	                "required.int_cantidad_salones", "El campo cantidad de salones es obligatorio.");
+		  ValidationUtils.rejectIfEmptyOrWhitespace(errors, "dte_fecha_creacion",
+	                "required.dte_fecha_creacion", "El campo fecha de creación es obligatorio.");
+		  ValidationUtils.rejectIfEmptyOrWhitespace(errors, "dte_fecha_modificacion",
+	                "required.dte_fecha_modificacion", "El campo fecha de modificación es obligatorio.");
 	}
 }

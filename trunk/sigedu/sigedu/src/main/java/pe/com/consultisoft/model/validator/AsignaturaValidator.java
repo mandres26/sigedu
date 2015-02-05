@@ -18,8 +18,7 @@ public class AsignaturaValidator implements Validator{
 
 	@Override
 	public void validate(Object target, Errors errors) {
-		  ValidationUtils.rejectIfEmptyOrWhitespace(errors, "nombre",
-	                "required.nombre", "El campo Nombre de Asignatura es obligatorio.");
+		  ValidationUtils.rejectIfEmptyOrWhitespace(errors, "str_curso",
+	                "required.str_curso", "El campo nombre de curso es obligatorio.");
 	}
-
 }

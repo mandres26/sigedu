@@ -7,5 +7,7 @@
     <session-factory>
         <mapping class="pe.com.consultisoft.model.Alumno" />
         <mapping class="pe.com.consultisoft.model.Colegio" />
+        <mapping class="pe.com.consultisoft.model.Asignatura" />
+        <mapping class="pe.com.consultisoft.model.Curricula" />
     </session-factory>        
 </hibernate-configuration>
