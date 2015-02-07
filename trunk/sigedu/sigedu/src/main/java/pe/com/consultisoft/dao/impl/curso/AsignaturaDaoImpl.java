@@ -12,7 +12,7 @@ import org.springframework.stereotype.Repository;
 import pe.com.consultisoft.controller.curso.AsignaturaController;
 import pe.com.consultisoft.dao.curso.AsignaturaDao;
 import pe.com.consultisoft.model.Asignatura;
-import pe.com.consultisoft.model.Parametro;
+//import pe.com.consultisoft.model.Parametro;
 import pe.com.consultisoft.utilitarios.Constantes;
 
 @Repository
