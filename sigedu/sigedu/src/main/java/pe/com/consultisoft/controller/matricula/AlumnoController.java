@@ -18,6 +18,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import pe.com.consultisoft.model.Alumno;
 import pe.com.consultisoft.model.validator.AlumnoValidator;
+import pe.com.consultisoft.service.commons.UbigeoService;
 import pe.com.consultisoft.service.matricula.AlumnoService;
 import pe.com.consultisoft.utilitarios.Constantes;
 
@@ -30,11 +31,15 @@ public class AlumnoController {
 	AlumnoService alumnoService;
 	
 	@Autowired
+	UbigeoService ubigeoService;
+	
+	@Autowired
 	AlumnoValidator alumnoValidator;
 
 	@RequestMapping(value = "/formAlumno")
-	public ModelAndView form(Locale locale) {
-		logger.info("Ingreso al formulario alumno.", locale);
+	public ModelAndView form(Locale locale,
+								ModelMap model) {
+		model.addAttribute("listDepartamentos", ubigeoService.listDepartamentos());
 		ModelAndView mav = new ModelAndView("matriculas/alumnos/add_alumno", "alumno", new Alumno());
 		return mav;
 	}
@@ -141,5 +146,16 @@ public class AlumnoController {
 		model.addAttribute("listAlumnos", listAlumnos);
         return "matriculas/alumnos/list_alumno";
     }
+	
+	@RequestMapping(value = "/listarProvincias")
+	public ModelAndView listarProvincias(@ModelAttribute("alumno") Alumno alumno,
+										Locale locale,
+										ModelMap model) {
+		model.addAttribute("listDepartamentos", ubigeoService.listDepartamentos());
+		model.addAttribute("listProvincias", ubigeoService.findProvinciasPorDepartamento(alumno.getDistrito().getProvincia().getDepartamento().getId()));
+		ModelAndView mav = new ModelAndView("matriculas/alumnos/add_alumno", "alumno", new Alumno());
+		return mav;
+	}
+
 	
 }

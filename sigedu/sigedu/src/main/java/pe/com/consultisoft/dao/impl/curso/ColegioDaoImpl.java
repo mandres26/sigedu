@@ -12,7 +12,7 @@ import org.springframework.stereotype.Repository;
 import pe.com.consultisoft.controller.curso.ColegioController;
 import pe.com.consultisoft.dao.curso.ColegioDao;
 import pe.com.consultisoft.model.Colegio;
-import pe.com.consultisoft.model.Parametro;
+//import pe.com.consultisoft.model.Parametro;
 import pe.com.consultisoft.utilitarios.Constantes;
 
 @Repository
@@ -99,7 +99,7 @@ public class ColegioDaoImpl implements ColegioDao {
 			return null;
 		}
 	}
-	
+	/*
 	//Validar.
 	@Override
 	public List<Parametro> listEstado() {
@@ -112,5 +112,5 @@ public class ColegioDaoImpl implements ColegioDao {
 			logger.error(ex.getMessage());
 			return null;
 		}	
-	}	
+	}*/
 }
