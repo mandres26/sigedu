@@ -2,9 +2,12 @@ package pe.com.consultisoft.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
@@ -32,7 +35,8 @@ public class Colegio {
 	private String dte_fecha_modificacion;
 	@Column(name="int_cantidad_salones")
 	private String int_cantidad_salones;
-	//@Column(name="int_iddistrito")
+	//@ManyToOne(fetch=FetchType.LAZY)
+	//@JoinColumn(name="int_iddistrito")
 	//private Distrito distrito;
 	@Column(name="int_idusuario_creacion")
 	private String int_idusuario_creacion;

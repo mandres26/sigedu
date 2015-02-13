@@ -9,5 +9,10 @@
         <mapping class="pe.com.consultisoft.model.Colegio" />
         <mapping class="pe.com.consultisoft.model.Asignatura" />
         <mapping class="pe.com.consultisoft.model.Curricula" />
+
+        <mapping class="pe.com.consultisoft.model.Departamento" />
+        <mapping class="pe.com.consultisoft.model.Provincia" />
+        <mapping class="pe.com.consultisoft.model.Distrito" />
+
     </session-factory>        
 </hibernate-configuration>

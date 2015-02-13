@@ -61,6 +61,9 @@
 			</tr>
 			
 		</table>
+		<br>
+		<hr>
+		<br>
 		<table>
 			<tr>
 				<td>
@@ -73,12 +76,11 @@
 						<img src="resources/img/Grabar.png" width="50" height="50" border="0">
 					</button>
 				</td>
-				
 			</tr>
 		</table>
 		
 	</form:form>
 	
-    <a href="listAsignatura" cssClass="Navegador"><img src="resources/img/alumno.jpg" width="50" height="50" border="0" />Ir a Mantenimiento Asignatura</a>
+    <a href="listAsignatura" cssClass="Navegador"><img src="resources/img/asignatura.jpg" width="50" height="50" border="0" />Ir a Mantenimiento Asignatura</a>
 </body>
 </html>

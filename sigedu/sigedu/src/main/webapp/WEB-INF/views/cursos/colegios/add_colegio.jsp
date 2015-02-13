@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="resources/css/mensajes.css" type="text/css">
 <link rel="stylesheet" href="resources/css/controles.css" type="text/css">
 <link rel="stylesheet" href="resources/css/titulos.css" type="text/css">
+
 <title>SIGEDU</title>
 </head>
 <body>
@@ -135,7 +136,9 @@
 		</table>
 		
 	</form:form>
-	
-    <a href="listColegio" cssClass="Navegador"><img src="resources/img/alumno.jpg" width="50" height="50" border="0" />Ir a Mantenimiento Colegio</a>
+	<br>
+	<hr>
+	<br>
+    <a href="listColegio" cssClass="Navegador"><img src="resources/img/colegio.jpg" width="50" height="50" border="0" />Ir a Mantenimiento Colegio</a>
 </body>
 </html>

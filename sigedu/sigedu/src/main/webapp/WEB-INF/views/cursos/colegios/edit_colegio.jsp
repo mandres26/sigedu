@@ -63,7 +63,7 @@
 			<tr>
 				<td>Direcci&oacute;n:</td>
 				<td><form:errors path="str_direccion" cssClass="error" /><br> <form:input
-						path="str_direccion" /></td>
+						path="str_direccion" size="100" /></td>
 			</tr>
 			<tr>
 				<td>Cantidad Salones:</td>
@@ -72,9 +72,9 @@
 			</tr>
 			<tr>
 				<td>Estado:</td>
-				<td><form:radiobutton path="int_idestado" value=1 />Activo 
+				<td><form:radiobutton path="int_idestado" value="1" />Activo 
 					&nbsp;
-					<form:radiobutton path="int_idestado" value=2 />Inactivo</td>
+					<form:radiobutton path="int_idestado" value="2" />Inactivo</td>
 			</tr>
 			
 			<tr>
