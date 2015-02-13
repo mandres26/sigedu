@@ -27,11 +27,11 @@
     <hr>
         
          <form:form action="findAsignatura" method="post" commandName="asignatura" >
-            
+            <br>
             <table width="400" >
             	<tr>
 					<td width="100">Asignatura:</td>
-					<td width="300"><form:input	path="str_curso" width="200" /></td>
+					<td width="300"><form:input	path="str_curso" size="50" /></td>
 				</tr>
 			</table>
 			<table>	
@@ -41,7 +41,7 @@
                         <button type="submit" title="Buscar asignatura">
                             <img src="resources/img/Buscar.png" width="50" height="50" border="0">
                         </button>
-                        <a href="formAsignatura" cssClass="Navegador"><img src="resources/img/cursos.jpg" width="50" height="50" border="0" title="Nueva asignatura"></a>
+                        <a href="formAsignatura" cssClass="Navegador"><img src="resources/img/asignatura.jpg" width="50" height="50" border="0" title="Nueva asignatura"></a>
     					<br>
                     </td>
                 </tr>

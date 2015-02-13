@@ -31,7 +31,7 @@ function editar(int_idcurso){
 		<table>
 			<tr>
 				<td>C&oacute;digo:</td>
-				<td>${asignatura.codigo}</td>
+				<td>${asignatura.int_idcurso}</td>
 			</tr>
 			<tr>
 				<td>Nombre:</td>
@@ -46,9 +46,6 @@ function editar(int_idcurso){
 			</tr>
 			<tr>
 				<td>
-					&nbsp;
-				</td>
-				<td>
 					<button title="Editar" onclick="javascript:editar('${asignatura.int_idcurso}')">
 						<img src="resources/img/Editar.png" width="50" height="50" border="0">
 					</button>
@@ -56,6 +53,6 @@ function editar(int_idcurso){
 			</tr>			
 		</table>
 	</div>
-	<a href="listAsignatura" cssClass="Navegador"><img src="resources/img/curso.jpg" width="50" height="50" border="0" />Ir a Mantenimiento Asignatura</a>
+	<a href="listAsignatura" cssClass="Navegador"><img src="resources/img/cursos.jpg" width="50" height="50" border="0" />Ir a Mantenimiento Asignatura</a>
 </body>
 </html>

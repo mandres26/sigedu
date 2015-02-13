@@ -9,7 +9,7 @@
 			</td>
 			<td width="50%" valign="middle" align="left">
 				<div style="margin-right: 10px; font-size: 12px;">
-					<img src="resources/img/logo.png" width="120" height="20">
+					<img src="resources/img/logo.png" width="120" height="30">
 				</div>
 			</td>
 		</tr>

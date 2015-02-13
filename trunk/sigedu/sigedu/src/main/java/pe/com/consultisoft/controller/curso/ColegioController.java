@@ -117,7 +117,7 @@ public class ColegioController {
 			
 		}
  
-        return "cursos/colegios/edit_colegio";
+        return "cursos/colegios/list_colegio";
     }
 
 	
