@@ -19,7 +19,7 @@
 <body>
 	<table width="1400" align="center">
 		<tr>
-			<td><img src="resources/img/logoConsultisoft.png" width="350" height="100" border="0"></td>
+			<td><img src="resources/img/logo.png" width="350" height="100" border="0"></td>
 		</tr>
 	</table>	
 	<hr width="1400">
