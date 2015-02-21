@@ -18,6 +18,9 @@ import org.springframework.web.servlet.ModelAndView;
 
 import pe.com.consultisoft.model.Colegio;
 import pe.com.consultisoft.model.validator.ColegioValidator;
+import pe.com.consultisoft.service.commons.TipocontribuyenteService;
+import pe.com.consultisoft.service.commons.EstadoService;
+
 import pe.com.consultisoft.service.curso.ColegioService;
 import pe.com.consultisoft.utilitarios.Constantes;
 
@@ -31,13 +34,22 @@ public class ColegioController {
 	
 	@Autowired
 	ColegioValidator colegioValidator;
-
+	
+	@Autowired
+	TipocontribuyenteService tipocontribuyenteService;
+	
+	@Autowired
+	EstadoService estadoService;
+	
 	@RequestMapping(value = "/formColegio")
-	public ModelAndView form(Locale locale) {
-		logger.info("Ingreso al formulario colegio.", locale);
+	public ModelAndView form(Locale locale,
+								ModelMap model) {
+		model.addAttribute("listTipocontribuyentes", tipocontribuyenteService.listTipocontribuyentes());
+		model.addAttribute("listEstados", estadoService.listEstados());
 		ModelAndView mav = new ModelAndView("cursos/colegios/add_colegio", "colegio", new Colegio());
 		return mav;
 	}
+	
 	
 	@RequestMapping(value = "/addColegio")
     public String add(@ModelAttribute("colegio") Colegio colegio, 
@@ -63,7 +75,7 @@ public class ColegioController {
 
 	@RequestMapping(value = "/deleteColegio")
     public String delete(@ModelAttribute("colegio") Colegio colegio,
-    						@ModelAttribute("int_idcolegio")String int_idcolegio,
+    						@ModelAttribute("codigo")String int_idcolegio,
     						ModelMap model) {
  
 		colegioService.delete(Integer.parseInt(int_idcolegio));
@@ -80,7 +92,7 @@ public class ColegioController {
     }
 	
 	@RequestMapping(value = "/viewColegio", method = RequestMethod.GET)
-    public String view(@ModelAttribute("int_idcolegio")
+    public String view(@ModelAttribute("codigo")
     String int_idcolegio, ModelMap model) {
  
 		Colegio colegio = colegioService.find(Integer.parseInt(int_idcolegio));
@@ -90,7 +102,7 @@ public class ColegioController {
     }
 	
 	@RequestMapping(value = "/editColegio")
-    public String edit(@ModelAttribute("int_idcolegio")
+    public String edit(@ModelAttribute("codigo")
     String int_idcolegio, ModelMap model) {
  
 		Colegio colegio = colegioService.find(Integer.parseInt(int_idcolegio));
@@ -141,5 +153,5 @@ public class ColegioController {
 		model.addAttribute("listColegios", listColegios);
         return "cursos/colegios/list_colegio";
     }
-	
 }
+	

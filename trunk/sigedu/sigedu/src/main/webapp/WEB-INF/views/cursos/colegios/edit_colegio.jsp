@@ -15,14 +15,14 @@
 <title>SIGEDU</title>
 </head>
 <body>
-	<table>
+	<table width="1400" align="center">
 		<tr>
 			<td><img src="resources/img/logoConsultisoft.png" width="350" height="100" border="0"></td>
 		</tr>
 	</table>
-	<hr>
-	<h2 class="Titulo">Editar Colegio</h2>
-	<hr>
+	<hr width="1400">
+	<h1 class="Titulo" align="center" width="1400">Editar Colegio</h1>
+	<hr width="1400">
 	
 	<c:if test="${resultado==0}">
 		<h3 class="MensajeExito">
@@ -34,65 +34,77 @@
     </h3>
 	<form:form method="post" action="updateColegio" commandName="colegio">
 
-		<table>
+		<table width="1400" align="center">
 			<tr>
-				<td>C&oacute;digo:</td>
-				<td><form:input
+				<td width="150">C&oacute;digo:</td>
+				<td width="850"><form:input
 						path="int_idcolegio" readonly="true"/></td>
 			</tr>
 			<tr>
-				<td>Nombre Colegio:</td>
-				<td><form:errors path="str_colegio" cssClass="error" /><br> <form:input
-						path="str_colegio" /></td>
+				<td width="150">Nombre Colegio:</td>
+				<td width="850"><form:errors path="str_colegio" cssClass="error" /><br> <form:input
+						path="str_colegio" size="50" /></td>
 			</tr>
 			<tr>
-				<td>Tel&eacute;fono 1:</td>
-				<td><form:errors path="str_telefono1" cssClass="error" /><br> <form:input
+				<td width="150">Tel&eacute;fono 1:</td>
+				<td width="850"><form:errors path="str_telefono1" cssClass="error" /><br> <form:input
 						path="str_telefono1" /></td>
 			</tr>
 			<tr>
-				<td>Tel&eacute;fono 2:</td>
-				<td><form:errors path="str_telefono2" cssClass="error" /><br> <form:input
+				<td width="150">Tel&eacute;fono 2:</td>
+				<td width="850"><form:errors path="str_telefono2" cssClass="error" /><br> <form:input
 						path="str_telefono2" /></td>
 			</tr>
 			<tr>
-				<td>Celular:</td>
-				<td><form:errors path="str_celular" cssClass="error" /><br> <form:input
+				<td width="150">Celular:</td>
+				<td width="850"><form:errors path="str_celular" cssClass="error" /><br> <form:input
 						path="str_celular" /></td>
 			</tr>
 			<tr>
-				<td>Direcci&oacute;n:</td>
-				<td><form:errors path="str_direccion" cssClass="error" /><br> <form:input
-						path="str_direccion" size="100" /></td>
+				<td width="150">Direcci&oacute;n:</td>
+				<td width="850"><form:errors path="str_direccion" cssClass="error" /><br> <form:input
+						path="str_direccion" size="50" /></td>
 			</tr>
 			<tr>
-				<td>Cantidad Salones:</td>
-				<td><form:errors path="int_cantidad_salones" cssClass="error" /><br> <form:input
+				<td width="150">Cantidad Salones:</td>
+				<td width="850"><form:errors path="int_cantidad_salones" cssClass="error" /><br> <form:input
 						path="int_cantidad_salones" /></td>
 			</tr>
 			<tr>
-				<td>Estado:</td>
-				<td><form:radiobutton path="int_idestado" value="1" />Activo 
+				<td width="150">Estado:</td>
+				<td width="850"><form:radiobutton path="int_idestado" value="1" />Activo 
 					&nbsp;
 					<form:radiobutton path="int_idestado" value="2" />Inactivo</td>
 			</tr>
-			
+		</table>
+		<br>
+		<table width="1400" align="center">	
 			<tr>
-				<td>
+				<td align="right">
 					<button type="reset" title="Limpiar">
 						<img src="resources/img/Borrar.png" width="50" height="50" border="0">
 					</button>
 				</td>
-				<td>
+				<td align="left">
 					<button type="submit" title="Grabar">
 						<img src="resources/img/Grabar.png" width="50" height="50" border="0">
 					</button>
 				</td>
-				
 			</tr>
 		</table>
+		
+		<br>
+		<hr width="1400" align="center">
+		
+		
 	</form:form>
-	
-    <a href="listColegio" cssClass="Navegador"><img src="resources/img/alumno.jpg" width="50" height="50" border="0" />Ir a Mantenimiento Colegio</a>
+	<table width="1400" align="center">
+	<tr>
+		<td>
+			<a href="listColegio" cssClass="Navegador"><img src="resources/img/alumno.jpg" width="50" height="50" border="0" />Ir a Mantenimiento Colegio</a>	
+		</td>
+	</tr>
+	</table>
+    
 </body>
 </html>

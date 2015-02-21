@@ -7,6 +7,11 @@
     <session-factory>
         <mapping class="pe.com.consultisoft.model.Alumno" />
         <mapping class="pe.com.consultisoft.model.Colegio" />
+        <mapping class="pe.com.consultisoft.model.Dcn" />
+        <mapping class="pe.com.consultisoft.model.Plc" />
+        <mapping class="pe.com.consultisoft.model.Parametro" />
+        <mapping class="pe.com.consultisoft.model.Ie" />
+        
         <mapping class="pe.com.consultisoft.model.Asignatura" />
         <mapping class="pe.com.consultisoft.model.Curricula" />
 

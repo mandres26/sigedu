@@ -10,6 +10,7 @@
 <title>Sistema de Gesti&oacute;n Educativa - SIGEDU</title>
 </head>
 <body>
+	
 	<div id="header" align="center">
 		<%@include file="commons/header.jsp"%>
 	</div>
@@ -21,8 +22,7 @@
 						src="resources/img/pagos.jpg" width="100" height="100" border="0" />Pagos</a></td>
 				<td></td>
 				<td><a href="moduloMatriculas" cssClass="Navegador"><img
-						src="resources/img/matricula.jpg" width="100" height="100"
-						border="0" />Matr&iacute;cula</a></td>
+						src="resources/img/matricula.jpg" width="100" height="100" border="0" />Matr&iacute;cula</a></td>
 				<td></td>
 			</tr>
 			<tr>
@@ -32,8 +32,7 @@
 				<td><img src="resources/img/centro.jpg" border="0" /></td>
 				<td></td>
 				<td><a href="moduloAdministrativo" cssClass="Navegador"><img
-						src="resources/img/administrativo.jpg" width="100" height="100"
-						border="0" />Administrativo</a></td>
+						src="resources/img/administrativo.jpg" width="100" height="100" border="0" />Administrativo</a></td>
 			</tr>
 			<tr>
 				<td></td>
@@ -41,8 +40,7 @@
 						src="resources/img/notas.jpg" width="100" height="100" border="0" />Notas</a></td>
 				<td></td>
 				<td><a href="moduloReportes" cssClass="Navegador"><img
-						src="resources/img/reportes.jpg" width="100" height="100"
-						border="0" />Reportes</a></td>
+						src="resources/img/reportes.jpg" width="100" height="100" border="0" />Reportes</a></td>
 				<td></td>
 			</tr>
 
