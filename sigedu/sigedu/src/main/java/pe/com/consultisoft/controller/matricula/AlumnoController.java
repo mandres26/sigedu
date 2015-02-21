@@ -60,7 +60,6 @@ public class AlumnoController {
 				model.addAttribute("resultado", "-1");
 				model.addAttribute("mensaje", Constantes.Mensajes.MSG_REGISTRO_NUEVO_ERROR);				
 			}
-			
 		}
  
         return "matriculas/alumnos/add_alumno";

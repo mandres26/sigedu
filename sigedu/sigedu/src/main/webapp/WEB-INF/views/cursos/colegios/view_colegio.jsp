@@ -19,43 +19,45 @@ function editar(int_idcolegio){
 </head>
 
 <body>
-	<table>
+	<table width="1400" align="center">
 		<tr>
-			<td><img src="resources/img/logoConsultisoft.png" width="350" height="100" border="0"></td>
+			<td ><img src="resources/img/logoConsultisoft.png" width="350" height="100" border="0"></td>
 		</tr>
-	</table>
-	<hr>
-	<h2 class="Titulo">Datos del Colegio</h2>
-	<hr>
+	</table>	
+	<hr width="1400">
+	
+	<h1 class="Titulo" align="center" width="1400">Datos del Colegio</h1>
+	<hr width="1400">
+	
 		<div id="divView">
-		<table>
+		<table width="1400" align="center">
 			<tr>
-				<td>C&oacute;digo:</td>
-				<td>${colegio.int_idcolegio}</td>
+				<td width="150">C&oacute;digo:</td>
+				<td width="800">${colegio.int_idcolegio}</td>
 			</tr>
 			<tr>
-				<td>Nombre Colegio:</td>
-				<td>${colegio.str_colegio}</td>
+				<td width="150">Nombre Colegio:</td>
+				<td width="800">${colegio.str_colegio}</td>
 			</tr>
 			<tr>
-				<td>Tel&eacute;fono 1:</td>
-				<td>${colegio.str_telefono1}</td>
+				<td width="150">Tel&eacute;fono 1:</td>
+				<td width="800">${colegio.str_telefono1}</td>
 			</tr>
 			<tr>
-				<td>Tel&eacute;fono 2:</td>
-				<td>${colegio.str_telefono2}</td>
+				<td width="150">Tel&eacute;fono 2:</td>
+				<td width="800">${colegio.str_telefono2}</td>
 			</tr>
 			<tr>
-				<td>Celular:</td>
-				<td>${colegio.str_celular}</td>
+				<td width="150">Celular:</td>
+				<td width="800">${colegio.str_celular}</td>
 			</tr>
 			<tr>
-				<td>Direcci&oacute;n:</td>
-				<td>${colegio.str_direccion}</td>
+				<td width="150">Direcci&oacute;n:</td>
+				<td width="800">${colegio.str_direccion}</td>
 			</tr>
 			<tr>
-				<td>Estado:</td>
-				<td>					
+				<td width="150">Estado:</td>
+				<td width="800">					
 					<c:if test="${colegio.int_idestado==1}">Activo</c:if>
 					<c:if test="${colegio.int_idestado==2}">Inactivo</c:if>
 				</td>
@@ -72,6 +74,16 @@ function editar(int_idcolegio){
 			</tr>			
 		</table>
 	</div>
-	<a href="listColegio" cssClass="Navegador"><img src="resources/img/colegio.jpg" width="50" height="50" border="0" />Ir a Mantenimiento Colegio</a>
+	<br>
+	<hr>
+	<br>
+	<table width="1400" align="center">
+	<tr>
+		<td>
+			<a href="listColegio" cssClass="Navegador"><img src="resources/img/colegio.jpg" width="50" height="50" border="0" />Ir a Mantenimiento Colegio</a>		
+		</td>
+	</tr>
+	</table>
+	
 </body>
 </html>

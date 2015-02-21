@@ -18,6 +18,7 @@ public class UbigeoServiceImpl implements UbigeoService {
 	private UbigeoDao ubigeoDao;
 	@Override
 	@Transactional
+	
 	public List<Departamento> listDepartamentos() {
 		return ubigeoDao.listDepartamentos();
 	}

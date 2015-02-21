@@ -10,11 +10,18 @@
 <title>Sistema de Gesti&oacute;n Educativa - SIGEDU</title></head>
 
 <body>
+	<table width="1400" align="center">
+		<tr>
+			<td ><img src="resources/img/logoConsultisoft.png" width="350" height="100" border="0"></td>
+		</tr>
+	</table>	
+	<hr width="1440">
+	
 	<div id="header" align="center">
 		<%@include file="../commons/header.jsp"%>
 	</div>
 
-	<hr width="1420">
+	<hr width="1440">
 	
 	<table width="1400" align="center">
 	<tr>
@@ -33,9 +40,9 @@
 						<li><a href="#">Cursos</a>
 							<ul>
 								<li><a href="listColegio"></>Colegio</a></li>
-								<li><a href="#"></>Instituci&oacute;n Educativa</a></li>
-								<li><a href="#"></>Diseño Curricular</a></li>
-								<li><a href="#"></>Plan Curricular</a></li>
+								<li><a href="listIe"></>Instituci&oacute;n Educativa</a></li>
+								<li><a href="listDcn"></>Diseño Curricular</a></li>
+								<li><a href="listPlc"></>Plan Curricular</a></li>
 								<li><a href="#"></>Apertura IE</a></li>
 								<li><a href="#"></>Apertura Per&iacute;odo Lectivo</a></li>
 							</ul>
@@ -80,15 +87,15 @@
 					<td><b>Generalidades</b></td>
 				</tr>
 				<tr>
-					<td><a href="listColegio" cssClass="Navegador">
+					<td><a href="listIe" cssClass="Navegador">
 						<img src="resources/img/colegio.jpg" width="90" height="90" border="0" />
 						Institución Educativa</a></td>
 					<td>&nbsp;</td>
-					<td><a href="listColegio" cssClass="Navegador">
+					<td><a href="listDcn" cssClass="Navegador">
 						<img src="resources/img/disenocurri.jpg" width="90" height="90" border="0" />
 						Diseño Curricular</a></td>
 					<td>&nbsp;</td>
-					<td><a href="listColegio" cssClass="Navegador">
+					<td><a href="listPlc" cssClass="Navegador">
 						<img src="resources/img/plancurri.jpg" width="90" height="90" border="0" />
 						Plan Curricular</a></td>
 					<td>&nbsp;</td>
@@ -117,8 +124,7 @@
 					<td><a href="listAsignatura" cssClass="Navegador"><img
 							src="resources/img/asignatura.jpg" width="90" height="90" border="0" />Asignatura</a></td>
 					<td>&nbsp;</td>
-					<td>&nbsp;</td>
-					
+										
 					<td><a href="listCurricula" cssClass="Navegador"><img
 							src="resources/img/curricula.jpg" width="90" height="90" border="0" />Curricula</a></td>
 					<td>&nbsp;</td>

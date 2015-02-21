@@ -35,16 +35,72 @@ public class Colegio {
 	private String dte_fecha_modificacion;
 	@Column(name="int_cantidad_salones")
 	private String int_cantidad_salones;
-	//@ManyToOne(fetch=FetchType.LAZY)
-	//@JoinColumn(name="int_iddistrito")
-	//private Distrito distrito;
+	@ManyToOne(fetch=FetchType.LAZY)
+	@JoinColumn(name="int_iddistrito")
+	private Distrito distrito;
 	@Column(name="int_idusuario_creacion")
 	private String int_idusuario_creacion;
 	@Column(name="int_idusuario_modificacion")
 	private String int_idusuario_modificacion;
+	//@ManyToOne(fetch=FetchType.LAZY)
+	//@JoinColumn(name="int_idestado")
+	//private Estado estado;
 	@Column(name="int_idestado")
 	private Integer int_idestado;
+	@Column(name="str_observaciones")
+	private String str_observaciones;
+	@ManyToOne(fetch=FetchType.LAZY)
+	@JoinColumn(name="int_idtipocontribuyente")
+	private Parametro parametro;
+	@Column(name="str_razonsocial")
+	private String str_razonsocial;
+	@Column(name="str_nombrecomercial")
+	private String str_nombrecomercial;
+	@Column(name="str_ruc")
+	private String str_ruc;
 	
+	
+	
+	
+	public Parametro getParametro() {
+		return parametro;
+	}
+	public void setParametro(Parametro parametro) {
+		this.parametro = parametro;
+	}
+	public Distrito getDistrito() {
+		return distrito;
+	}
+	public void setDistrito(Distrito distrito) {
+		this.distrito = distrito;
+	}
+	public String getStr_observaciones() {
+		return str_observaciones;
+	}
+	public void setStr_observaciones(String str_observaciones) {
+		this.str_observaciones = str_observaciones;
+	}
+	public String getStr_razonsocial() {
+		return str_razonsocial;
+	}
+	public void setStr_razonsocial(String str_razonsocial) {
+		this.str_razonsocial = str_razonsocial;
+	}
+	public String getStr_nombrecomercial() {
+		return str_nombrecomercial;
+	}
+	public void setStr_nombrecomercial(String str_nombrecomercial) {
+		this.str_nombrecomercial = str_nombrecomercial;
+	}
+	public String getStr_ruc() {
+		return str_ruc;
+	}
+	public void setStr_ruc(String str_ruc) {
+		this.str_ruc = str_ruc;
+	}
+	public void setInt_idestado(Integer int_idestado) {
+		this.int_idestado = int_idestado;
+	}
 	public Integer getInt_idcolegio() {
 		return int_idcolegio;
 	}
