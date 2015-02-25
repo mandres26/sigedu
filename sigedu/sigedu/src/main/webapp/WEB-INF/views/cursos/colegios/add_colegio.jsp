@@ -13,15 +13,6 @@
 <link rel="stylesheet" href="resources/css/controles.css" type="text/css">
 <link rel="stylesheet" href="resources/css/titulos.css" type="text/css">
 
-<script language="JavaScript">
-function listarTipocontribuyentes(idTipocontribuyente){
-	var form = document.forms(0);
-	form.action="listarTipocontribuyentes";
-	form.submit();
-}
-
-</script>
-
 <title>SIGEDU</title>
 </head>
 <body>
@@ -47,7 +38,7 @@ function listarTipocontribuyentes(idTipocontribuyente){
 	<table width="1400" align="center"> 
 	<tr>
 	<td>
-		<table width="700">
+		<table width="700" >
 			<tr>
 				<td width="150">Nombre Colegio:<br></td>
 				<td width="550"><form:errors path="str_colegio" cssClass="error" /><br>
@@ -59,13 +50,17 @@ function listarTipocontribuyentes(idTipocontribuyente){
 								<form:input	path="str_direccion" size="50"/><br></td>
 			</tr>
 			<tr>
-				<td>Departamento:</td>
-				<td> 
+				<td>
+					&nbsp;
+				</td>
+			</tr>
+			<tr>
+				<td width="150">Departamento:<br></td>
+				<td width="550"> 
 					<form:select path="distrito.provincia.departamento" onChange="JavaScript:listarProvincias(this.value)">
-						<form:option value="" label="-- Seleccione --" />
-    					<form:options items="${listDepartamentos}" itemValue="id" itemLabel="nombre" />
+						<form:option value="" label="-- Seleccione --" /><br>
+    					<form:options items="${listDepartamentos}" itemValue="id" itemLabel="nombre" /><br>
 					</form:select>
-				
 				</td>
 			</tr>
 			<tr>
@@ -88,7 +83,6 @@ function listarTipocontribuyentes(idTipocontribuyente){
 				<td width="550"><form:errors path="str_celular" cssClass="error" /><br>
 								<form:input path="str_celular"  size="30"/><br></td>
 			</tr>
-			
 		</table>
 	</td>
 	<td width="50">
@@ -98,7 +92,7 @@ function listarTipocontribuyentes(idTipocontribuyente){
 		<table width="700" >
 			<tr>
 				<td width="150">Tipo Contribuyente: <br></td>
-				<td width="550"><form:select path="parametro"  >
+				<td width="550"><form:select path="parametro"  ><br>
 						<form:option value="" label="-- Seleccione --" />
 						<form:options items="${listTipocontribuyentes}" itemValue="int_idparametro" itemLabel="str_parametro" />
 					</form:select>
@@ -131,26 +125,27 @@ function listarTipocontribuyentes(idTipocontribuyente){
 					<form:input type="date" name="fecha_modificacion" path="dte_fecha_modificacion" /><br></td>
 			</tr>
 			<tr>
+				<td>
+					&nbsp;
+				</td>
+			</tr>
+			<tr>
 				<td width="150">Estado: <br></td>
 				<td width="550"><form:select path="parametro"  >
-						<form:option value="" label="-- Seleccione --" />
-						<form:options items="${listEstados}" itemValue="int_idparametro" itemLabel="str_parametro" />
+						<form:option value="" label="-- Seleccione --" /><br>
+						<form:options items="${listEstados}" itemValue="int_idparametro" itemLabel="str_parametro" /><br>
 					</form:select>
 				</td>
 			</tr>
-			
 		</table>
-
 	</td>
 	</tr>
 	</table>
-	<br>
-	
 	<table width="1400" align="center">
 	<tr>
-		<td width="150">Observaciones: <br></td>
-		<td width="1150"><form:errors path="str_observaciones" cssClass="error" /><br>
-								<form:textarea path="str_observaciones" rows="10" cols="150" /><br></td>
+		<td width="150" valign="top">Observaciones: <br></td>
+		<td width="1200"><form:errors path="str_observaciones" cssClass="error" />
+								<form:textarea path="str_observaciones" rows="5" cols="150" /></td>
 	</tr>
 	</table>
 	

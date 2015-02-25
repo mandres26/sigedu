@@ -18,7 +18,7 @@ public class Colegio {
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator="sgcm_cole_int_idcolegio_sep")
     @SequenceGenerator(name="sgcm_cole_int_idcolegio_sep", sequenceName="sgcm_cole_int_idcolegio_sep", allocationSize=1)
 	@Column(name="int_idcolegio")
-	private Integer int_idcolegio;
+	private Integer codigo;
 	@Column(name="str_colegio")
 	private String str_colegio;
 	@Column(name="str_telefono1")
@@ -44,7 +44,7 @@ public class Colegio {
 	private String int_idusuario_modificacion;
 	//@ManyToOne(fetch=FetchType.LAZY)
 	//@JoinColumn(name="int_idestado")
-	//private Estado estado;
+	//private Parametro estado;
 	@Column(name="int_idestado")
 	private Integer int_idestado;
 	@Column(name="str_observaciones")
@@ -61,51 +61,11 @@ public class Colegio {
 	
 	
 	
-	
-	public Parametro getParametro() {
-		return parametro;
+	public Integer getCodigo() {
+		return codigo;
 	}
-	public void setParametro(Parametro parametro) {
-		this.parametro = parametro;
-	}
-	public Distrito getDistrito() {
-		return distrito;
-	}
-	public void setDistrito(Distrito distrito) {
-		this.distrito = distrito;
-	}
-	public String getStr_observaciones() {
-		return str_observaciones;
-	}
-	public void setStr_observaciones(String str_observaciones) {
-		this.str_observaciones = str_observaciones;
-	}
-	public String getStr_razonsocial() {
-		return str_razonsocial;
-	}
-	public void setStr_razonsocial(String str_razonsocial) {
-		this.str_razonsocial = str_razonsocial;
-	}
-	public String getStr_nombrecomercial() {
-		return str_nombrecomercial;
-	}
-	public void setStr_nombrecomercial(String str_nombrecomercial) {
-		this.str_nombrecomercial = str_nombrecomercial;
-	}
-	public String getStr_ruc() {
-		return str_ruc;
-	}
-	public void setStr_ruc(String str_ruc) {
-		this.str_ruc = str_ruc;
-	}
-	public void setInt_idestado(Integer int_idestado) {
-		this.int_idestado = int_idestado;
-	}
-	public Integer getInt_idcolegio() {
-		return int_idcolegio;
-	}
-	public void setInt_idcolegio(Integer int_idcolegio) {
-		this.int_idcolegio = int_idcolegio;
+	public void setCodigo(Integer codigo) {
+		this.codigo = codigo;
 	}
 	public String getStr_colegio() {
 		return str_colegio;
@@ -155,12 +115,12 @@ public class Colegio {
 	public void setInt_cantidad_salones(String int_cantidad_salones) {
 		this.int_cantidad_salones = int_cantidad_salones;
 	}
-	/*public Distrito getDistrito() {
+	public Distrito getDistrito() {
 		return distrito;
 	}
 	public void setDistrito(Distrito distrito) {
 		this.distrito = distrito;
-	}*/
+	}
 	public String getInt_idusuario_creacion() {
 		return int_idusuario_creacion;
 	}
@@ -173,14 +133,48 @@ public class Colegio {
 	public void setInt_idusuario_modificacion(String int_idusuario_modificacion) {
 		this.int_idusuario_modificacion = int_idusuario_modificacion;
 	}
-	/*public String getInt_idestado() {
-		return int_idestado;
+	/*
+	public Parametro getEstado() {
+		return estado;
+	}
+	public void setEstado(Parametro estado) {
+		this.estado = estado;
 	}*/
-	public void setInt_idestado(int int_idestado) {
-		this.int_idestado = int_idestado;
+	public String getStr_observaciones() {
+		return str_observaciones;
+	}
+	public void setStr_observaciones(String str_observaciones) {
+		this.str_observaciones = str_observaciones;
+	}
+	public Parametro getParametro() {
+		return parametro;
+	}
+	public void setParametro(Parametro parametro) {
+		this.parametro = parametro;
+	}
+	public String getStr_razonsocial() {
+		return str_razonsocial;
+	}
+	public void setStr_razonsocial(String str_razonsocial) {
+		this.str_razonsocial = str_razonsocial;
+	}
+	public String getStr_nombrecomercial() {
+		return str_nombrecomercial;
+	}
+	public void setStr_nombrecomercial(String str_nombrecomercial) {
+		this.str_nombrecomercial = str_nombrecomercial;
+	}
+	public String getStr_ruc() {
+		return str_ruc;
+	}
+	public void setStr_ruc(String str_ruc) {
+		this.str_ruc = str_ruc;
 	}
 	public Integer getInt_idestado() {
 		return int_idestado;
+	}
+	public void setInt_idestado(Integer int_idestado) {
+		this.int_idestado = int_idestado;
 	}
 	
 	

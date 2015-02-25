@@ -10,8 +10,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link rel="stylesheet" href="resources/css/titulos.css" type="text/css">
 <script language="JavaScript" type="text/javascript">
-function editar(int_idcolegio){
-	location.replace("editColegio?int_idcolegio="+int_idcolegio);
+function editar(codigo){
+	location.replace("editColegio?codigo="+codigo);
 	//alert("hola");
 }
 </script>
@@ -30,44 +30,76 @@ function editar(int_idcolegio){
 	<hr width="1400">
 	
 		<div id="divView">
-		<table width="1400" align="center">
+		<table width="600" align="center" >
 			<tr>
-				<td width="150">C&oacute;digo:</td>
-				<td width="800">${colegio.int_idcolegio}</td>
+				<td width="200">C&oacute;digo:</td>
+				<td width="400">${colegio.codigo}</td>
 			</tr>
 			<tr>
-				<td width="150">Nombre Colegio:</td>
-				<td width="800">${colegio.str_colegio}</td>
+				<td width="200">Nombre Colegio:</td>
+				<td width="400">${colegio.str_colegio}</td>
 			</tr>
 			<tr>
-				<td width="150">Tel&eacute;fono 1:</td>
-				<td width="800">${colegio.str_telefono1}</td>
+				<td width="200">Direcci&oacute;n:</td>
+				<td width="400">${colegio.str_direccion}</td>
+			</tr>
+			
+			<tr>
+				<td width="200">Tel&eacute;fono 1:</td>
+				<td width="400">${colegio.str_telefono1}</td>
 			</tr>
 			<tr>
-				<td width="150">Tel&eacute;fono 2:</td>
-				<td width="800">${colegio.str_telefono2}</td>
+				<td width="200">Tel&eacute;fono 2:</td>
+				<td width="400">${colegio.str_telefono2}</td>
 			</tr>
 			<tr>
-				<td width="150">Celular:</td>
-				<td width="800">${colegio.str_celular}</td>
+				<td width="200">Celular:</td>
+				<td width="400">${colegio.str_celular}</td>
 			</tr>
 			<tr>
-				<td width="150">Direcci&oacute;n:</td>
-				<td width="800">${colegio.str_direccion}</td>
+				<td width="200">Cantidad de salones:</td>
+				<td width="400">${colegio.int_cantidad_salones}</td>
 			</tr>
 			<tr>
-				<td width="150">Estado:</td>
-				<td width="800">					
-					<c:if test="${colegio.int_idestado==1}">Activo</c:if>
-					<c:if test="${colegio.int_idestado==2}">Inactivo</c:if>
+				<td width="200">Observaciones:</td>
+				<td width="400">${colegio.str_observaciones}</td>
+			</tr>
+			
+			<tr>
+				<td width="200">Razón Social:</td>
+				<td width="400">${colegio.str_razonsocial}</td>
+			</tr>
+			<tr>
+				<td width="200">Nombre Comercial:</td>
+				<td width="400">${colegio.str_nombrecomercial}</td>
+			</tr>
+			<tr>
+				<td width="200">RUC:</td>
+				<td width="400">${colegio.str_ruc}</td>
+			</tr>
+			<tr>
+				<td width="200">Fecha creaci&oacute;n:</td>
+				<td width="400">${colegio.dte_fecha_creacion}</td>
+			</tr>
+			<tr>
+				<td width="200">Fecha modificaci&oacute;n:</td>
+				<td width="400">${colegio.dte_fecha_modificacion}</td>
+			</tr>
+			<tr>
+				<td width="200">Estado:</td>
+				<td width="400">					
+					<c:if test="${colegio.int_idestado==1}">Activo</c:if >
+					<c:if test="${colegio.int_idestado==2}">Inactivo</c:if >
+					
 				</td>
 			</tr>
+			
 			<tr>
 				<td>
 					&nbsp;
 				</td>
 				<td>
-					<button title="Editar" onclick="javascript:editar('${colegio.int_idcolegio}')">
+					<button title="Editar" onclick="javascript:editar('${colegio.codigo}')">
 						<img src="resources/img/Editar.png" width="50" height="50" border="0">
 					</button>
 				</td>								

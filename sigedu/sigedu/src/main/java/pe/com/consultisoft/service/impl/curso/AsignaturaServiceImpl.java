@@ -17,7 +17,6 @@ public class AsignaturaServiceImpl implements AsignaturaService{
 	@Override
 	@Transactional
 	public List<Asignatura> list() {
-		// TODO Auto-generated method stub
 		return asignaturaDao.list();
 	}
 	@Override
