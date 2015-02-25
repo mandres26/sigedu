@@ -1,0 +1,269 @@
+Departamento/Provincia/Distrito
+*******************************
+INSERT INTO sgcm_dpto(int_iddepartamento, str_departamento, chr_codigo_departamento) VALUES (1, 'Lima', '01');
+
+INSERT INTO sgcm_prov(int_idprovincia, str_provincia, chr_codigo_provincia, int_iddepartamento) VALUES (1, 'Lima', '01', 1);
+
+INSERT INTO sgcm_dist(int_iddistrito, str_distrito, chr_codigo_distrito, int_idprovincia) VALUES (1, 'Cercado', '01', 1);
+INSERT INTO sgcm_dist(int_iddistrito, str_distrito, chr_codigo_distrito, int_idprovincia) VALUES (2, 'San Isidro', '02', 1);
+INSERT INTO sgcm_dist(int_iddistrito, str_distrito, chr_codigo_distrito, int_idprovincia) VALUES (3, 'Breña', '03', 1);
+INSERT INTO sgcm_dist(int_iddistrito, str_distrito, chr_codigo_distrito, int_idprovincia) VALUES (4, 'Lince', '04', 1);
+
+Estado: 
+******
+INSERT INTO sgcm_para(int_idparametro, str_parametro, int_tipo_parametro) VALUES (1, 'Activo', 1);
+INSERT INTO sgcm_para(int_idparametro, str_parametro, int_tipo_parametro) VALUES (2, 'Inactivo', 1);
+INSERT INTO sgcm_para(int_idparametro, str_parametro, int_tipo_parametro) VALUES (3, 'Cerrado', 1);
+
+Año:
+***
+INSERT INTO sgcm_anho(int_idanho, str_anho, str_anho_actual, int_idestado) VALUES (1, '2014', '2014', 1);
+INSERT INTO sgcm_anho(int_idanho, str_anho, str_anho_actual, int_idestado) VALUES (2, '2015', '2015', 1);
+
+Tipo de Área:
+************
+INSERT INTO sgcm_para(int_idparametro, str_parametro, int_tipo_parametro) VALUES (4, 'Curricular', 2);
+INSERT INTO sgcm_para(int_idparametro, str_parametro, int_tipo_parametro) VALUES (5, 'No Curricular', 2);
+
+Tipo Contribuyente:
+******************
+INSERT INTO sgcm_para(int_idparametro, str_parametro, int_tipo_parametro) VALUES (6, 'Sociedad Anónima', 3);
+INSERT INTO sgcm_para(int_idparametro, str_parametro, int_tipo_parametro) VALUES (7, 'Sociedad Anónima Cerrada', 3);
+INSERT INTO sgcm_para(int_idparametro, str_parametro, int_tipo_parametro) VALUES (8, 'Empresa Individual de Responsabilidad Limitada', 3);
+
+Tipo Calificación:
+*****************
+INSERT INTO sgcm_para(int_idparametro, str_parametro, int_tipo_parametro) VALUES (9, 'Cualitativa', 4);
+INSERT INTO sgcm_para(int_idparametro, str_parametro, int_tipo_parametro) VALUES (10, 'Vigesimal', 4);
+
+
+Gestión:
+*******
+INSERT INTO sgcm_para(int_idparametro, str_parametro, int_tipo_parametro) VALUES (11, 'Estatal', 5);
+INSERT INTO sgcm_para(int_idparametro, str_parametro, int_tipo_parametro) VALUES (12, 'Privada', 5);
+
+Género:
+******
+INSERT INTO sgcm_para(int_idparametro, str_parametro, int_tipo_parametro) VALUES (13, 'Mixto', 6);
+INSERT INTO sgcm_para(int_idparametro, str_parametro, int_tipo_parametro) VALUES (14, 'Sólo mujeres', 6);
+INSERT INTO sgcm_para(int_idparametro, str_parametro, int_tipo_parametro) VALUES (15, 'Sólo varones', 6);
+
+Forma:
+*****
+INSERT INTO sgcm_para(int_idparametro, str_parametro, int_tipo_parametro) VALUES (16, 'Escolarizado', 7);
+INSERT INTO sgcm_para(int_idparametro, str_parametro, int_tipo_parametro) VALUES (17, 'No escolarizado', 7);
+
+
+DRE:
+***
+INSERT INTO sgcm_para(int_idparametro, str_parametro, int_tipo_parametro) VALUES (18, 'Amazonas', 8);
+INSERT INTO sgcm_para(int_idparametro, str_parametro, int_tipo_parametro) VALUES (19, 'Ancash', 8);
+INSERT INTO sgcm_para(int_idparametro, str_parametro, int_tipo_parametro) VALUES (20, 'Apurimac', 8);
+INSERT INTO sgcm_para(int_idparametro, str_parametro, int_tipo_parametro) VALUES (21, 'Arequipa', 8);
+INSERT INTO sgcm_para(int_idparametro, str_parametro, int_tipo_parametro) VALUES (22, 'Ayacucho', 8);
+INSERT INTO sgcm_para(int_idparametro, str_parametro, int_tipo_parametro) VALUES (23, 'Cajamarca', 8);
+INSERT INTO sgcm_para(int_idparametro, str_parametro, int_tipo_parametro) VALUES (24, 'Callao', 8);
+INSERT INTO sgcm_para(int_idparametro, str_parametro, int_tipo_parametro) VALUES (25, 'Cusco', 8);
+INSERT INTO sgcm_para(int_idparametro, str_parametro, int_tipo_parametro) VALUES (26, 'Huancavelica', 8);
+INSERT INTO sgcm_para(int_idparametro, str_parametro, int_tipo_parametro) VALUES (27, 'Huanuco', 8);
+INSERT INTO sgcm_para(int_idparametro, str_parametro, int_tipo_parametro) VALUES (28, 'Ica', 8);
+INSERT INTO sgcm_para(int_idparametro, str_parametro, int_tipo_parametro) VALUES (29, 'Junin', 8);
+INSERT INTO sgcm_para(int_idparametro, str_parametro, int_tipo_parametro) VALUES (30, 'La Libertad', 8);
+INSERT INTO sgcm_para(int_idparametro, str_parametro, int_tipo_parametro) VALUES (31, 'Lambayeque', 8);
+INSERT INTO sgcm_para(int_idparametro, str_parametro, int_tipo_parametro) VALUES (32, 'Lima Metropolitana', 8);
+INSERT INTO sgcm_para(int_idparametro, str_parametro, int_tipo_parametro) VALUES (33, 'Lima Provincias', 8);
+INSERT INTO sgcm_para(int_idparametro, str_parametro, int_tipo_parametro) VALUES (34, 'Loreto', 8);
+INSERT INTO sgcm_para(int_idparametro, str_parametro, int_tipo_parametro) VALUES (35, 'Madre de Dios', 8);
+INSERT INTO sgcm_para(int_idparametro, str_parametro, int_tipo_parametro) VALUES (36, 'Moquegua', 8);
+INSERT INTO sgcm_para(int_idparametro, str_parametro, int_tipo_parametro) VALUES (37, 'Pasco', 8);
+INSERT INTO sgcm_para(int_idparametro, str_parametro, int_tipo_parametro) VALUES (38, 'Piura', 8);
+INSERT INTO sgcm_para(int_idparametro, str_parametro, int_tipo_parametro) VALUES (39, 'Puno', 8);
+INSERT INTO sgcm_para(int_idparametro, str_parametro, int_tipo_parametro) VALUES (40, 'San Martin', 8);
+INSERT INTO sgcm_para(int_idparametro, str_parametro, int_tipo_parametro) VALUES (41, 'Tacna', 8);
+INSERT INTO sgcm_para(int_idparametro, str_parametro, int_tipo_parametro) VALUES (42, 'Tumbes', 8);
+INSERT INTO sgcm_para(int_idparametro, str_parametro, int_tipo_parametro) VALUES (43, 'Ucayali', 8);
+
+
+Tipo de Centro:
+**************
+INSERT INTO sgcm_para(int_idparametro, str_parametro, int_tipo_parametro) VALUES (44, 'Colegio', 9);
+
+Modalidad:
+*********
+INSERT INTO sgcm_para(int_idparametro, str_parametro, int_tipo_parametro) VALUES (45, 'Centro Educativo Ocupacional', 10);
+INSERT INTO sgcm_para(int_idparametro, str_parametro, int_tipo_parametro) VALUES (46, 'Educación Básica Alternativa', 10);
+INSERT INTO sgcm_para(int_idparametro, str_parametro, int_tipo_parametro) VALUES (47, 'Educación Básica Regular', 10);
+
+
+Nivel:
+*****
+INSERT INTO sgcm_nivel(int_idnivel, str_nivel, dte_fecha_creacion, dte_fecha_modificacion, int_idtipo_calificacion, int_idestado) VALUES (1, 'Inicial', '05/02/2015', '05/02/2015', 1, 1);
+INSERT INTO sgcm_nivel(int_idnivel, str_nivel, dte_fecha_creacion, dte_fecha_modificacion, int_idtipo_calificacion, int_idestado) VALUES (2, 'Primaria', '05/02/2015', '05/02/2015', 2, 1);
+INSERT INTO sgcm_nivel(int_idnivel, str_nivel, dte_fecha_creacion, dte_fecha_modificacion, int_idtipo_calificacion, int_idestado) VALUES (3, 'Secundaria', '05/02/2015', '05/02/2015', 2, 1);
+
+Ugel:
+****
+INSERT INTO sgcm_ugel(int_idugel, str_ugel, dte_fecha_creacion, dte_fecha_modificacion, int_idusuario_creacion, int_idusuario_modificacion, int_iddre, int_idestado)
+    VALUES (1, 'Ugel01', '24/02/2015', '24/02/2015', 1, 1, 32, 1);
+INSERT INTO sgcm_ugel(int_idugel, str_ugel, dte_fecha_creacion, dte_fecha_modificacion, int_idusuario_creacion, int_idusuario_modificacion, int_iddre, int_idestado)
+    VALUES (2, 'Ugel02', '24/02/2015', '24/02/2015', 1, 1, 32, 1);
+INSERT INTO sgcm_ugel(int_idugel, str_ugel, dte_fecha_creacion, dte_fecha_modificacion, int_idusuario_creacion, int_idusuario_modificacion, int_iddre, int_idestado)
+    VALUES (3, 'Ugel03', '24/02/2015', '24/02/2015', 1, 1, 32, 1);
+INSERT INTO sgcm_ugel(int_idugel, str_ugel, dte_fecha_creacion, dte_fecha_modificacion, int_idusuario_creacion, int_idusuario_modificacion, int_iddre, int_idestado)
+    VALUES (4, 'Ugel04', '24/02/2015', '24/02/2015', 1, 1, 32, 1);
+INSERT INTO sgcm_ugel(int_idugel, str_ugel, dte_fecha_creacion, dte_fecha_modificacion, int_idusuario_creacion, int_idusuario_modificacion, int_iddre, int_idestado)
+    VALUES (5, 'Ugel05', '24/02/2015', '24/02/2015', 1, 1, 32, 1);
+INSERT INTO sgcm_ugel(int_idugel, str_ugel, dte_fecha_creacion, dte_fecha_modificacion, int_idusuario_creacion, int_idusuario_modificacion, int_iddre, int_idestado)
+    VALUES (6, 'Ugel06', '24/02/2015', '24/02/2015', 1, 1, 32, 1);
+INSERT INTO sgcm_ugel(int_idugel, str_ugel, dte_fecha_creacion, dte_fecha_modificacion, int_idusuario_creacion, int_idusuario_modificacion, int_iddre, int_idestado)
+    VALUES (7, 'Ugel07', '24/02/2015', '24/02/2015', 1, 1, 32, 1);
+
+
+Colegio:
+*******
+
+INSERT INTO sgcm_cole(
+            int_idcolegio, str_colegio, str_telefono1, str_telefono2, str_celular, 
+            str_direccion, dte_fecha_creacion, dte_fecha_modificacion, int_cantidad_salones, 
+            int_iddistrito, int_idusuario_creacion, int_idusuario_modificacion, 
+            int_idestado, str_observaciones, int_idtipocontribuyente, str_razonsocial, 
+            str_nombrecomercial, str_ruc)
+    VALUES (1, 'Colegio Albert Einstein', '4654578', '4653295', '994471687', 
+            'Av. Arequipa 534', '18/02/2015', '18/02/2015', 80, 
+            1261, 1, 1, 
+            1, 'Colegio de dos años de formado.', 6, 'Asociacion Albert Einstein', 
+            'Colegio Albert Einstein', '20524134588');
+
+INSERT INTO sgcm_cole(
+            int_idcolegio, str_colegio, str_telefono1, str_telefono2, str_celular, 
+            str_direccion, dte_fecha_creacion, dte_fecha_modificacion, int_cantidad_salones, 
+            int_iddistrito, int_idusuario_creacion, int_idusuario_modificacion, 
+            int_idestado, str_observaciones, int_idtipocontribuyente, str_razonsocial, 
+            str_nombrecomercial, str_ruc)
+    VALUES (2, 'Colegio La Independencia', '4652356', '4657485', '994471155', 
+            'Av. Lince 8765', '18/02/2015', '18/02/2015', 80, 
+            1267, 1, 1, 
+            1, 'Colegio a punto de comprar otro local.', 6, 'Asociacion La Independencia', 
+            'Colegio La Independencia', '2064857723');
+Colegio:
+*******
+
+INSERT INTO sgcm_cole(
+            int_idcolegio, str_colegio, str_telefono1, str_telefono2, str_celular, 
+            str_direccion, dte_fecha_creacion, dte_fecha_modificacion, int_cantidad_salones, 
+            int_iddistrito, int_idusuario_creacion, int_idusuario_modificacion, 
+            int_idestado, str_observaciones, int_idtipocontribuyente, str_razonsocial, 
+            str_nombrecomercial, str_ruc)
+    VALUES (1, 'Colegio Albert Einstein', '4654578', '4653295', '994471687', 
+            'Av. Arequipa 534', '18/02/2015', '18/02/2015', 80, 
+            1261, 1, 1, 
+            1, 'Colegio de dos años de formado.', 6, 'Asociacion Albert Einstein', 
+            'Colegio Albert Einstein', '20524134588');
+
+INSERT INTO sgcm_cole(
+            int_idcolegio, str_colegio, str_telefono1, str_telefono2, str_celular, 
+            str_direccion, dte_fecha_creacion, dte_fecha_modificacion, int_cantidad_salones, 
+            int_iddistrito, int_idusuario_creacion, int_idusuario_modificacion, 
+            int_idestado, str_observaciones, int_idtipocontribuyente, str_razonsocial, 
+            str_nombrecomercial, str_ruc)
+    VALUES (2, 'Colegio La Independencia', '4652356', '4657485', '994471155', 
+            'Av. Lince 8765', '18/02/2015', '18/02/2015', 80, 
+            1267, 1, 1, 
+            1, 'Colegio a punto de comprar otro local.', 6, 'Asociacion La Independencia', 
+            'Colegio La Independencia', '2064857723');
+
+INSERT INTO sgcm_cole(
+            int_idcolegio, str_colegio, str_telefono1, str_telefono2, str_celular, 
+            str_direccion, dte_fecha_creacion, dte_fecha_modificacion, int_cantidad_salones, 
+            int_iddistrito, int_idusuario_creacion, int_idusuario_modificacion, 
+            int_idestado, str_observaciones, int_idtipocontribuyente, str_razonsocial, 
+            str_nombrecomercial, str_ruc)
+    VALUES (3, 'Colegio San Antonio de Padua', '4457895', '4456989', '996587912', 
+            'Av. Estados Unidos 276', '25/02/2015', '25/02/2015', 75, 
+            1261, 1, 1, 
+            1, 'Colegio a punto de comprar un sistema web de gestión.', 6, 'Asociacion San Antonio de Padua', 
+            'Colegio San Antonio de Padua', '2078964135');
+
+
+
+IE:
+**
+INSERT INTO sgcm_ie(
+            int_idie, str_ie, str_codigo_modular, str_codigo_local, dte_fecha_creacion, 
+            dte_fecha_modificacion, int_idnivel, int_idugel, int_idusuario_creacion, 
+            int_idusuario_modificacion, int_idcolegio, int_idestado, int_idmodalidad, 
+            int_idgestion, int_idgenero, int_idforma, str_res_autorizacion_func, 
+            str_resolucion_numero, str_telefono, str_fax, str_pagina_web, 
+            str_email, dte_fecha_resolucion, str_dias_laborables, str_turno)
+    VALUES (1, '002154 San Antonio de Padua', '124008', '13588', '24/02/2015', 
+            '24/02/2015', 3, 4, 1, 
+            1, 3, 1, 47, 
+            12, 13, 16, 'RAF-104523', 
+            '100-102589', '4358878', '4357845', 'www.sanantonio.edu.pe', 
+            'informes@sanantonio.edu.pe', '24/02/2015', 'Lun-Mar-Mie-Jue-Vie', 'Mañana-Tarde');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Área:
+****
+INSERT INTO sgcm_area(int_idarea, str_area, dte_fecha_creacion, dte_fecha_modificacion, int_idtipo_area, int_idusuario_creacion, int_idusuario_modificacion, int_idestado) VALUES (1, 'Desarrollo personal', '05/02/2015', '05/02/2015', 4, 1, 1, 1);
+INSERT INTO sgcm_area(int_idarea, str_area, dte_fecha_creacion, dte_fecha_modificacion, int_idtipo_area, int_idusuario_creacion, int_idusuario_modificacion, int_idestado) VALUES (2, 'Emprendimiento', '05/02/2015', '05/02/2015', 4, 1, 1, 1);
+INSERT INTO sgcm_area(int_idarea, str_area, dte_fecha_creacion, dte_fecha_modificacion, int_idtipo_area, int_idusuario_creacion, int_idusuario_modificacion, int_idestado) VALUES (3, 'Educación física y deporte', '05/02/2015', '05/02/2015', 4, 1, 1, 1);
+INSERT INTO sgcm_area(int_idarea, str_area, dte_fecha_creacion, dte_fecha_modificacion, int_idtipo_area, int_idusuario_creacion, int_idusuario_modificacion, int_idestado) VALUES (4, 'Estudios sociales y ciudadanía', '05/02/2015', '05/02/2015', 4, 1, 1, 1);
+INSERT INTO sgcm_area(int_idarea, str_area, dte_fecha_creacion, dte_fecha_modificacion, int_idtipo_area, int_idusuario_creacion, int_idusuario_modificacion, int_idestado) VALUES (5, 'Comunicación', '05/02/2015', '05/02/2015', 4, 1, 1, 1);
+INSERT INTO sgcm_area(int_idarea, str_area, dte_fecha_creacion, dte_fecha_modificacion, int_idtipo_area, int_idusuario_creacion, int_idusuario_modificacion, int_idestado) VALUES (6, 'Comunicación digital', '05/02/2015', '05/02/2015', 4, 1, 1, 1);
+INSERT INTO sgcm_area(int_idarea, str_area, dte_fecha_creacion, dte_fecha_modificacion, int_idtipo_area, int_idusuario_creacion, int_idusuario_modificacion, int_idestado) VALUES (7, 'Inglés', '05/02/2015', '05/02/2015', 4, 1, 1, 1);
+INSERT INTO sgcm_area(int_idarea, str_area, dte_fecha_creacion, dte_fecha_modificacion, int_idtipo_area, int_idusuario_creacion, int_idusuario_modificacion, int_idestado) VALUES (8, 'Matemática', '05/02/2015', '05/02/2015', 4, 1, 1, 1);
+INSERT INTO sgcm_area(int_idarea, str_area, dte_fecha_creacion, dte_fecha_modificacion, int_idtipo_area, int_idusuario_creacion, int_idusuario_modificacion, int_idestado) VALUES (9, 'Ciencia y tecnología', '05/02/2015', '05/02/2015', 4, 1, 1, 1);
+INSERT INTO sgcm_area(int_idarea, str_area, dte_fecha_creacion, dte_fecha_modificacion, int_idtipo_area, int_idusuario_creacion, int_idusuario_modificacion, int_idestado) VALUES (10, 'Arte', '05/02/2015', '05/02/2015', 4, 1, 1, 1);
+
+
+Año:
+***
+INSERT INTO sgcm_anho(int_idanho, str_anho, str_anho_actual, int_idestado) VALUES (1, '2014', '2014', 1);
+INSERT INTO sgcm_anho(int_idanho, str_anho, str_anho_actual, int_idestado) VALUES (2, '2015', '2015', 1);
+
+
+
+
+Curso/Asignatura:
+****************
+INSERT INTO sgcm_curs(int_idcurso, str_curso, dte_fecha_creacion, dte_fecha_modificacion, int_idarea, int_idusuario_creacion, int_idusuario_modificacion, int_idestado)
+ 	VALUES (1, 'Razonamiento Matematico', '05/02/2015', '05/02/2015', 8, 1, 1, 1);
+INSERT INTO sgcm_curs(int_idcurso, str_curso, dte_fecha_creacion, dte_fecha_modificacion, int_idarea, int_idusuario_creacion, int_idusuario_modificacion, int_idestado)
+ 	VALUES (2, 'Geometría', '05/02/2015', '05/02/2015', 8, 1, 1, 1);
+INSERT INTO sgcm_curs(int_idcurso, str_curso, dte_fecha_creacion, dte_fecha_modificacion, int_idarea, int_idusuario_creacion, int_idusuario_modificacion, int_idestado)
+	VALUES (3, 'Aritmetica', '05/02/2015', '05/02/2015', 8, 1, 1, 1);
+INSERT INTO sgcm_curs(int_idcurso, str_curso, dte_fecha_creacion, dte_fecha_modificacion, int_idarea, int_idusuario_creacion, int_idusuario_modificacion, int_idestado)
+ 	VALUES (4, 'Trigonometria', '05/02/2015', '05/02/2015', 8, 1, 1, 1);
+INSERT INTO sgcm_curs(int_idcurso, str_curso, dte_fecha_creacion, dte_fecha_modificacion, int_idarea, int_idusuario_creacion, int_idusuario_modificacion, int_idestado)
+ 	VALUES (5, 'Juegos Logicos', '05/02/2015', '05/02/2015', 8, 1, 1, 1);
+
+
+
+
+
+
+
+
+
+
+
+
+
+https://www.youtube.com/watch?v=TSApIGTyzos
+
