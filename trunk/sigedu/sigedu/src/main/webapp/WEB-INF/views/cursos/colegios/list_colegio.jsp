@@ -17,19 +17,24 @@
 <title>SIGEDU</title>
 </head>
 <body>
-	<table width="1400" align="center">
+
+
+<div align="center">
+	<table width="1600" align="center">
 		<tr>
-			<td><img src="resources/img/logo.png" width="350" height="100" border="0"></td>
+			<td ><img src="resources/img/logoConsultisoft.png" width="350" height="100" border="0"></td>
 		</tr>
 	</table>	
-	<hr width="1400">
+	<hr width="1600">
 	
-	<h3 class="Titulo" width="1400" align="center">Mantenimiento de Instituci&oacute;n Educativa</h3>
-	<hr width="1400">
-	<table width="1400" align="center">
+	<h1 class="Titulo" align="center" width="1400">Mantenimiento de Colegio</h1>
+	
+	<hr width="1600">
+	
+	<table width="1600" align="center">
 	<tr>
 		<td>
-			<table width="200"  >
+			<table width="150"  >
 			<tr >
 				<td >
 					<ul class="menu">
@@ -43,7 +48,7 @@
 						<li><a href="#">Cursos</a>
 							<ul>
 								<li><a href="listColegio"></>Colegio</a></li>
-								<li><a href="#"></>Instituci&oacute;n Educativa</a></li>
+								<li><a href="listIe"></>Instituci&oacute;n Educativa</a></li>
 								<li><a href="#"></>Diseño Curricular</a></li>
 								<li><a href="#"></>Plan Curricular</a></li>
 								<li><a href="#"></>Apertura IE</a></li>
@@ -85,16 +90,25 @@
 			</table>
 		</td>
 		<td>
-			<table width="1000" align="center" >
+			<table width="1200" align="center" >
 			<tr>
 				<td >
 					
 				         <form:form action="findColegio" method="post" commandName="colegio" >
 				            <br>
-				            <table width="400" >
+				            <table width="800" >
 				            	<tr>
-									<td width="100">Nombre:</td>
-									<td width="300"><form:input	path="str_colegio" size="50" /></td>
+									<td width="200">Nombre:</td>
+									<td width="600"><form:input	path="str_colegio" size="50" /></td>
+								</tr>
+								<tr>
+									<td>
+										&nbsp;
+									</td>
+								</tr>
+								<tr>
+									<td width="200">RUC:</td>
+									<td width="600"><form:input	path="str_ruc" size="50" /></td>
 								</tr>
 							</table>
 							<br>
@@ -109,12 +123,14 @@
 				                    	&nbsp;
 				                    </td>
 				                    <td> 
-				                    	<a href="formColegio" cssClass="Navegador"><img src="resources/img/colegio.jpg" width="50" height="50" border="0" title="Nuevo colegio"></a>
+				                    	<a href="formColegio" cssClass="Navegador">
+				                    		<img src="resources/img/colegio.jpg" width="50" height="50" border="0" title="Registrar nuevo colegio"></a>
 				                    </td>
 				                </tr>
 				            </table>
 				        </form:form>
-				    <hr>
+				        
+				    <hr width="1300">
 					
 					
 					<c:if test="${resultado==0}">
@@ -137,23 +153,23 @@
 						<display:setProperty name="export.xml" value="false" />
 						<display:setProperty name="export.csv" value="false" /> 
 				
-						<display:column value="${fila_rowNum}" title="Nro." />
-						<display:column property="str_colegio" title="Colegio" sortable="true" style="width:300px" />
-						<display:column property="str_telefono1" title="Teléfono 1" sortable="true" style="width:60px" />
-						<display:column property="str_telefono2" title="Teléfono 2" sortable="true" style="width:60px" />
-						<display:column property="str_celular" title="Celular" sortable="true" style="width:100px" />
-						<display:column property="str_direccion" title="Dirección" sortable="true" style="width:300px" />
-						<display:column property="int_cantidad_salones" title="Cant. Salones" sortable="true" style="width:60x" />
+						<display:column value="${fila_rowNum}"  title="Nro." />
+						<display:column property="str_colegio"  title="Colegio"  sortable="true" style="width:300px" />
+						<display:column property="str_direccion"  title="Dirección"  sortable="true" style="width:300px" />
+						<display:column property="int_cantidad_salones"  title="Cant. Salones"  sortable="true" style="width:100x" />
 						<display:column title="Estado">
 							<c:if test="${fila.int_idestado==1}">Activo</c:if>
 							<c:if test="${fila.int_idestado==2}">Inactivo</c:if>
 						</display:column>
 						<display:column media="html" title="Ver" style="text-align:center;">
-							<a href="viewColegio?int_idcolegio=${fila.int_idcolegio}"><img src="resources/img/Buscar.png" alt="Ver" height="20" width="20"></a>
+							<a href="viewColegio?codigo=${fila.codigo}"><img src="resources/img/Buscar.png" alt="Ver" height="20" width="20"></a>
 						</display:column>
-				
+						<display:column media="html" title="Editar" style="text-align:center;">
+							<a href="editColegio?codigo=${fila.codigo}"><img src="resources/img/Editar.png" alt="Edit" height="20" width="20"></a>
+						</display:column>
+										
 						<display:column media="html" title="Eliminar" style="text-align:center;">
-							<a href="JavaScript:eliminar('${fila.str_colegio}', 'deleteColegio?int_idcolegio=${fila.int_idcolegio}')"><img src="resources/img/Borrar.png" alt="Ver" height="20" width="20"></a>
+							<a href="JavaScript:eliminar('${fila.str_colegio}', 'deleteColegio?codigo=${fila.codigo}')"><img src="resources/img/Borrar.png" alt="Ver" height="20" width="20"></a>
 						</display:column>
 					</display:table>
 					<br>
@@ -175,9 +191,17 @@
 	</table>
 	
 	<br>
-	<hr>
+	<hr width="1600">
 	<br>
-	<a href="moduloCursos" cssClass="Navegador"><img src="resources/img/cursos.jpg" width="50" height="50" border="0" />Ir a Men&uacute; Principal</a>
-		
+	
+	<table width="1600" align="center">
+	<tr>
+		<td>
+			<a href="moduloCursos" cssClass="Navegador"><img src="resources/img/cursos.jpg" width="50" height="50" border="0" />Ir a Men&uacute; Cursos</a>	
+		</td>
+	</tr>
+	</table>	
+</div>	
+
 </body>
 </html>

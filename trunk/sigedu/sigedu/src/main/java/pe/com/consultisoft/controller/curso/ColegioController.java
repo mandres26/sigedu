@@ -20,7 +20,6 @@ import pe.com.consultisoft.model.Colegio;
 import pe.com.consultisoft.model.validator.ColegioValidator;
 import pe.com.consultisoft.service.commons.TipocontribuyenteService;
 import pe.com.consultisoft.service.commons.EstadoService;
-
 import pe.com.consultisoft.service.curso.ColegioService;
 import pe.com.consultisoft.utilitarios.Constantes;
 
@@ -75,11 +74,11 @@ public class ColegioController {
 
 	@RequestMapping(value = "/deleteColegio")
     public String delete(@ModelAttribute("colegio") Colegio colegio,
-    						@ModelAttribute("codigo")String int_idcolegio,
+    						@ModelAttribute("codigo")String codigo,
     						ModelMap model) {
  
-		colegioService.delete(Integer.parseInt(int_idcolegio));
-		if(colegioService.delete(Integer.parseInt(int_idcolegio))==0){
+		colegioService.delete(Integer.parseInt(codigo));
+		if(colegioService.delete(Integer.parseInt(codigo))==0){
 			model.addAttribute("resultado", "0");
 			model.addAttribute("mensaje", Constantes.Mensajes.MSG_REGISTRO_ELIMINADO_OK);
 		}
@@ -93,9 +92,9 @@ public class ColegioController {
 	
 	@RequestMapping(value = "/viewColegio", method = RequestMethod.GET)
     public String view(@ModelAttribute("codigo")
-    String int_idcolegio, ModelMap model) {
+    String codigo, ModelMap model) {
  
-		Colegio colegio = colegioService.find(Integer.parseInt(int_idcolegio));
+		Colegio colegio = colegioService.find(Integer.parseInt(codigo));
 		model.addAttribute("colegio", colegio);
  
         return "cursos/colegios/view_colegio";
@@ -103,9 +102,9 @@ public class ColegioController {
 	
 	@RequestMapping(value = "/editColegio")
     public String edit(@ModelAttribute("codigo")
-    String int_idcolegio, ModelMap model) {
+    String codigo, ModelMap model) {
  
-		Colegio colegio = colegioService.find(Integer.parseInt(int_idcolegio));
+		Colegio colegio = colegioService.find(Integer.parseInt(codigo));
 		model.addAttribute("colegio", colegio);
  
         return "cursos/colegios/edit_colegio";
@@ -126,7 +125,6 @@ public class ColegioController {
 				model.addAttribute("resultado", "-1");
 				model.addAttribute("mensaje", Constantes.Mensajes.MSG_REGISTRO_ACTUALIZADO_ERROR);				
 			}
-			
 		}
  
         return "cursos/colegios/list_colegio";

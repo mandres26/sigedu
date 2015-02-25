@@ -10,11 +10,12 @@
 <title>Sistema de Gesti&oacute;n Educativa - SIGEDU</title></head>
 
 <body>
-	<table width="1400" align="center">
-		<tr>
-			<td ><img src="resources/img/logoConsultisoft.png" width="350" height="100" border="0"></td>
-		</tr>
-	</table>	
+	<table width="1440" align="center">
+	<tr>
+		<td width="350"><img src="resources/img/logoConsultisoft.png"  height="100" border="0"></td>
+	</tr>
+	</table>		
+	
 	<hr width="1440">
 	
 	<div id="header" align="center">

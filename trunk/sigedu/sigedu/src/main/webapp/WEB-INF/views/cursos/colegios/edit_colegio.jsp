@@ -34,45 +34,76 @@
     </h3>
 	<form:form method="post" action="updateColegio" commandName="colegio">
 
-		<table width="1400" align="center">
+		<table width="600" align="center">
 			<tr>
-				<td width="150">C&oacute;digo:</td>
-				<td width="850"><form:input
-						path="int_idcolegio" readonly="true"/></td>
+				<td width="200">C&oacute;digo:</td>
+				<td width="400"><form:input
+						path="codigo" readonly="true"/></td>
 			</tr>
 			<tr>
-				<td width="150">Nombre Colegio:</td>
-				<td width="850"><form:errors path="str_colegio" cssClass="error" /><br> <form:input
+				<td width="200">Nombre Colegio:</td>
+				<td width="400"><form:errors path="str_colegio" cssClass="error" /><br> <form:input
 						path="str_colegio" size="50" /></td>
 			</tr>
 			<tr>
-				<td width="150">Tel&eacute;fono 1:</td>
-				<td width="850"><form:errors path="str_telefono1" cssClass="error" /><br> <form:input
-						path="str_telefono1" /></td>
-			</tr>
-			<tr>
-				<td width="150">Tel&eacute;fono 2:</td>
-				<td width="850"><form:errors path="str_telefono2" cssClass="error" /><br> <form:input
-						path="str_telefono2" /></td>
-			</tr>
-			<tr>
-				<td width="150">Celular:</td>
-				<td width="850"><form:errors path="str_celular" cssClass="error" /><br> <form:input
-						path="str_celular" /></td>
-			</tr>
-			<tr>
-				<td width="150">Direcci&oacute;n:</td>
-				<td width="850"><form:errors path="str_direccion" cssClass="error" /><br> <form:input
+				<td width="200">Direcci&oacute;n:</td>
+				<td width="400"><form:errors path="str_direccion" cssClass="error" /><br> <form:input
 						path="str_direccion" size="50" /></td>
 			</tr>
 			<tr>
-				<td width="150">Cantidad Salones:</td>
-				<td width="850"><form:errors path="int_cantidad_salones" cssClass="error" /><br> <form:input
+				<td width="200">Tel&eacute;fono 1:</td>
+				<td width="400"><form:errors path="str_telefono1" cssClass="error" /><br> <form:input
+						path="str_telefono1" /></td>
+			</tr>
+			<tr>
+				<td width="200">Tel&eacute;fono 2:</td>
+				<td width="400"><form:errors path="str_telefono2" cssClass="error" /><br> <form:input
+						path="str_telefono2" /></td>
+			</tr>
+			<tr>
+				<td width="200">Celular:</td>
+				<td width="400"><form:errors path="str_celular" cssClass="error" /><br> <form:input
+						path="str_celular" /></td>
+			</tr>
+			
+			<tr>
+				<td width="200">Cantidad Salones:</td>
+				<td width="400"><form:errors path="int_cantidad_salones" cssClass="error" /><br> <form:input
 						path="int_cantidad_salones" /></td>
 			</tr>
 			<tr>
-				<td width="150">Estado:</td>
-				<td width="850"><form:radiobutton path="int_idestado" value="1" />Activo 
+				<td width="200">Observaciones:</td>
+				<td width="400"><form:errors path="str_observaciones" cssClass="error" /><br> 
+							<form:input path="str_observaciones" size="50"/></td>
+			</tr>
+			<tr>
+				<td width="200">Raz&oacute;n Social:</td>
+				<td width="400"><form:errors path="str_razonsocial" cssClass="error" /><br> <form:input
+						path="str_razonsocial" size="50" /></td>
+			</tr>
+			<tr>
+				<td width="200">Nombre Comercial:</td>
+				<td width="400"><form:errors path="str_nombrecomercial" cssClass="error" /><br> <form:input
+						path="str_nombrecomercial" size="50" /></td>
+			</tr>
+			<tr>
+				<td width="200">RUC:</td>
+				<td width="400"><form:errors path="str_ruc" cssClass="error" /><br> <form:input
+						path="str_ruc" /></td>
+			</tr>
+			<tr>
+				<td width="200">Fecha creaci&oacute;n:</td>
+				<td width="400"><form:errors path="dte_fecha_creacion" cssClass="error" /><br> 
+						<form:input type="date" path="dte_fecha_creacion" /></td>
+			</tr>
+			<tr>
+				<td width="200">Fecha modificaci&oacute;n:</td>
+				<td width="400"><form:errors path="dte_fecha_modificacion" cssClass="error" /><br> 
+						<form:input type="date" path="dte_fecha_modificacion" /></td>
+			</tr>
+			<tr>
+				<td width="200">Estado:</td>
+				<td width="400"><form:radiobutton path="int_idestado" value="1" />Activo 
 					&nbsp;
 					<form:radiobutton path="int_idestado" value="2" />Inactivo</td>
 			</tr>

@@ -1,6 +1,7 @@
 package pe.com.consultisoft.utilitarios;
 
 public class Constantes {
+	
 	//Mensajes de confirmación de transacciones
 	public static class Mensajes{
 		public static final String MSG_REGISTRO_NUEVO_OK = "Se grabó con exito el nuevo registro";

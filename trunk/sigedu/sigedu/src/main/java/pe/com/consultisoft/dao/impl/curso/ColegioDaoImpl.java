@@ -12,14 +12,14 @@ import org.springframework.stereotype.Repository;
 import pe.com.consultisoft.controller.curso.ColegioController;
 import pe.com.consultisoft.dao.curso.ColegioDao;
 import pe.com.consultisoft.model.Colegio;
-//import pe.com.consultisoft.model.Parametro;
+import pe.com.consultisoft.model.Parametro;
 import pe.com.consultisoft.utilitarios.Constantes;
 
 @Repository
 public class ColegioDaoImpl implements ColegioDao {
 	@Autowired
     private SessionFactory sessionFactory;
-	
+	private Parametro parametro; 
 	private static final Logger logger = LoggerFactory.getLogger(ColegioDaoImpl.class);
 
 	@Override
@@ -38,7 +38,8 @@ public class ColegioDaoImpl implements ColegioDao {
 	@Override
 	public int add(Colegio colegio) {
 		try{
-			colegio.setInt_idestado(Constantes.Estados.EST_ACTIVO1);
+			parametro.setInt_idparametro(Constantes.Estados.EST_ACTIVO1);
+			colegio.setParametro(parametro);
 			sessionFactory.getCurrentSession().save(colegio);
 			//sessionFactory.getCurrentSession().flush();
 			return 0;
@@ -65,7 +66,8 @@ public class ColegioDaoImpl implements ColegioDao {
 	public int delete(int int_idcolegio) {
 		try{
 			Colegio colegio = (Colegio)sessionFactory.getCurrentSession().get(Colegio.class, int_idcolegio);
-			colegio.setInt_idestado(Constantes.Estados.EST_INACTIVO1);
+			parametro.setInt_idparametro(Constantes.Estados.EST_INACTIVO1);
+			colegio.setParametro(parametro);
 			sessionFactory.getCurrentSession().save(colegio);
 			return 0;
 		}
@@ -99,18 +101,4 @@ public class ColegioDaoImpl implements ColegioDao {
 			return null;
 		}
 	}
-	/*
-	//Validar.
-	@Override
-	public List<Parametro> listEstado() {
-		try{
-			List<Parametro> listEstados = new ArrayList();
-			listEstados = sessionFactory.getCurrentSession().createQuery("from sgcm_para where int_tipo_parametro = '1' order by str_parametro").list();
-			return listEstados;
-		}
-		catch(Exception ex){
-			logger.error(ex.getMessage());
-			return null;
-		}	
-	}*/
 }
