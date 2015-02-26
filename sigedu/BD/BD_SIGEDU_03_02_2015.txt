@@ -182,7 +182,7 @@ ALTER TABLE SGCM_DOCT
 
 CREATE TABLE SGCM_DPTO
 (
-	int_iddepartamento   INT NOT NULL ,
+	int_iddepartamento   SERIAL NOT NULL ,
 	str_departamento     character varying(50) NULL ,
 	chr_codigo_departamento character varying(2) NULL 
 );
