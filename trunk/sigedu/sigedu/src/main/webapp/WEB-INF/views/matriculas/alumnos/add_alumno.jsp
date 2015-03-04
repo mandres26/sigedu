@@ -69,9 +69,21 @@ function listarProvincias(idDepartamento){
 					</form:select>
 				
 				</td>
+				</tr>
+		</table>
+        <table>
+			<tr>
+				<td>Provincia:</td>
+				<td> 
+					<form:select path="distrito.provincia" >
+						<form:option value="" label="-- Seleccione --" />
+    					<form:options items="${listProvincias}" itemValue="id" itemLabel="nombre" />
+					</form:select>
+				
+				</td>
 			</tr>
 		</table>
-
+        
 		<table>
 			<tr>
 				<td>

@@ -75,6 +75,8 @@
 		<display:column property="str_curso" title="Asignatura" sortable="true" style="width:400px " />
 		<display:column property="dte_fecha_creacion" title="Fec. Creación" sortable="true" style="width:200px" />
 		<display:column property="dte_fecha_modificacion" title="Fec. Modificación" sortable="true" style="width:200px" />
+
+		
 		<display:column title="Estado">
 			<c:if test="${fila.int_idestado==1}">Activo</c:if>
 			<c:if test="${fila.int_idestado==2}">Inactivo</c:if>

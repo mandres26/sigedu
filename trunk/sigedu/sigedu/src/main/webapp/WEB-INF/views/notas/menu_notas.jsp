@@ -4,9 +4,47 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link rel="stylesheet" href="resources/css/links.css" title="links"
+	type="text/css">
+<link rel="stylesheet" href="resources/css/titulos.css" type="text/css">
 <title>Sistema de Gesti&oacute;n Educativa - SIGEDU</title>
 </head>
 <body>
-<h1>P&aacute;gina en Construcci&oacute;n</h1>
+	<div id="header" align="center">
+		<%@include file="../commons/header.jsp"%>
+	</div>
+
+	<div align="center">
+		<table>
+			<tr>
+				<td colspan="5">&nbsp;</td>
+			</tr>
+			<tr>
+				<td><a href="listCursos" cssClass="Navegador">
+					<img src="resources/img/registrar_notas.png" width="100" height="100" border="0" />Notas</a></td>
+				<td>&nbsp;</td>
+				
+				
+			</tr>
+			<tr>
+				<td colspan="5">&nbsp;</td>
+			</tr>
+			<tr>
+				<td colspan="5">&nbsp;</td>
+			</tr>
+			<tr>
+
+				<td colspan="5" align="center"><a href="moduloPrincipal"
+					cssClass="Navegador"><img src="resources/img/home.png"
+						width="50" height="50" border="0" />Ir a M&oacute;dulo Principal</a></td>
+
+			</tr>
+
+		</table>
+	</div>
+	<div id="footer">
+		<%@include file="../commons/footer.jsp"%>
+	</div>
+
 </body>
 </html>
