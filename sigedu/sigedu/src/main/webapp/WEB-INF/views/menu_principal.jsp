@@ -10,20 +10,14 @@
 <title>Sistema de Gesti&oacute;n Educativa - SIGEDU</title>
 </head>
 <body>
-	<table width="1440" align="center">
-	<tr>
-		<td width="350"><img src="resources/img/logoConsultisoft.png"  height="100" border="0"></td>
-	</tr>
-	</table>	
-	
-	<hr width="1440">
+	<hr width="1630">
 	
 	<div id="header" align="center">
 		<%@include file="commons/header.jsp"%>
 	</div>
 	
-	<hr width="1440">
-	
+	<hr width="1630">
+	<br>
 	<div align="center">
 		<table>
 			<tr>
@@ -56,6 +50,7 @@
 
 		</table>
 	</div>
+	<br><br>
 	<div id="footer">
 		<%@include file="commons/footer.jsp"%>
 	</div>
