@@ -1,3 +1,11 @@
+--Año:
+---
+INSERT INTO sgcm_anho(int_idanho, str_anho, str_anho_actual, int_idestado) VALUES (1, '2014', '2014', 1);
+INSERT INTO sgcm_anho(int_idanho, str_anho, str_anho_actual, int_idestado) VALUES (2, '2015', '2015', 1);
+
+----PARAMETROS------
+--Estado: 
+------
 Estado: 
 ******
 INSERT INTO sgcm_para(int_idparametro, str_parametro, int_tipo_parametro) VALUES (1, 'Activo', 1);
