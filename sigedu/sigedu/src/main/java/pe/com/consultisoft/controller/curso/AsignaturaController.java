@@ -63,11 +63,11 @@ public class AsignaturaController {
 
 	@RequestMapping(value = "/deleteAsignatura")
     public String delete(@ModelAttribute("asignatura") Asignatura asignatura,
-    						@ModelAttribute("int_idcurso")String int_idcurso,
+    						@ModelAttribute("codigo")String codigo,
     						ModelMap model) {
  
-		asignaturaService.delete(Integer.parseInt(int_idcurso));
-		if(asignaturaService.delete(Integer.parseInt(int_idcurso))==0){
+		asignaturaService.delete(Integer.parseInt(codigo));
+		if(asignaturaService.delete(Integer.parseInt(codigo))==0){
 			model.addAttribute("resultado", "0");
 			model.addAttribute("mensaje", Constantes.Mensajes.MSG_REGISTRO_ELIMINADO_OK);
 		}
@@ -80,20 +80,20 @@ public class AsignaturaController {
     }
 	
 	@RequestMapping(value = "/viewAsignatura", method = RequestMethod.GET)
-    public String view(@ModelAttribute("int_idcurso")
+    public String view(@ModelAttribute("codigo")
     String codigo, ModelMap model) {
  
-		//Asignatura asignatura = asignaturaService.find(Integer.parseInt(int_idcurso));
-		//model.addAttribute("asignatura", asignatura);
+		Asignatura asignatura = asignaturaService.find(Integer.parseInt(codigo));
+		model.addAttribute("asignatura", asignatura);
  
         return "cursos/asignaturas/view_asignatura";
     }
 	
 	@RequestMapping(value = "/editAsignatura")
-    public String edit(@ModelAttribute("int_idcurso")
-    String int_idcurso, ModelMap model) {
+    public String edit(@ModelAttribute("codigo")
+    String codigo, ModelMap model) {
  
-		Asignatura asignatura = asignaturaService.find(Integer.parseInt(int_idcurso));
+		Asignatura asignatura = asignaturaService.find(Integer.parseInt(codigo));
 		model.addAttribute("asignatura", asignatura);
  
         return "cursos/asignaturas/edit_asignatura";
@@ -129,15 +129,6 @@ public class AsignaturaController {
 		map.put("listAsignaturas", asignaturaService.list());
 		
 		return "cursos/asignaturas/list_asignatura";
-	}
-	@RequestMapping(value = "/listCursos")
-	public String list1(@ModelAttribute("asignatura") Asignatura asignatura,
-						Map<String, Object> map){
-		logger.info("Ingreso a listar asignaturas.");
-		
-		map.put("listCursos", asignaturaService.list());
-		
-		return "notas/bus_cursos";
 	}
 
 	@RequestMapping(value = "/findAsignatura")
