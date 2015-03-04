@@ -18,7 +18,7 @@ public class Dcn {
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator="sgcm_dcn_int_iddcn_seq")
     @SequenceGenerator(name="sgcm_dcn_int_iddcn_seq", sequenceName="sgcm_dcn_int_iddcn_seq", allocationSize=1)
 	@Column(name="int_iddcn")
-	private Integer int_iddcn;
+	private Integer codigo;
 	@Column(name="str_dcn")
 	private String str_dcn;
 	@Column(name="dte_fecha_inicio_vig")
@@ -36,25 +36,16 @@ public class Dcn {
 	
 	//@ManyToOne(fetch=FetchType.LAZY)
 	//@Column(name="int_idtipo_centro")
-	//private Tipocentro tipocentro;
+	//private Parametro tipocentro;
 	@Column(name="int_idestado")
 	private Integer int_idestado;
 
-	
-	public Parametro getParametro() {
-		return parametro;
+	public Integer getCodigo() {
+		return codigo;
 	}
 
-	public void setParametro(Parametro parametro) {
-		this.parametro = parametro;
-	}
-
-	public Integer getInt_iddcn() {
-		return int_iddcn;
-	}
-
-	public void setInt_iddcn(Integer int_iddcn) {
-		this.int_iddcn = int_iddcn;
+	public void setCodigo(Integer codigo) {
+		this.codigo = codigo;
 	}
 
 	public String getStr_dcn() {
@@ -97,6 +88,14 @@ public class Dcn {
 		this.dte_fecha_modificacion = dte_fecha_modificacion;
 	}
 
+	public Parametro getParametro() {
+		return parametro;
+	}
+
+	public void setParametro(Parametro parametro) {
+		this.parametro = parametro;
+	}
+
 	public Integer getInt_idestado() {
 		return int_idestado;
 	}
@@ -104,4 +103,6 @@ public class Dcn {
 	public void setInt_idestado(Integer int_idestado) {
 		this.int_idestado = int_idestado;
 	}
+
+	
 }
