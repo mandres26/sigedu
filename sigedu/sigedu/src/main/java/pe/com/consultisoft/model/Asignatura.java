@@ -25,7 +25,6 @@ public class Asignatura {
 	//private Area area;
 	@Column(name="int_idestado")
 	private Integer int_idestado;
-	
 	public Integer getInt_idcurso() {
 		return int_idcurso;
 	}
@@ -38,6 +37,14 @@ public class Asignatura {
 	public void setStr_curso(String str_curso) {
 		this.str_curso = str_curso;
 	}
+	public Integer getInt_idestado() {
+		return int_idestado;
+	}
+	public void setInt_idestado(Integer int_idestado) {
+		this.int_idestado = int_idestado;
+	}
+	
+	
 	public String getDte_fecha_creacion() {
 		return dte_fecha_creacion;
 	}
@@ -56,10 +63,5 @@ public class Asignatura {
 	public void setInt_idarea(Integer int_idarea) {
 		this.int_idarea = int_idarea;
 	}*/
-	public Integer getInt_idestado() {
-		return int_idestado;
-	}
-	public void setInt_idestado(Integer int_idestado) {
-		this.int_idestado = int_idestado;
-	}
+	
 }

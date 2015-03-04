@@ -101,4 +101,19 @@ public class ColegioDaoImpl implements ColegioDao {
 			return null;
 		}
 	}
+	/*
+/*	//Validar.
+	@Override
+	public List<Parametro> listEstado() {
+		try{
+			List<Parametro> listEstados = new ArrayList();
+			listEstados = sessionFactory.getCurrentSession().createQuery("from sgcm_para where int_tipo_parametro = '1' order by str_parametro").list();
+			return listEstados;
+		}
+		catch(Exception ex){
+			logger.error(ex.getMessage());
+			return null;
+		}	
+	}	*/
+	}*/
 }

@@ -40,6 +40,7 @@ public class AlumnoController {
 	public ModelAndView form(Locale locale,
 								ModelMap model) {
 		model.addAttribute("listDepartamentos", ubigeoService.listDepartamentos());
+		
 		ModelAndView mav = new ModelAndView("matriculas/alumnos/add_alumno", "alumno", new Alumno());
 		return mav;
 	}
@@ -152,6 +153,7 @@ public class AlumnoController {
 										ModelMap model) {
 		model.addAttribute("listDepartamentos", ubigeoService.listDepartamentos());
 		model.addAttribute("listProvincias", ubigeoService.findProvinciasPorDepartamento(alumno.getDistrito().getProvincia().getDepartamento().getId()));
+		//System.out.println(ubigeoService.findProvinciasPorDepartamento(alumno.getDistrito().getProvincia().getDepartamento().getId()).get(0));
 		ModelAndView mav = new ModelAndView("matriculas/alumnos/add_alumno", "alumno", new Alumno());
 		return mav;
 	}

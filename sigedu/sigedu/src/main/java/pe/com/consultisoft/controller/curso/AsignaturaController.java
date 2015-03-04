@@ -130,6 +130,15 @@ public class AsignaturaController {
 		
 		return "cursos/asignaturas/list_asignatura";
 	}
+	@RequestMapping(value = "/listCursos")
+	public String list1(@ModelAttribute("asignatura") Asignatura asignatura,
+						Map<String, Object> map){
+		logger.info("Ingreso a listar asignaturas.");
+		
+		map.put("listCursos", asignaturaService.list());
+		
+		return "notas/bus_cursos";
+	}
 
 	@RequestMapping(value = "/findAsignatura")
     public String find(@ModelAttribute("asignatura") Asignatura asignatura,
