@@ -1,51 +1,50 @@
---Año:
----
-INSERT INTO sgcm_anho(int_idanho, str_anho, str_anho_actual, int_idestado) VALUES (1, '2014', '2014', 1);
-INSERT INTO sgcm_anho(int_idanho, str_anho, str_anho_actual, int_idestado) VALUES (2, '2015', '2015', 1);
-
-----PARAMETROS------
---Estado: 
-------
+Estado: 
+******
 INSERT INTO sgcm_para(int_idparametro, str_parametro, int_tipo_parametro) VALUES (1, 'Activo', 1);
 INSERT INTO sgcm_para(int_idparametro, str_parametro, int_tipo_parametro) VALUES (2, 'Inactivo', 1);
 INSERT INTO sgcm_para(int_idparametro, str_parametro, int_tipo_parametro) VALUES (3, 'Cerrado', 1);
 
---Tipo de Área:
-------------
+Año:
+***
+INSERT INTO sgcm_anho(int_idanho, str_anho, str_anho_actual, int_idestado) VALUES (1, '2014', '2014', 1);
+INSERT INTO sgcm_anho(int_idanho, str_anho, str_anho_actual, int_idestado) VALUES (2, '2015', '2015', 1);
+
+Tipo de Área:
+************
 INSERT INTO sgcm_para(int_idparametro, str_parametro, int_tipo_parametro) VALUES (4, 'Curricular', 2);
 INSERT INTO sgcm_para(int_idparametro, str_parametro, int_tipo_parametro) VALUES (5, 'No Curricular', 2);
 
---Tipo Contribuyente:
-------------------
+Tipo Contribuyente:
+******************
 INSERT INTO sgcm_para(int_idparametro, str_parametro, int_tipo_parametro) VALUES (6, 'Sociedad Anónima', 3);
 INSERT INTO sgcm_para(int_idparametro, str_parametro, int_tipo_parametro) VALUES (7, 'Sociedad Anónima Cerrada', 3);
 INSERT INTO sgcm_para(int_idparametro, str_parametro, int_tipo_parametro) VALUES (8, 'Empresa Individual de Responsabilidad Limitada', 3);
 
---Tipo Calificación:
------------------
+Tipo Calificación:
+*****************
 INSERT INTO sgcm_para(int_idparametro, str_parametro, int_tipo_parametro) VALUES (9, 'Cualitativa', 4);
 INSERT INTO sgcm_para(int_idparametro, str_parametro, int_tipo_parametro) VALUES (10, 'Vigesimal', 4);
 
 
---Gestión:
--------
+Gestión:
+*******
 INSERT INTO sgcm_para(int_idparametro, str_parametro, int_tipo_parametro) VALUES (11, 'Estatal', 5);
 INSERT INTO sgcm_para(int_idparametro, str_parametro, int_tipo_parametro) VALUES (12, 'Privada', 5);
 
---Género:
-------
+Género:
+******
 INSERT INTO sgcm_para(int_idparametro, str_parametro, int_tipo_parametro) VALUES (13, 'Mixto', 6);
 INSERT INTO sgcm_para(int_idparametro, str_parametro, int_tipo_parametro) VALUES (14, 'Sólo mujeres', 6);
 INSERT INTO sgcm_para(int_idparametro, str_parametro, int_tipo_parametro) VALUES (15, 'Sólo varones', 6);
 
---Forma:
------
+Forma:
+*****
 INSERT INTO sgcm_para(int_idparametro, str_parametro, int_tipo_parametro) VALUES (16, 'Escolarizado', 7);
 INSERT INTO sgcm_para(int_idparametro, str_parametro, int_tipo_parametro) VALUES (17, 'No escolarizado', 7);
 
 
---DRE:
----
+DRE:
+***
 INSERT INTO sgcm_para(int_idparametro, str_parametro, int_tipo_parametro) VALUES (18, 'Amazonas', 8);
 INSERT INTO sgcm_para(int_idparametro, str_parametro, int_tipo_parametro) VALUES (19, 'Ancash', 8);
 INSERT INTO sgcm_para(int_idparametro, str_parametro, int_tipo_parametro) VALUES (20, 'Apurimac', 8);
@@ -74,29 +73,25 @@ INSERT INTO sgcm_para(int_idparametro, str_parametro, int_tipo_parametro) VALUES
 INSERT INTO sgcm_para(int_idparametro, str_parametro, int_tipo_parametro) VALUES (43, 'Ucayali', 8);
 
 
---Tipo de Centro:
---------------
+Tipo de Centro:
+**************
 INSERT INTO sgcm_para(int_idparametro, str_parametro, int_tipo_parametro) VALUES (44, 'Colegio', 9);
 
---Modalidad:
----------
+Modalidad:
+*********
 INSERT INTO sgcm_para(int_idparametro, str_parametro, int_tipo_parametro) VALUES (45, 'Centro Educativo Ocupacional', 10);
 INSERT INTO sgcm_para(int_idparametro, str_parametro, int_tipo_parametro) VALUES (46, 'Educación Básica Alternativa', 10);
 INSERT INTO sgcm_para(int_idparametro, str_parametro, int_tipo_parametro) VALUES (47, 'Educación Básica Regular', 10);
 
---Sexo:
----------
-INSERT INTO sgcm_para(int_idparametro, str_parametro, int_tipo_parametro) VALUES (48, 'Masculino', 11);
-INSERT INTO sgcm_para(int_idparametro, str_parametro, int_tipo_parametro) VALUES (49, 'Femenino', 11);
 
---Nivel:
------
+Nivel:
+*****
 INSERT INTO sgcm_nivel(int_idnivel, str_nivel, dte_fecha_creacion, dte_fecha_modificacion, int_idtipo_calificacion, int_idestado) VALUES (1, 'Inicial', '05/02/2015', '05/02/2015', 1, 1);
 INSERT INTO sgcm_nivel(int_idnivel, str_nivel, dte_fecha_creacion, dte_fecha_modificacion, int_idtipo_calificacion, int_idestado) VALUES (2, 'Primaria', '05/02/2015', '05/02/2015', 2, 1);
 INSERT INTO sgcm_nivel(int_idnivel, str_nivel, dte_fecha_creacion, dte_fecha_modificacion, int_idtipo_calificacion, int_idestado) VALUES (3, 'Secundaria', '05/02/2015', '05/02/2015', 2, 1);
 
---Ugel:
-----
+Ugel:
+****
 INSERT INTO sgcm_ugel(int_idugel, str_ugel, dte_fecha_creacion, dte_fecha_modificacion, int_idusuario_creacion, int_idusuario_modificacion, int_iddre, int_idestado)
     VALUES (1, 'Ugel01', '24/02/2015', '24/02/2015', 1, 1, 32, 1);
 INSERT INTO sgcm_ugel(int_idugel, str_ugel, dte_fecha_creacion, dte_fecha_modificacion, int_idusuario_creacion, int_idusuario_modificacion, int_iddre, int_idestado)
@@ -113,8 +108,8 @@ INSERT INTO sgcm_ugel(int_idugel, str_ugel, dte_fecha_creacion, dte_fecha_modifi
     VALUES (7, 'Ugel07', '24/02/2015', '24/02/2015', 1, 1, 32, 1);
 
 
---Colegio:
--------
+Colegio:
+*******
 
 INSERT INTO sgcm_cole(
             int_idcolegio, str_colegio, str_telefono1, str_telefono2, str_celular, 
@@ -154,8 +149,8 @@ INSERT INTO sgcm_cole(
 
 
 
---IE:
---
+IE:
+**
 INSERT INTO sgcm_ie(
             int_idie, str_ie, str_codigo_modular, str_codigo_local, dte_fecha_creacion, 
             dte_fecha_modificacion, int_idnivel, int_idugel, int_idusuario_creacion, 
@@ -172,8 +167,8 @@ INSERT INTO sgcm_ie(
 
 
 
---Área:
-----
+Área:
+****
 INSERT INTO sgcm_area(int_idarea, str_area, dte_fecha_creacion, dte_fecha_modificacion, int_idtipo_area, int_idusuario_creacion, int_idusuario_modificacion, int_idestado) VALUES (1, 'Desarrollo personal', '05/02/2015', '05/02/2015', 4, 1, 1, 1);
 INSERT INTO sgcm_area(int_idarea, str_area, dte_fecha_creacion, dte_fecha_modificacion, int_idtipo_area, int_idusuario_creacion, int_idusuario_modificacion, int_idestado) VALUES (2, 'Emprendimiento', '05/02/2015', '05/02/2015', 4, 1, 1, 1);
 INSERT INTO sgcm_area(int_idarea, str_area, dte_fecha_creacion, dte_fecha_modificacion, int_idtipo_area, int_idusuario_creacion, int_idusuario_modificacion, int_idestado) VALUES (3, 'Educación física y deporte', '05/02/2015', '05/02/2015', 4, 1, 1, 1);
@@ -186,8 +181,10 @@ INSERT INTO sgcm_area(int_idarea, str_area, dte_fecha_creacion, dte_fecha_modifi
 INSERT INTO sgcm_area(int_idarea, str_area, dte_fecha_creacion, dte_fecha_modificacion, int_idtipo_area, int_idusuario_creacion, int_idusuario_modificacion, int_idestado) VALUES (10, 'Arte', '05/02/2015', '05/02/2015', 4, 1, 1, 1);
 
 
---Curso/Asignatura:
-----------------
+
+
+Curso/Asignatura:
+****************
 INSERT INTO sgcm_curs(int_idcurso, str_curso, dte_fecha_creacion, dte_fecha_modificacion, int_idarea, int_idusuario_creacion, int_idusuario_modificacion, int_idestado)
  	VALUES (1, 'Razonamiento Matematico', '05/02/2015', '05/02/2015', 8, 1, 1, 1);
 INSERT INTO sgcm_curs(int_idcurso, str_curso, dte_fecha_creacion, dte_fecha_modificacion, int_idarea, int_idusuario_creacion, int_idusuario_modificacion, int_idestado)
