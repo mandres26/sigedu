@@ -17,14 +17,14 @@
 <title>SIGEDU</title>
 </head>
 <body>
-	<table width="1400" align="center">
+	<table width="1600" align="center">
 		<tr>
 			<td><img src="resources/img/logoConsultisoft.png" width="350" height="100" border="0"></td>
 		</tr>
 	</table>
-	<hr width="1400">
+	<hr width="1600">
 	<h2 class="Titulo" width="1400" align="center">Registro Nuevo Diseño Curricular Nacional</h2>
-	<hr width="1400">
+	<hr width="1600">
 	
 	<c:if test="${resultado==0}">
 		<h3 class="MensajeExito">
@@ -36,7 +36,7 @@
     </h3>
 	<form:form method="post" action="addDcn" commandName="dcn">
 
-	<table width="1400" align="center"> 
+	<table width="1600" align="center"> 
 	<tr>
 	<td>
 		<table width="700">
@@ -69,29 +69,26 @@
 	</td>
 	<td>
 		<table width="700" >
+			
 			<tr>
 				<td width="150">Modalidad: <br></td>
-				<td width="550"><select name="listarModalidad" >
-						<option selected> Seleccione modalidad</option>
-						<option value="1">Centro Educativo Ocupacional</option>
-						<option value="2">Educaci&oacute;n B&acute;sica Alternativa</option>
-						<option value="3">Educaci&oacute;n B&acute;sica Regular</option>
-					</select>
+				<td width="550"><form:select path="parametro"  ><br>
+						<form:option value="" label="-- Seleccione --" />
+						<form:options items="${listModalidades}" itemValue="int_idparametro" itemLabel="str_parametro" />
+					</form:select>
 				</td>
 			</tr>
-			
 			<tr>
 				<td>
 					&nbsp;
 				</td>
 			</tr>
-			
 			<tr>
 				<td width="150">Tipo de Centro: <br></td>
-				<td width="550"><select name="listarTipoCentro" >
-						<option selected> Seleccione tipo de centro</option>
-						<option value="1">Colegio</option>
-					</select>
+				<td width="550"><form:select path="parametro"  ><br>
+						<form:option value="" label="-- Seleccione --" />
+						<form:options items="${listTipocentros}" itemValue="int_idparametro" itemLabel="str_parametro" />
+					</form:select>
 				</td>
 			</tr>
 			<tr>
@@ -99,16 +96,7 @@
 					&nbsp;
 				</td>
 			</tr>
-			<tr>
-				<td width="150">Estado: <br></td>
-				<td width="550"><select name="listarEstado" ><br>
-						<option selected> Seleccione estado</option>
-						<option value="1">Activo</option>
-						<option value="2">Inactivo</option>
-						<option value="3">Cerrado</option>
-					</select>
-				</td>
-			</tr>
+			
 			<tr>
 				<td>
 					&nbsp;
@@ -119,6 +107,14 @@
 				<td width="550"><form:errors path="dte_fecha_modificacion" cssClass="error" /><br>
 					<form:input type="date" name="fecha_modificacion" path="dte_fecha_modificacion" /><br></td>
 			</tr>
+			<tr>
+				<td width="150">Estado: <br></td>
+				<td width="550"><form:select path="parametro"  >
+						<form:option value="" label="-- Seleccione --" /><br>
+						<form:options items="${listEstados}" itemValue="int_idparametro" itemLabel="str_parametro" /><br>
+					</form:select>
+				</td>
+			</tr>
 		</table>
 
 	</td>
@@ -126,7 +122,7 @@
 	</table>
 	
 	<br><br>
-	<table width="1400" align="center">
+	<table width="1600" align="center">
 			<tr>
 				<td align="right">
 					<button type="reset" title="Limpiar">
@@ -145,10 +141,10 @@
 		
 	</form:form>
 	<br>
-	<hr width="1400">
+	<hr width="1600">
 	<br>
 	
-	<table width="1400" align="center">
+	<table width="1600" align="center">
 		<tr>
 			<td>
 				<a href="listDcn" cssClass="Navegador"><img src="resources/img/colegio.jpg" width="50" height="50" border="0" />Ir a Mantenimiento DCN</a>	
