@@ -63,9 +63,11 @@ public class ColegioDaoImpl implements ColegioDao {
 	}
 
 	@Override
-	public int delete(int int_idcolegio) {
+	public int delete(int codigo) {
 		try{
-			Colegio colegio = (Colegio)sessionFactory.getCurrentSession().get(Colegio.class, int_idcolegio);
+			logger.info(String.valueOf(codigo));
+			
+			Colegio colegio = (Colegio)sessionFactory.getCurrentSession().get(Colegio.class, codigo);
 			parametro.setInt_idparametro(Constantes.Estados.EST_INACTIVO1);
 			colegio.setParametro(parametro);
 			sessionFactory.getCurrentSession().save(colegio);
@@ -92,9 +94,9 @@ public class ColegioDaoImpl implements ColegioDao {
 	}
 
 	@Override
-	public Colegio find(int int_idcolegio) {
+	public Colegio find(int codigo) {
 		try{
-			return (Colegio) sessionFactory.getCurrentSession().get(Colegio.class, int_idcolegio);
+			return (Colegio) sessionFactory.getCurrentSession().get(Colegio.class, codigo);
 		}
 		catch(Exception ex){
 			logger.error(ex.getMessage());
