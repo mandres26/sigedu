@@ -21,5 +21,6 @@
         <mapping class="pe.com.consultisoft.model.Distrito" />
 
         <mapping class="pe.com.consultisoft.model.Docente" />
+        
     </session-factory>        
 </hibernate-configuration>
