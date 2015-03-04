@@ -33,22 +33,13 @@ public class ColegioController {
 	
 	@Autowired
 	ColegioValidator colegioValidator;
-	
-	@Autowired
-	TipocontribuyenteService tipocontribuyenteService;
-	
-	@Autowired
-	EstadoService estadoService;
-	
+
 	@RequestMapping(value = "/formColegio")
-	public ModelAndView form(Locale locale,
-								ModelMap model) {
-		model.addAttribute("listTipocontribuyentes", tipocontribuyenteService.listTipocontribuyentes());
-		model.addAttribute("listEstados", estadoService.listEstados());
+	public ModelAndView form(Locale locale) {
+		logger.info("Ingreso al formulario colegio.", locale);
 		ModelAndView mav = new ModelAndView("cursos/colegios/add_colegio", "colegio", new Colegio());
 		return mav;
 	}
-	
 	
 	@RequestMapping(value = "/addColegio")
     public String add(@ModelAttribute("colegio") Colegio colegio, 
@@ -125,9 +116,11 @@ public class ColegioController {
 				model.addAttribute("resultado", "-1");
 				model.addAttribute("mensaje", Constantes.Mensajes.MSG_REGISTRO_ACTUALIZADO_ERROR);				
 			}
+			
 		}
  
         return "cursos/colegios/list_colegio";
+        return "cursos/colegios/edit_colegio";
     }
 
 	
@@ -151,5 +144,5 @@ public class ColegioController {
 		model.addAttribute("listColegios", listColegios);
         return "cursos/colegios/list_colegio";
     }
-}
 	
+}
