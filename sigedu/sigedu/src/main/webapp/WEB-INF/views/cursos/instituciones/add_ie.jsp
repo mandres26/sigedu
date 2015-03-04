@@ -13,10 +13,7 @@
 <link rel="stylesheet" href="resources/css/controles.css" type="text/css">
 <link rel="stylesheet" href="resources/css/titulos.css" type="text/css">
 
-
-
 <title>SIGEDU</title>
-
 
 </head>
 <body>
@@ -42,12 +39,13 @@
 	<table width="1400" align="center"> 
 	<tr>
 	<td>
-		<table width="700" >
+		<table width="700" border="1">
 			<tr>
 				<td width="200">Colegio:<br></td>
-				<td width="500"><form:errors path="" cssClass="error" /><br>
+				<td width="200"><form:errors path="" cssClass="error" /><br>
 								<form:input path="" size="45"/><br>
 				</td>
+				<td width="200"><form:input type="button" onclick="ventanaNueva()" /></td>
 			</tr>
 			<tr>
 				<td width="200">Direcci&oacute;n:<br></td>

@@ -93,10 +93,10 @@
 					
 				         <form:form action="findIe" method="post" commandName="ie" >
 				            <br>
-				            <table width="800" >
+				            <table width="450" align="center" >
 				            	<tr>
-									<td width="200">Cod. Modular:</td>
-									<td width="600"><form:input	path="str_codigo_modular" size="40" /></td>
+									<td width="100">Cod. Modular:</td>
+									<td width="350"><form:input	path="str_codigo_modular" size="40" /></td>
 								</tr>
 								<tr>
 									<td>
@@ -104,12 +104,12 @@
 									</td>
 								</tr>
 								<tr>
-									<td width="200">Cod. Local:</td>
-									<td width="600"><form:input	path="str_codigo_local" size="40" /></td>
+									<td width="100">Cod. Local:</td>
+									<td width="350"><form:input	path="str_codigo_local" size="40" /></td>
 								</tr>
 							</table>
 							<br>
-							<table>	
+							<table align="center">	
 				                <tr>
 				                    <td>
 				                    	<button type="submit" title="Buscar Institución Educativa">
