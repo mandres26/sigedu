@@ -20,7 +20,9 @@ import org.springframework.web.servlet.ModelAndView;
 import pe.com.consultisoft.model.Dcn;
 import pe.com.consultisoft.model.validator.DcnValidator;
 import pe.com.consultisoft.service.commons.ModalidadService;
+import pe.com.consultisoft.service.commons.TipocentroService;
 import pe.com.consultisoft.service.commons.UbigeoService;
+import pe.com.consultisoft.service.commons.EstadoService;
 import pe.com.consultisoft.service.curso.DcnService;
 import pe.com.consultisoft.utilitarios.Constantes;
 
@@ -41,11 +43,19 @@ public class DcnController {
 	@Autowired
 	ModalidadService modalidadService;
 
+	@Autowired
+	TipocentroService tipocentroService;
+	
+	@Autowired
+	EstadoService estadoService;
+	
 	@RequestMapping(value = "/formDcn")
 	public ModelAndView form(Locale locale,
 								ModelMap model) {
 		logger.info("Ingreso al formulario dcn.", locale);
 		model.addAttribute("listModalidades", modalidadService.listModalidades());
+		model.addAttribute("listTipocentros", tipocentroService.listTipocentros());
+		model.addAttribute("listEstados", estadoService.listEstados());
 		ModelAndView mav = new ModelAndView("cursos/dcns/add_dcn", "dcn", new Dcn());
 		
 		return mav;
@@ -75,11 +85,11 @@ public class DcnController {
 
 	@RequestMapping(value = "/deleteDcn")
     public String delete(@ModelAttribute("dcn") Dcn dcn,
-    						@ModelAttribute("codigo")String int_iddcn,
+    						@ModelAttribute("codigo")String codigo,
     						ModelMap model) {
  
-		dcnService.delete(Integer.parseInt(int_iddcn));
-		if(dcnService.delete(Integer.parseInt(int_iddcn))==0){
+		dcnService.delete(Integer.parseInt(codigo));
+		if(dcnService.delete(Integer.parseInt(codigo))==0){
 			model.addAttribute("resultado", "0");
 			model.addAttribute("mensaje", Constantes.Mensajes.MSG_REGISTRO_ELIMINADO_OK);
 		}
@@ -93,9 +103,9 @@ public class DcnController {
 	
 	@RequestMapping(value = "/viewDcn", method = RequestMethod.GET)
     public String view(@ModelAttribute("codigo")
-    String int_iddcn, ModelMap model) {
+    String codigo, ModelMap model) {
  
-		Dcn dcn = dcnService.find(Integer.parseInt(int_iddcn));
+		Dcn dcn = dcnService.find(Integer.parseInt(codigo));
 		model.addAttribute("dcn", dcn);
  
         return "cursos/dcns/view_dcn";
@@ -103,9 +113,9 @@ public class DcnController {
 	
 	@RequestMapping(value = "/editDcn")
     public String edit(@ModelAttribute("codigo")
-    String int_iddcn, ModelMap model) {
+    String codigo, ModelMap model) {
  
-		Dcn dcn = dcnService.find(Integer.parseInt(int_iddcn));
+		Dcn dcn = dcnService.find(Integer.parseInt(codigo));
 		model.addAttribute("dcn", dcn);
  
         return "cursos/dcns/edit_dcn";
@@ -135,9 +145,9 @@ public class DcnController {
 	
 	@RequestMapping(value = "/listDcn")
 	public String list(@ModelAttribute("dcn") Dcn dcn,
-						Map<String, Object> map){
+						Map<String, Object> map, ModelMap model){
 		logger.info("Ingreso a listar dcns.");
-		
+		model.addAttribute("listModalidades", modalidadService.listModalidades());
 		map.put("listDcns", dcnService.list());
 		
 		return "cursos/dcns/list_dcn";
