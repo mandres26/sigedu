@@ -6,5 +6,4 @@ import pe.com.consultisoft.model.Parametro;
 
 public interface ModalidadService {
 	public List<Parametro> listModalidades();
-
 }
