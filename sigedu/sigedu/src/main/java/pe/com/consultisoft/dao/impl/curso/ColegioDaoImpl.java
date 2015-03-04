@@ -117,5 +117,5 @@ public class ColegioDaoImpl implements ColegioDao {
 			return null;
 		}	
 	}	*/
-	}*/
+	
 }
