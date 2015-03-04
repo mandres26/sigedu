@@ -19,6 +19,12 @@ public class DcnValidator implements Validator{
 	@Override
 	public void validate(Object target, Errors errors) {
 		  ValidationUtils.rejectIfEmptyOrWhitespace(errors, "str_dcn",
-	                "required.str_colegio", "El campo Nombre del DCN es obligatorio.");
+	                "required.str_dcn", "El campo Nombre del DCN es obligatorio.");
+		  ValidationUtils.rejectIfEmptyOrWhitespace(errors, "dte_fecha_inicio_vig",
+	                "required.dte_fecha_inicio_vig", "El campo fecha inicio de vigencia es obligatorio.");
+		  ValidationUtils.rejectIfEmptyOrWhitespace(errors, "dte_fecha_fin_vig",
+	                "required.dte_fecha_fin_vig", "El campo fin de vigencia es obligatorio.");
+		  
+		  
 	}
 }
