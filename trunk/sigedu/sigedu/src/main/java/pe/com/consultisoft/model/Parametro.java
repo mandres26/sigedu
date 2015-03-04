@@ -11,8 +11,8 @@ import javax.persistence.Table;
 @Table(name="sgcm_para")
 public class Parametro {
 	@Id	
-	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator="sgcm_parametro_int_idparametro_seq")
-    @SequenceGenerator(name="sgcm_parametro_int_idparametro_seq", sequenceName="sgcm_parametro_int_idparametro_seq", allocationSize=1)
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator="sgcm_para_int_idparametro_seq")
+    @SequenceGenerator(name="sgcm_para_int_idparametro_seq", sequenceName="sgcm_para_int_idparametro_seq", allocationSize=1)
 	@Column(name="int_idparametro")
 	private Integer int_idparametro;
 	@Column(name="str_parametro")
