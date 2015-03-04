@@ -18,7 +18,7 @@ public class Plc {
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator="sgcm_plc_int_idplc_seq")
     @SequenceGenerator(name="sgcm_plc_int_idplc_seq", sequenceName="sgcm_plc_int_idplc_seq", allocationSize=1)
 	@Column(name="int_idplc")
-	private Integer int_idplc;
+	private Integer codigo;
 	@Column(name="str_plc")
 	private String str_plc;
 	@Column(name="dte_fecha_inicio")
@@ -33,18 +33,18 @@ public class Plc {
 	@JoinColumn(name="int_idanho")
 	private Anho anho;
 	
-	@ManyToOne(fetch=FetchType.LAZY)
-	@JoinColumn(name="int_idestado")
-	private Parametro estado;
+	//@ManyToOne(fetch=FetchType.LAZY)
+	//@JoinColumn(name="int_idestado")
+	//private Parametro estado;
 	
-	//@Column(name="int_idestado")
-	//private Integer int_idestado;
+	@Column(name="int_idestado")
+	private Integer int_idestado;
 	
-	public Integer getInt_idplc() {
-		return int_idplc;
+	public Integer getCodigo() {
+		return codigo;
 	}
-	public void setInt_idplc(Integer int_idplc) {
-		this.int_idplc = int_idplc;
+	public void setCodigo(Integer codigo) {
+		this.codigo = codigo;
 	}
 	public String getStr_plc() {
 		return str_plc;
@@ -82,11 +82,21 @@ public class Plc {
 	public void setAnho(Anho anho) {
 		this.anho = anho;
 	}
+	public Integer getInt_idestado() {
+		return int_idestado;
+	}
+	public void setInt_idestado(Integer int_idestado) {
+		this.int_idestado = int_idestado;
+	}
+	
+	/*
 	public Parametro getEstado() {
 		return estado;
 	}
 	public void setEstado(Parametro estado) {
 		this.estado = estado;
 	}
+	*/
+	
 	
 }
