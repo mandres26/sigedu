@@ -96,10 +96,10 @@
 					
 				         <form:form action="findColegio" method="post" commandName="colegio" >
 				            <br>
-				            <table width="800" >
+				            <table width="450" align="center">
 				            	<tr>
-									<td width="200">Nombre:</td>
-									<td width="600"><form:input	path="str_colegio" size="50" /></td>
+									<td width="100">Nombre:</td>
+									<td width="350"><form:input	path="str_colegio" size="50" /></td>
 								</tr>
 								<tr>
 									<td>
@@ -107,12 +107,12 @@
 									</td>
 								</tr>
 								<tr>
-									<td width="200">RUC:</td>
-									<td width="600"><form:input	path="str_ruc" size="50" /></td>
+									<td width="100">RUC:</td>
+									<td width="350"><form:input	path="str_ruc" size="50" /></td>
 								</tr>
 							</table>
 							<br>
-							<table>	
+							<table align="center">	
 				                <tr>
 				                    <td>
 				                    	<button type="submit" title="Buscar colegio">
@@ -156,7 +156,9 @@
 						<display:column value="${fila_rowNum}"  title="Nro." />
 						<display:column property="str_colegio"  title="Colegio"  sortable="true" style="width:300px" />
 						<display:column property="str_direccion"  title="Dirección"  sortable="true" style="width:300px" />
-						<display:column property="int_cantidad_salones"  title="Cant. Salones"  sortable="true" style="width:100x" />
+						<display:column property="str_ruc"  title="RUC"  sortable="true" style="width:150px" />
+						<display:column property="int_cantidad_salones"  title="Cant. Salones"  sortable="true" style="width:80x" />
+						
 						<display:column title="Estado">
 							<c:if test="${fila.int_idestado==1}">Activo</c:if>
 							<c:if test="${fila.int_idestado==2}">Inactivo</c:if>
