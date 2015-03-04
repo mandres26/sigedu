@@ -10,7 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import pe.com.consultisoft.dao.commons.TipocentroDao;
-//import pe.com.consultisoft.dao.impl.matricula.AlumnoDaoImpl;
+import pe.com.consultisoft.dao.impl.commons.TipocentroDaoImpl;
 import pe.com.consultisoft.model.Parametro;
 
 
@@ -19,7 +19,7 @@ public class TipocentroDaoImpl implements TipocentroDao {
 	@Autowired
     private SessionFactory sessionFactory;
 	
-	private static final Logger logger = LoggerFactory.getLogger(TipocontribuyenteDaoImpl.class);
+	private static final Logger logger = LoggerFactory.getLogger(TipocentroDaoImpl.class);
 	
 	@Override
 	public List<Parametro> listTipocentros() {
