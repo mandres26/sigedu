@@ -10,21 +10,19 @@
 <title>Sistema de Gesti&oacute;n Educativa - SIGEDU</title></head>
 
 <body>
-	<table width="1440" align="center">
-	<tr>
-		<td width="350"><img src="resources/img/logoConsultisoft.png"  height="100" border="0"></td>
-	</tr>
-	</table>		
-	
-	<hr width="1440">
+	<hr width="1630">
 	
 	<div id="header" align="center">
 		<%@include file="../commons/header.jsp"%>
 	</div>
 
-	<hr width="1440">
+	<hr width="1630">
 	
-	<table width="1400" align="center">
+	<h1 class="Titulo" align="center" width="1600">M&oacute;dulo Cursos</h1>
+	
+	<hr width="1600">
+	
+	<table width="1600" align="center">
 	<tr>
 		<td>
 			<table width="200" >
@@ -42,7 +40,7 @@
 							<ul>
 								<li><a href="listColegio"></>Colegio</a></li>
 								<li><a href="listIe"></>Instituci&oacute;n Educativa</a></li>
-								<li><a href="listDcn"></>Diseño Curricular</a></li>
+								<li><a href="listDcn"></>Diseño Curricular Nacional</a></li>
 								<li><a href="listPlc"></>Plan Curricular</a></li>
 								<li><a href="#"></>Apertura IE</a></li>
 								<li><a href="#"></>Apertura Per&iacute;odo Lectivo</a></li>
@@ -83,9 +81,12 @@
 			</table>
 		</td>
 		<td>
+			
 			<table width="1000" align="center">
 				<tr>
-					<td><b>Generalidades</b></td>
+					<td align="center">
+						Generalidades
+					</td>
 				</tr>
 				<tr>
 					<td><a href="listIe" cssClass="Navegador">
