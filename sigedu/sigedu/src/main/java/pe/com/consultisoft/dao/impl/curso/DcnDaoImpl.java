@@ -12,7 +12,6 @@ import org.springframework.stereotype.Repository;
 import pe.com.consultisoft.controller.curso.DcnController;
 import pe.com.consultisoft.dao.curso.DcnDao;
 import pe.com.consultisoft.model.Dcn;
-//import pe.com.consultisoft.model.Parametro;
 import pe.com.consultisoft.utilitarios.Constantes;
 
 @Repository
@@ -62,9 +61,9 @@ public class DcnDaoImpl implements DcnDao {
 	}
 
 	@Override
-	public int delete(int int_iddcn) {
+	public int delete(int codigo) {
 		try{
-			Dcn dcn = (Dcn)sessionFactory.getCurrentSession().get(Dcn.class, int_iddcn);
+			Dcn dcn = (Dcn)sessionFactory.getCurrentSession().get(Dcn.class, codigo);
 			dcn.setInt_idestado(Constantes.Estados.EST_INACTIVO1);
 			sessionFactory.getCurrentSession().save(dcn);
 			return 0;
@@ -90,9 +89,9 @@ public class DcnDaoImpl implements DcnDao {
 	}
 
 	@Override
-	public Dcn find(int int_iddcn) {
+	public Dcn find(int codigo) {
 		try{
-			return (Dcn) sessionFactory.getCurrentSession().get(Dcn.class, int_iddcn);
+			return (Dcn) sessionFactory.getCurrentSession().get(Dcn.class, codigo);
 		}
 		catch(Exception ex){
 			logger.error(ex.getMessage());
