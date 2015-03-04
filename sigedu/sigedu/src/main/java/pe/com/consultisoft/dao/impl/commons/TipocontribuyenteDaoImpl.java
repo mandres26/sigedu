@@ -10,7 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import pe.com.consultisoft.dao.commons.TipocontribuyenteDao;
-import pe.com.consultisoft.dao.impl.matricula.AlumnoDaoImpl;
+//import pe.com.consultisoft.dao.impl.matricula.AlumnoDaoImpl;
 import pe.com.consultisoft.model.Parametro;
 
 
