@@ -25,7 +25,7 @@ public class EstadoDaoImpl implements EstadoDao {
 	public List<Parametro> listEstados() {
 		try{
 			List<Parametro> listEstados = new ArrayList();
-			listEstados = sessionFactory.getCurrentSession().createQuery("from Parametro where int_tipo_parametro=1 and int_idparametro<> 3 order by str_parametro").list();
+			listEstados = sessionFactory.getCurrentSession().createQuery("from Parametro where int_tipo_parametro=1 order by str_parametro").list();
 			return listEstados;
 		}
 		catch(Exception ex){
