@@ -45,7 +45,6 @@
 				<td width="200"><form:errors path="" cssClass="error" /><br>
 								<form:input path="" size="45"/><br>
 				</td>
-				<td width="200"><form:input type="button" onclick="ventanaNueva()" /></td>
 			</tr>
 			<tr>
 				<td width="200">Direcci&oacute;n:<br></td>
