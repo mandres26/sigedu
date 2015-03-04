@@ -45,7 +45,7 @@
 }
 
 .menu li:hover ul{
-	height:100px;
+	height:80px;
 	overflow-y:auto;
 	overflow-x:hidden;
 }
