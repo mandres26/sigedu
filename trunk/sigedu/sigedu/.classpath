@@ -30,6 +30,19 @@
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Willy/.m2/repository/org/hibernate/easybeans-uberjar-hibernate/1.2.4/easybeans-uberjar-hibernate-1.2.4.jar"/>
+	<classpathentry kind="lib" path="C:/Documents and Settings/martin/.m2/repository/org/hibernate/easybeans-uberjar-hibernate/1.2.4/easybeans-uberjar-hibernate-1.2.4.jar"/>
+	<classpathentry kind="lib" path="C:/Archivos de programa/Java/jdk1.7.0_45/jre/lib/resources.jar"/>
+	<classpathentry kind="lib" path="C:/Archivos de programa/Java/jdk1.7.0_45/jre/lib/rt.jar"/>
+	<classpathentry kind="lib" path="C:/Archivos de programa/Java/jdk1.7.0_45/jre/lib/jsse.jar"/>
+	<classpathentry kind="lib" path="C:/Archivos de programa/Java/jdk1.7.0_45/jre/lib/jce.jar"/>
+	<classpathentry kind="lib" path="C:/Archivos de programa/Java/jdk1.7.0_45/jre/lib/charsets.jar"/>
+	<classpathentry kind="lib" path="C:/Archivos de programa/Java/jdk1.7.0_45/jre/lib/jfr.jar"/>
+	<classpathentry kind="lib" path="C:/Archivos de programa/Java/jdk1.7.0_45/jre/lib/ext/dnsns.jar"/>
+	<classpathentry kind="lib" path="C:/Archivos de programa/Java/jdk1.7.0_45/jre/lib/ext/localedata.jar"/>
+	<classpathentry kind="lib" path="C:/Archivos de programa/Java/jdk1.7.0_45/jre/lib/ext/sunec.jar"/>
+	<classpathentry kind="lib" path="C:/Archivos de programa/Java/jdk1.7.0_45/jre/lib/ext/sunjce_provider.jar"/>
+	<classpathentry kind="lib" path="C:/Archivos de programa/Java/jdk1.7.0_45/jre/lib/ext/sunmscapi.jar"/>
+	<classpathentry kind="lib" path="C:/Archivos de programa/Java/jdk1.7.0_45/jre/lib/ext/sunpkcs11.jar"/>
+	<classpathentry kind="lib" path="C:/Archivos de programa/Java/jdk1.7.0_45/jre/lib/ext/zipfs.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
