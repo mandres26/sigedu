@@ -17,21 +17,21 @@
 <title>SIGEDU</title>
 </head>
 <body>
-	<table width="1400" align="center">
+	<table width="1600" align="center">
 		<tr>
 			<td ><img src="resources/img/logoConsultisoft.png" width="350" height="100" border="0"></td>
 		</tr>
 	</table>	
-	<hr width="1400">
+	<hr width="1600">
 	
-	<h1 class="Titulo" align="center" width="1400">Mantenimiento de Plan Curricular</h1>
+	<h1 class="Titulo" align="center" width="1600">Mantenimiento de Plan Curricular</h1>
 	
-	<hr width="1400">
+	<hr width="1600">
 	
-	<table width="1400" align="center">
+	<table width="1600" align="center" >
 	<tr>
 		<td>
-			<table width="200"  >
+			<table width="250"  >
 			<tr >
 				<td >
 					<ul class="menu">
@@ -87,26 +87,25 @@
 			</table>
 		</td>
 		<td>
-			<table width="1000" align="center" >
+			<table width="1200" align="center" >
 			<tr>
-				<td >
-					
-				         <form:form action="findPlc" method="post" commandName="plc" >
+				<td>
+					     <form:form action="findPlc" method="post" commandName="plc" >
 				            <br>
-				            <table width="800" >
+				            <table width="450" align="center">
 				            	<tr>
-									<td width="200">Nombre PLC:</td>
-									<td width="600"><form:errors path="str_plc" cssClass="error" /><br> 
+									<td width="100">Nombre PLC:</td>
+									<td width="350"><form:errors path="str_plc" cssClass="error" /><br> 
 										<form:input type="text" name="str_plc" path="str_plc" size="50"/><br></td>
 								</tr>
 								<tr>
-									<td width="150">Fecha Inicio:<br></td>
-									<td width="550"><form:errors path="dte_fecha_inicio" cssClass="error" /><br> 
+									<td width="100">Fecha Inicio:<br></td>
+									<td width="350"><form:errors path="dte_fecha_inicio" cssClass="error" /><br> 
 										<form:input type="date" name="dte_fecha_inicio" path="dte_fecha_inicio" /><br></td>
 								</tr>
 								<tr>
-									<td width="150">Fecha Fin:<br></td>
-									<td width="550"><form:errors path="dte_fecha_fin" cssClass="error" /><br>
+									<td width="100">Fecha Fin:<br></td>
+									<td width="350"><form:errors path="dte_fecha_fin" cssClass="error" /><br>
 										<form:input type="date" name="dte_fecha_fin" path="dte_fecha_fin" /><br></td>
 								</tr>
 								<tr>
@@ -117,7 +116,7 @@
 								
 							</table>
 							<br>
-							<table>	
+							<table align="center" >	
 				                <tr>
 				                    <td>
 				                    	<button type="submit" title="Buscar Plan Curricular">
@@ -134,7 +133,7 @@
 				            </table>
 				        </form:form>
 				        
-				    <hr width="1020">
+				    <hr width="1200">
 					
 					
 					<c:if test="${resultado==0}">
@@ -166,11 +165,14 @@
 							<c:if test="${fila.int_idestado==2}">Inactivo</c:if>
 						</display:column>
 						<display:column media="html" title="Ver" style="text-align:center;">
-							<a href="editPlc?int_idplc=${fila.int_idplc}"><img src="resources/img/Buscar.png" alt="Ver" height="20" width="20"></a>
+							<a href="viewPlc?codigo=${fila.codigo}"><img src="resources/img/Buscar.png" alt="Ver" height="20" width="20"></a>
+						</display:column>
+						<display:column media="html" title="Editar" style="text-align:center;">
+							<a href="editPlc?codigo=${fila.codigo}"><img src="resources/img/Editar.png" alt="Ver" height="20" width="20"></a>
 						</display:column>
 				
 						<display:column media="html" title="Eliminar" style="text-align:center;">
-							<a href="JavaScript:eliminar('${fila.str_plc}', 'deletePlc?int_iddcn=${fila.int_idplc}')"><img src="resources/img/Borrar.png" alt="Ver" height="20" width="20"></a>
+							<a href="JavaScript:eliminar('${fila.str_plc}', 'deletePlc?codigo=${fila.codigo}')"><img src="resources/img/Borrar.png" alt="Ver" height="20" width="20"></a>
 						</display:column>
 					</display:table>
 					<br>
@@ -192,10 +194,10 @@
 	</table>
 	
 	<br>
-	<hr width="1400">
+	<hr width="1600">
 	<br>
 	
-	<table width="1400" align="center">
+	<table width="1600" align="center">
 	<tr>
 		<td>
 			<a href="moduloCursos" cssClass="Navegador"><img src="resources/img/cursos.jpg" width="50" height="50" border="0" />Ir a Men&uacute; PLC</a>	
