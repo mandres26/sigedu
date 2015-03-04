@@ -14,7 +14,7 @@ public class Asignatura {
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator="sgcm_curs_int_idcurso_seq")
     @SequenceGenerator(name="sgcm_curs_int_idcurso_seq", sequenceName="sgcm_curs_int_idcurso_seq", allocationSize=1)
 	@Column(name="int_idcurso")
-	private Integer int_idcurso;
+	private Integer codigo;
 	@Column(name="str_curso")
 	private String str_curso;
 	@Column(name="dte_fecha_creacion")
@@ -25,11 +25,13 @@ public class Asignatura {
 	//private Area area;
 	@Column(name="int_idestado")
 	private Integer int_idestado;
-	public Integer getInt_idcurso() {
-		return int_idcurso;
+	
+	
+	public Integer getCodigo() {
+		return codigo;
 	}
-	public void setInt_idcurso(Integer int_idcurso) {
-		this.int_idcurso = int_idcurso;
+	public void setCodigo(Integer codigo) {
+		this.codigo = codigo;
 	}
 	public String getStr_curso() {
 		return str_curso;
