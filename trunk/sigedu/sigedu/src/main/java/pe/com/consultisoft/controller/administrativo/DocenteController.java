@@ -14,11 +14,16 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
+import pe.com.consultisoft.model.Distrito;
 import pe.com.consultisoft.model.Docente;
+import pe.com.consultisoft.model.Provincia;
 import pe.com.consultisoft.model.validator.DocenteValidator;
 import pe.com.consultisoft.service.administrativo.DocenteService;
+import pe.com.consultisoft.service.commons.UbigeoService;
 import pe.com.consultisoft.utilitarios.Constantes;
 
 
@@ -31,10 +36,17 @@ public class DocenteController {
 	
 	@Autowired
 	DocenteValidator docenteValidator;
+	
+	@Autowired
+	UbigeoService ubigeoService;
+
 
 	@RequestMapping(value = "/formDocente")
-	public ModelAndView form(Locale locale) {
+	public ModelAndView form(Locale locale, ModelMap model) {
 		logger.info("Ingreso al formulario docente.", locale);
+		model.addAttribute("listDepartamentos",
+				ubigeoService.listDepartamentos());
+		
 		ModelAndView mav = new ModelAndView("administrativo/docentes/add_docente", "docente", new Docente());
 		return mav;
 	}
@@ -141,5 +153,32 @@ public class DocenteController {
 		model.addAttribute("listDocentes", listDocentes);
         return "administrativo/docentes/list_docente";
     }
+	@RequestMapping(value = "/listarProvincias", method = RequestMethod.GET, headers = "Accept=application/json")
+	public @ResponseBody List<Provincia> listarProvincias(
+			@RequestParam(value = "idDepartamento", required = true) Integer idDepartamento) {
+
+		try {
+			List<Provincia> lstProvincias = ubigeoService
+					.findProvinciasPorDepartamento(idDepartamento);
+			return lstProvincias;
+		} catch (Exception e) {
+			return null;
+		}
+
+	}
+
+	@RequestMapping(value = "/listarDistritos", method = RequestMethod.GET, headers = "Accept=application/json")
+	public @ResponseBody List<Distrito> listarDistritos(
+			@RequestParam(value = "idProvincia", required = true) Integer idProvincia) {
+
+		try {
+			List<Distrito> lstDistritos = ubigeoService
+					.findDistritosPorProvincia(idProvincia);
+			return lstDistritos;
+		} catch (Exception e) {
+			return null;
+		}
+
+	}
 	
 }
