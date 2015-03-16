@@ -21,7 +21,7 @@ public class Distrito {
 	private Integer id;
 	@Column(name="str_distrito")
 	private String nombre;
-	@ManyToOne(fetch=FetchType.LAZY)
+	@ManyToOne(fetch=FetchType.EAGER)
 	@JoinColumn(name="int_idprovincia")
 	private Provincia provincia;
 	public Integer getId() {

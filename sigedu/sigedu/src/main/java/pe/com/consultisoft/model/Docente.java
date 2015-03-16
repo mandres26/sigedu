@@ -2,9 +2,12 @@ package pe.com.consultisoft.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 @Entity
@@ -34,9 +37,11 @@ public class Docente {
 	@Column(name="dte_fecha_modificacion")
 	private String dte_fecha_modificacion;
 	@Column(name="str_dni")
-	private String str_dni;
-	@Column(name="int_iddistrito")
-	private Integer int_iddistrito;
+	private String str_dni;*/
+	@ManyToOne(fetch=FetchType.LAZY)
+	@JoinColumn(name="int_iddistrito")
+	private Distrito distrito;
+	/*
 	@Column(name="dte_fecha_nacimiento")
 	private String dte_fecha_nacimiento;
 	@Column(name="int_idusuario_creacion")
@@ -141,5 +146,10 @@ public class Docente {
 	public void setInt_idestado(Integer int_idestado) {
 		this.int_idestado = int_idestado;
 	}
-	
+	public Distrito getDistrito() {
+		return distrito;
+	}
+	public void setDistrito(Distrito distrito) {
+		this.distrito = distrito;
+	}	
 }

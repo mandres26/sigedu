@@ -13,6 +13,7 @@ import pe.com.consultisoft.dao.commons.UbigeoDao;
 import pe.com.consultisoft.dao.impl.matricula.AlumnoDaoImpl;
 import pe.com.consultisoft.model.Alumno;
 import pe.com.consultisoft.model.Departamento;
+import pe.com.consultisoft.model.Distrito;
 import pe.com.consultisoft.model.Provincia;
 
 @Repository
@@ -41,6 +42,19 @@ public class UbigeoDaoImpl implements UbigeoDao {
 			List<Provincia> listProvincias = new ArrayList();
 			listProvincias = sessionFactory.getCurrentSession().createQuery("from Provincia where departamento.id="+ idDepartamento + " order by nombre").list();
 			return listProvincias;
+		}
+		catch(Exception ex){
+			logger.error(ex.getMessage());
+			return null;
+		}
+	}
+
+	@Override
+	public List<Distrito> findDistritosPorProvincia(int idProvincia) {
+		try{
+			List<Distrito> listDistritos = new ArrayList();
+			listDistritos = sessionFactory.getCurrentSession().createQuery("from Distrito where provincia.id="+ idProvincia + " order by nombre").list();
+			return listDistritos;
 		}
 		catch(Exception ex){
 			logger.error(ex.getMessage());

@@ -9,6 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 import pe.com.consultisoft.dao.commons.UbigeoDao;
 import pe.com.consultisoft.dao.matricula.AlumnoDao;
 import pe.com.consultisoft.model.Departamento;
+import pe.com.consultisoft.model.Distrito;
 import pe.com.consultisoft.model.Provincia;
 import pe.com.consultisoft.service.commons.UbigeoService;
 
@@ -18,14 +19,20 @@ public class UbigeoServiceImpl implements UbigeoService {
 	private UbigeoDao ubigeoDao;
 	@Override
 	@Transactional
-	
 	public List<Departamento> listDepartamentos() {
 		return ubigeoDao.listDepartamentos();
 	}
 
 	@Override
+	@Transactional
 	public List<Provincia> findProvinciasPorDepartamento(int idDepartamento) {
 		return ubigeoDao.findProvinciasPorDepartamento(idDepartamento);
+	}
+	
+	@Override
+	@Transactional
+	public List<Distrito> findDistritosPorProvincia(int idProvincia){
+		return ubigeoDao.findDistritosPorProvincia(idProvincia);
 	}
 
 }
