@@ -1,0 +1,1 @@
+Proyecto orientado a la gestion de informacion academica de colegios particulares y estatales
